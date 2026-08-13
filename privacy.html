@@ -93,7 +93,9 @@
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
-    <strong>URLhaus</strong> and the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS). Only the URL or IP address being checked is sent to
+    <strong>URLhaus</strong>, the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS), and certificate
+    transparency sources (<strong>crt.sh</strong>, with <strong>Cert Spotter</strong> as a keyless fallback)
+    for SSL-certificate issue dates. Only the URL or IP address being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
     <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>OpenPhish</strong>, <strong>PhishStats</strong>,
     <strong>Phishing.Database</strong>, <strong>Destroylist</strong>, <strong>Feodo Tracker</strong>,
