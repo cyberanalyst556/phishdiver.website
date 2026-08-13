@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — PhishDiver</title>
+<meta name="description" content="Choose your PhishDiver plan and subscribe. Billing is handled securely by Stripe." />
+<meta name="theme-color" content="#070f1c" />
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .checkout-wrap { max-width: 760px; margin: 0 auto; padding: 40px 0 64px; }
+  .checkout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  .checkout-card { position: relative; border: 1px solid #223047; border-radius: 14px; background: #0c1730; padding: 22px; cursor: pointer; transition: border-color .15s, transform .15s; }
+  .checkout-card:hover { border-color: #2f4a7a; }
+  .checkout-card.sel { border-color: #4f8cff; box-shadow: 0 0 0 1px #4f8cff; }
+  .checkout-card .tag { position: absolute; top: -11px; right: 16px; font-size: 11px; font-weight: 700; color: #061224; background: #ffb703; padding: 3px 10px; border-radius: 20px; }
+  .checkout-card h3 { margin: 0 0 2px; font-size: 17px; }
+  .checkout-card .price { font-size: 26px; font-weight: 800; margin: 10px 0 2px; }
+  .checkout-card .price small { font-size: 12px; font-weight: 400; color: #8ea3c4; }
+  .checkout-card .sub { font-size: 12.5px; color: #8ea3c4; line-height: 1.5; margin-bottom: 12px; }
+  .checkout-card ul { margin: 0; padding: 0 0 0 18px; font-size: 12.5px; color: #c3d2ea; line-height: 1.7; }
+  .checkout-summary { margin-top: 18px; border: 1px solid #223047; border-radius: 12px; background: #0a1226; padding: 16px 18px; font-size: 13px; }
+  .checkout-summary .row { display: flex; justify-content: space-between; padding: 4px 0; color: #c3d2ea; }
+  .checkout-summary .row.total { font-weight: 700; color: #fff; border-top: 1px solid #223047; margin-top: 6px; padding-top: 8px; font-size: 15px; }
+  .checkout-summary .row.total .amt { color: #4f8cff; }
+  .btn-block { width: 100%; margin-top: 16px; }
+  .trust { text-align: center; color: #8ea3c4; font-size: 12px; margin-top: 14px; line-height: 1.6; }
+  .errbox { display: none; margin-top: 14px; border-radius: 10px; background: #3a1220; border: 1px solid #7a2b3f; color: #ffb3c1; padding: 12px 14px; font-size: 13px; }
+  @media (max-width: 640px) { .checkout-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
+      <span>PhishDiver <span class="pro">Pro</span></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="disclaimer.html">Legal</a>
+      <a class="nav-cta" href="checkout.html">Get Pro</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="checkout-wrap">
+    <div class="section-head" style="text-align:left">
+      <div class="section-kicker">Secure checkout</div>
+      <h1 style="margin:8px 0 6px">Choose your plan</h1>
+      <p style="color:#8ea3c4;max-width:520px">Pick a plan below. You'll pay on Stripe's secure, PCI-DSS compliant payment page — PhishDiver never sees your card details. Your license key is delivered right after payment.</p>
+    </div>
+
+    <div class="checkout-grid">
+      <div class="checkout-card" data-plan="monthly">
+        <h3>Pro Monthly</h3>
+        <div class="price">$4.99 <small>/ month</small></div>
+        <div class="sub">Billed monthly. Cancel any time.</div>
+        <ul>
+          <li>All webmail providers scanned</li>
+          <li>Both on-device AI engines</li>
+          <li>Attachment, QR &amp; calendar scanning</li>
+          <li>Every advanced detector</li>
+        </ul>
+      </div>
+      <div class="checkout-card sel" data-plan="annual">
+        <span class="tag">Best value</span>
+        <h3>Pro Annual</h3>
+        <div class="price">$49.99 <small>/ year</small></div>
+        <div class="sub">Billed once per year · save 17%.</div>
+        <ul>
+          <li>Everything in Pro Monthly</li>
+          <li>Two months free vs monthly</li>
+          <li>Same cancel-any-time policy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="checkout-summary">
+      <div class="row"><span>Plan</span><span id="sum-plan">Pro Annual</span></div>
+      <div class="row"><span>Billing</span><span id="sum-bill">$49.99 billed once a year</span></div>
+      <div class="row total"><span>Due today</span><span class="amt" id="sum-total">$49.99</span></div>
+    </div>
+
+    <button class="btn btn-primary btn-lg btn-block" id="continue-btn">Continue to secure payment</button>
+    <div class="errbox" id="errbox"></div>
+    <div class="trust">
+      🔒 Payment handled by <strong>Stripe</strong> — your card never touches PhishDiver.<br />
+      Subscriptions auto-renew until cancelled. Signup, renewal, and cancellation are all handled by Stripe — you manage everything on Stripe's hosted pages.
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="checkout.html">Get Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="eula.html">EULA</a>
+      <a href="disclaimer.html">Legal Disclaimers</a>
+      <a href="licenses.html">Open-Source Licenses</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>
+      <a href="index.html#pricing">Support</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year">2026</span> PhishDiver. All rights reserved.</span>
+    <span>PhishDiver is an aid to your judgment — it is not a guarantee of security.</span>
+  </div>
+</footer>
+
+<script src="js/checkout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

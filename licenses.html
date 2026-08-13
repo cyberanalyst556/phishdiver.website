@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open-Source Licenses &amp; Attribution — PhishDiver</title>
+<meta name="description" content="Third-party software and training data used by PhishDiver, with the licenses and attributions required for compliance." />
+<meta name="theme-color" content="#070f1c" />
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  table.oss { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+  table.oss th, table.oss td { padding: 12px 14px; text-align: left; font-size: 14px; border-top: 1px solid var(--border); }
+  table.oss thead th { background: var(--surface-2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); border-top: none; }
+  table.oss td { color: var(--muted); }
+  table.oss td:first-child { color: var(--text); font-weight: 600; }
+  .oss-license { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 22px; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
+      <span>PhishDiver <span class="pro">Pro</span></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="disclaimer.html">Legal</a>
+      <a class="nav-cta" href="checkout.html">Get Pro</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal-page">
+  <a class="back" href="index.html">← Back to home</a>
+  <h1>Open-Source Licenses &amp; Attribution</h1>
+  <div class="meta">Last updated: August 9, 2026</div>
+
+  <p>PhishDiver is built with the open-source components and training data listed below. We are committed to honoring every license. Full license texts ship inside the extension (in the <code>LICENSES/</code> folder) and are summarized here.</p>
+
+  <h2>1. Bundled software</h2>
+  <div class="compare-wrap">
+    <table class="oss">
+      <thead>
+        <tr><th>Component</th><th>License</th><th>Copyright</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ONNX Runtime Web v1.26.0</td>
+          <td><a href="https://opensource.org/licenses/MIT" rel="noopener">MIT License</a></td>
+          <td>Microsoft Corporation</td>
+          <td>Runs the on-device phishing classifier entirely in your browser</td>
+        </tr>
+        <tr>
+          <td>jsQR</td>
+          <td><a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache License 2.0</a></td>
+          <td>Cooperative Computing Ltd. (cozmo), 2015</td>
+          <td>Decodes QR codes in email image attachments, locally</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>2. Training data (not redistributed)</h2>
+  <p>The on-device model shipped with the extension is a trained TF-IDF + logistic-regression classifier. The raw source messages are <strong>not</strong> distributed — only the trained model file is shipped.</p>
+  <div class="compare-wrap">
+    <table class="oss">
+      <thead>
+        <tr><th>Data source</th><th>License</th><th>Copyright / Creator</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jose Nazario "Phishing corpus"</td>
+          <td><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a></td>
+          <td>Jose Nazario</td>
+          <td>Positive (phishing) training examples</td>
+        </tr>
+        <tr>
+          <td>Apache SpamAssassin public "easy ham" corpus</td>
+          <td>Freely redistributable public corpus; message copyrights remain with original senders</td>
+          <td>Apache SpamAssassin project and message authors</td>
+          <td>Negative (legitimate) training examples</td>
+        </tr>
+        <tr>
+          <td>Enron Email Corpus (CMU mirror)</td>
+          <td>Released publicly by the Federal Energy Regulatory Commission during its 2003 investigation</td>
+          <td>FERC and the original Enron Corp. email authors</td>
+          <td>Negative (legitimate) training examples — workplace ham</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="oss-license">
+    <strong>CC BY 4.0 attribution for the Nazario corpus</strong>
+    <p style="margin-top:10px;">The "Phishing corpus" by Jose Nazario
+    (<a href="https://monkey.org/~jose/phishing/" rel="noopener">monkey.org/~jose/phishing</a>)
+    is licensed under the Creative Commons Attribution 4.0 International license.
+    The messages were <em>adapted</em> — parsed and normalized into a machine-learning
+    training set — to train the on-device classifier. The raw messages, full headers,
+    and attachments are not redistributed with PhishDiver; only the trained model
+    is distributed. Full change indication and the license reference are provided in
+    <code>LICENSES/CC-BY-4.0-Nazario-Corpus.txt</code> inside the extension.</p>
+  </div>
+
+  <h2>3. Development-time tools (not shipped)</h2>
+  <p>The training pipeline runs on standard Python packages during development only; none of these are bundled in the extension: scikit-learn (BSD 3-Clause), skl2onnx (Apache 2.0), onnx (Apache 2.0), onnxruntime Python (MIT).</p>
+
+  <h2>4. Trademarks</h2>
+  <p>Product and brand names referenced by the extension (ONNX, Gemini Nano, Gmail, Outlook, HaveIBeenPwned, and others) are trademarks of their respective owners. PhishDiver is an independent project and is not affiliated with, endorsed by, or sponsored by those owners. See the <a href="disclaimer.html">Legal Disclaimers</a> page.</p>
+
+  <p style="margin-top:24px;">Questions about these licenses? Email <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
+          <span>PhishDiver <span class="pro">Pro</span></span>
+        </a>
+        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys. No signup. No data shared.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="eula.html">EULA</a>
+        <a href="disclaimer.html">Legal Disclaimers</a>
+        <a href="licenses.html">Open-Source Licenses</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>
+        <a href="index.html#pricing">Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> PhishDiver. All rights reserved.</span>
+      <span>PhishDiver is an aid to your judgment — it is not a guarantee of security.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
