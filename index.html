@@ -82,25 +82,26 @@
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Intelligence</div>
-      <h2>One verdict, 11+ independent sources</h2>
+      <h2>One verdict, 14+ independent sources</h2>
       <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
     </div>
     <div class="source-strip">
       <span class="source-chip live">URLhaus</span>
-      <span class="source-chip live">PhishTank</span>
-      <span class="source-chip live">ThreatFox</span>
-      <span class="source-chip live">AbuseIPDB</span>
       <span class="source-chip live">Spamhaus DNSBL</span>
       <span class="source-chip local">OpenPhish</span>
       <span class="source-chip local">PhishStats</span>
       <span class="source-chip local">Phishing.Database</span>
       <span class="source-chip local">Destroylist</span>
+      <span class="source-chip local">Phishing Army</span>
       <span class="source-chip local">Feodo Tracker</span>
+      <span class="source-chip local">IPsum</span>
       <span class="source-chip local">blocklist.de</span>
       <span class="source-chip local">IP blocklists</span>
+      <span class="source-chip local">Ransomware leak sites</span>
       <span class="source-chip">Certificate &amp; registry data</span>
     </div>
-    <p class="sources-note">🔒 Five are queried live, sending only the URL or IP at stake. Seven more are downloaded blocklists matched entirely in your browser — your links never reach them.</p>
+    <p class="sources-note">🔒 URLhaus and the Spamhaus DNSBL are queried live, sending only the URL or IP at stake. Ten more are downloaded blocklists matched entirely in your browser — your links never reach them.</p>
+    <p class="sources-note" style="margin-top:6px">↻ Blocklists refresh on a schedule — every 10 minutes (Feodo, OpenPhish) up to every 12 hours (ransomware.live) depending on the source — and are re-downloaded fresh whenever the browser starts, so the lists you get are never stale and never persist between sessions.</p>
   </div>
 </section>
 
@@ -128,7 +129,7 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>11+ independent sources stacked into every verdict — URLhaus, PhishTank, ThreatFox, AbuseIPDB, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, blocklist.de, and Spamhaus DNSBL. Live URL/IP checks against some, plus several downloaded blocklists matched entirely on-device.</p>
+        <p>14+ independent sources stacked into every verdict — URLhaus, Spamhaus DNSBL, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔎</div>
@@ -265,7 +266,7 @@
           <li>Sender, display-name, subject, body &amp; link checks</li>
           <li>Behavioral scam detection</li>
           <li>URL interception &amp; warning page</li>
-          <li>Live threat feeds (11+ sources: URLhaus, PhishTank, Feodo, ThreatFox, AbuseIPDB, OpenPhish, PhishStats, Phishing.Database, Destroylist, blocklist.de, Spamhaus DNSBL)</li>
+          <li>Live threat feeds (14+ sources: URLhaus, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, Spamhaus DNSBL)</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
         <a class="btn btn-ghost" href="#faq">Learn more</a>
@@ -373,7 +374,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>Three things, and only when relevant: (1) URL or IP checks against public threat feeds when a link is evaluated — URLhaus, PhishTank, ThreatFox, AbuseIPDB, and Spamhaus DNSBL, which query live — plus plain-text blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, blocklist.de, and others) that are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (3) a page fetch when <em>you</em> explicitly trigger a manual page check. No email content, identity, or browsing history is included. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>Three things, and only when relevant: (1) URL or IP checks against public threat feeds when a link is evaluated — URLhaus and Spamhaus DNSBL, which query live — plus plain-text blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, Phishing Army, IPsum, blocklist.de, GreenSnow, DShield, SSLBL, ransomware.live leak sites, and others) that are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (3) a page fetch when <em>you</em> explicitly trigger a manual page check. No email content, identity, or browsing history is included. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -393,7 +394,7 @@
       </details>
       <details>
         <summary>Will it slow down my browser?</summary>
-        <p>No. Inference runs in roughly 5–15 milliseconds per email, blocklists are cached locally, and the background worker stays warm so tooltips and checks feel instant.</p>
+        <p>No. Inference runs in roughly 5–15 milliseconds per email. Blocklists are downloaded on a schedule (from every 10 minutes to every 12 hours, per source) and cached in memory only — they are re-fetched fresh on every browser start and never persisted to disk. The background worker stays warm so tooltips and checks feel instant.</p>
       </details>
       <details>
         <summary>What happens when I click a dangerous link?</summary>

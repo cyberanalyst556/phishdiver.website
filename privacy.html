@@ -93,13 +93,18 @@
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
-    <strong>URLhaus</strong>, <strong>PhishTank</strong>, <strong>ThreatFox</strong>, <strong>AbuseIPDB</strong>, and
-    the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS). Only the URL or IP address being checked is sent to
+    <strong>URLhaus</strong> and the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS). Only the URL or IP address being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
     <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>OpenPhish</strong>, <strong>PhishStats</strong>,
     <strong>Phishing.Database</strong>, <strong>Destroylist</strong>, <strong>Feodo Tracker</strong>,
-    <strong>blocklist.de</strong>, and aggregate IP blocklists) are fetched from their publishers on a schedule and
-    matched entirely in your browser. Your URLs, IPs, and domains are never sent to these providers.</li>
+    <strong>Phishing Army</strong>, <strong>IPsum</strong>, <strong>blocklist.de</strong>,
+    <strong>GreenSnow</strong>, <strong>DShield</strong>, <strong>SSLBL</strong>, ransomware.live leak sites,
+    and aggregate IP blocklists) are fetched from their publishers on a schedule and
+    matched entirely in your browser. Your URLs, IPs, and domains are never sent to these providers.
+    Each list refreshes on its own cadence — from every 10 minutes (Feodo, OpenPhish) up to every
+    12 hours (ransomware.live) — and is re-downloaded fresh on every browser start. Lists are kept
+    only in memory for the session; they are never written to disk, so nothing persists after you
+    close the browser.</li>
   </ul>
 
   <h3>b) Breach checker (user-initiated)</h3>
