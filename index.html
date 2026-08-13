@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PhishDiver — AI Phishing &amp; Scam Protection for Email and Web</title>
+<meta name="description" content="PhishDiver catches phishing, scams, and malware in your email and on the web before you click. On-device AI, no account, no data shared. Free for Gmail; Pro covers 18+ providers." />
+<meta name="theme-color" content="#070f1c" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
+      <span>PhishDiver <span class="pro">Pro</span></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="disclaimer.html">Legal</a>
+      <a class="nav-cta" href="checkout.html">Get Pro</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <img class="hero-icon" src="images/icon128.png" alt="PhishDiver" />
+    <span class="eyebrow">🧠 On-device AI · No keys · No signup</span>
+    <h1>Every scam follows a script.<br /><span class="grad">See it before you click.</span></h1>
+    <p class="lede">
+      Scammers win when you act fast — the click, the call, the wire. PhishDiver takes the speed away.
+      Before your finger reaches the mouse, it has already decoded every link, sender, attachment, and
+      QR code in your inbox — and handed you the evidence in plain English.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary btn-lg" href="checkout.html">Get Pro</a>
+      <a class="btn btn-ghost btn-lg" href="#features">Explore features</a>
+    </div>
+    <div class="hero-trust">
+      <span>🔒 Email stays on your device</span>
+      <span>🚫 No account required</span>
+      <span>🌐 Chrome · Brave · Edge</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI engines ───────────────────────────────────────────────────────── -->
+<section id="engines">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Two engines, one job</div>
+      <h2>Every email gets read twice</h2>
+      <p>Once by a model trained on real attacks, once by Chrome's on-device AI. Both inside your browser — nothing is ever sent to a cloud.</p>
+    </div>
+    <div class="engines">
+      <div class="engine-card onnx">
+        <div class="eng-icon">🧠</div>
+        <h3>ONNX AI — Always Active</h3>
+        <span class="eng-pill">No setup · All browsers · Works offline</span>
+        <p>Retrained on more than 77,000 samples — genuine phishing and spam lures, legitimate mail from public corpora, and realistic modern everyday inbox messages — it runs in your browser's WebAssembly sandbox in milliseconds. No setup, no network, works in Chrome, Brave, and Edge.</p>
+      </div>
+      <div class="engine-card nano">
+        <div class="eng-icon">💎</div>
+        <h3>Gemini Nano — Bonus Layer</h3>
+        <span class="eng-pill">Chrome 127+ · On-device · Optional</span>
+        <p>When Chrome's built-in Gemini Nano is available, it adds a contextual read of intent — catching social-engineering language that keyword rules miss. It runs inside Chrome, not on Google's servers. Not available? ONNX still has your back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Threat sources ──────────────────────────────────────────────────── -->
+<section id="sources">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Intelligence</div>
+      <h2>One verdict, 11+ independent sources</h2>
+      <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
+    </div>
+    <div class="source-strip">
+      <span class="source-chip live">URLhaus</span>
+      <span class="source-chip live">PhishTank</span>
+      <span class="source-chip live">ThreatFox</span>
+      <span class="source-chip live">AbuseIPDB</span>
+      <span class="source-chip live">Spamhaus DNSBL</span>
+      <span class="source-chip local">OpenPhish</span>
+      <span class="source-chip local">PhishStats</span>
+      <span class="source-chip local">Phishing.Database</span>
+      <span class="source-chip local">Destroylist</span>
+      <span class="source-chip local">Feodo Tracker</span>
+      <span class="source-chip local">blocklist.de</span>
+      <span class="source-chip local">IP blocklists</span>
+      <span class="source-chip">Certificate &amp; registry data</span>
+    </div>
+    <p class="sources-note">🔒 Five are queried live, sending only the URL or IP at stake. Seven more are downloaded blocklists matched entirely in your browser — your links never reach them.</p>
+  </div>
+</section>
+
+<!-- ── Features ─────────────────────────────────────────────────────────── -->
+<section id="features" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Features</div>
+      <h2>Every tell, checked. Every verdict, explained.</h2>
+      <p>PhishDiver reads the room for you and shows its work — safe, suspicious, or dangerous, with the reasons in plain English.</p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="f-icon">🔍</div>
+        <h3>Real-time email scanning <span class="tag tag-free">Free</span></h3>
+        <p>Every opened email returns one clear verdict — sender, reply-to, subject, body, links, images, and attachments all checked in a single pass.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🚨</div>
+        <h3>URL interception <span class="tag tag-free">Free</span></h3>
+        <p>Every link is checked before the page loads. Dangerous ones hit a warning page with back, allow-once, and block options.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🌐</div>
+        <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
+        <p>11+ independent sources stacked into every verdict — URLhaus, PhishTank, ThreatFox, AbuseIPDB, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, blocklist.de, and Spamhaus DNSBL. Live URL/IP checks against some, plus several downloaded blocklists matched entirely on-device.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔎</div>
+        <h3>Link checker <span class="tag tag-free">Free</span></h3>
+        <p>Paste any URL and run the full pipeline — threat feeds, DNS, domain age, certificates, heuristics — with a confidence score.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📄</div>
+        <h3>Check the current page <span class="tag tag-free">Free</span></h3>
+        <p>One click runs the exact same analysis on the page you're on right now. No copy-paste needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">💔</div>
+        <h3>Behavioral scam detection <span class="tag tag-both">Free + Pro</span></h3>
+        <p>Spots romance scams, sextortion, and pig-butchering by pattern — not by keywords scammers have learned to avoid.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🏢</div>
+        <h3>BEC detection <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches the "urgent wire transfer" that looks like your CEO — executive impersonation, reply-to mismatches, vendor payment changes, and gift-card pushes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">👤</div>
+        <h3>Display-name spoofing <span class="tag tag-pro">Pro</span></h3>
+        <p>Notices when the name says PayPal but the address says gmail — the "PayPal Security &lt;randomguy@gmail.com&gt;" trick.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📎</div>
+        <h3>Attachment inspection <span class="tag tag-pro">Pro</span></h3>
+        <p>Probes the first 64 KB of every file for macros, embedded scripts, hidden executables, and filename tricks — judging the bytes, not the label.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📷</div>
+        <h3>QR code scanning <span class="tag tag-pro">Pro</span></h3>
+        <p>Decodes QR codes inside image attachments on your device, then runs the embedded link through the full threat pipeline.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📅</div>
+        <h3>Calendar invite phishing <span class="tag tag-pro">Pro</span></h3>
+        <p>Parses .ics invites and checks every URL in the description, location, and summary before you hit accept.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">💼</div>
+        <h3>Job offer scams <span class="tag tag-pro">Pro</span></h3>
+        <p>Flags the "you're hired" email that isn't — upfront fees, messaging-app-only interviews, and fake-check wire-backs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔗</div>
+        <h3>Reply-chain hijacking <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches a stranger who slipped into a real conversation, or a payment ask layered onto a genuine thread.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">☎️</div>
+        <h3>Callback / vishing scams <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches fake renewal and charge notices that point you at a phone number — no link to scan, no attachment to check.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🏦</div>
+        <h3>Payment-detail changes <span class="tag tag-pro">Pro</span></h3>
+        <p>Remembers how a vendor gets paid — bank, IBAN, crypto wallet (hashed, never stored raw) — and flags a sudden new account.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🌍</div>
+        <h3>Typosquatting &amp; homographs <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches "paypa1.com" in the address bar and Cyrillic look-alikes you can't even read, using 80+ Unicode confusables.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📋</div>
+        <h3>Clipboard hijacking <span class="tag tag-pro">Pro</span></h3>
+        <p>Detects pages silently swapping what you copy — crypto-address swaps and phishing links — at the browser API level.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🎣</div>
+        <h3>Credential harvesting <span class="tag tag-pro">Pro</span></h3>
+        <p>Flags login forms that submit to an unrelated domain, with 30+ trusted auth providers excluded.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🤖</div>
+        <h3>ClickFix / fake CAPTCHA <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches the "press Win+R and paste this" attack pages — one of the fastest-growing attack vectors right now.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🕵️</div>
+        <h3>Malicious iframes <span class="tag tag-pro">Pro</span></h3>
+        <p>Finds hidden 0×0 frames loading from threat-listed domains, including ones injected after the page loads.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🧪</div>
+        <h3>Live page scan <span class="tag tag-pro">Pro</span></h3>
+        <p>Fetches and reads the actual page — phishing text, login forms, brand titles, obfuscated scripts — catching pages whose URL looks clean.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔀</div>
+        <h3>Real-destination detection <span class="tag tag-pro">Pro</span></h3>
+        <p>Unwraps Safelinks-style redirectors and records where a link actually lands, so a "clean" link can't bounce you to a phishing site.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📜</div>
+        <h3>Threat history <span class="tag tag-pro">Pro</span></h3>
+        <p>Every non-safe verdict is logged locally, filterable by type and severity, and cleared any time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔢</div>
+        <h3>Breach checker <span class="tag tag-pro">Pro</span></h3>
+        <p>Check an email or domain against HaveIBeenPwned's public breach database — only the lookup itself leaves your browser.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Pricing ──────────────────────────────────────────────────────────── -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Pricing</div>
+      <h2>Start free. Upgrade when you want the whole shield.</h2>
+      <p>No hidden fees. Cancel any time. Pro unlocks every provider, every scanner, and both AI engines.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="plan-desc">Core protection for Gmail — free forever, no card, no trial clock.</p>
+        <div class="price">$0<small> / forever</small></div>
+        <div class="price-note">No credit card. No trial clock.</div>
+        <ul class="feature-list">
+          <li>Real-time email scanning — Gmail</li>
+          <li>Sender, display-name, subject, body &amp; link checks</li>
+          <li>Behavioral scam detection</li>
+          <li>URL interception &amp; warning page</li>
+          <li>Live threat feeds (11+ sources: URLhaus, PhishTank, Feodo, ThreatFox, AbuseIPDB, OpenPhish, PhishStats, Phishing.Database, Destroylist, blocklist.de, Spamhaus DNSBL)</li>
+          <li>Link checker &amp; current-page check</li>
+        </ul>
+        <a class="btn btn-ghost" href="#faq">Learn more</a>
+      </div>
+
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="plan-desc">Every provider, every scanner, and both on-device AI engines — billed monthly.</p>
+        <div class="price">$4.99<small> / month</small></div>
+        <div class="price-note">per month, billed monthly</div>
+        <ul class="feature-list">
+          <li>Everything in Free</li>
+          <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
+          <li>ONNX AI + Gemini Nano on-device engines</li>
+          <li>Attachment, QR &amp; calendar-invite scanning</li>
+          <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
+          <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Live page scan &amp; real-destination detection</li>
+          <li>Threat history &amp; breach checker</li>
+        </ul>
+        <a class="btn btn-ghost" href="checkout.html?plan=monthly">Get Pro — $4.99/mo</a>
+      </div>
+
+      <div class="plan featured">
+        <span class="plan-badge">Best value</span>
+        <h3>Pro Annual</h3>
+        <p class="plan-desc">The full Pro shield, one yearly payment — two months free.</p>
+        <div class="price">$49.99<small> / year</small></div>
+        <div class="price-note">≈ $4.17/month · save 17%</div>
+        <ul class="feature-list">
+          <li>Everything in Free</li>
+          <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
+          <li>ONNX AI + Gemini Nano on-device engines</li>
+          <li>Attachment, QR &amp; calendar-invite scanning</li>
+          <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
+          <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Live page scan &amp; real-destination detection</li>
+          <li>Threat history &amp; breach checker</li>
+        </ul>
+        <a class="btn btn-primary" href="checkout.html?plan=annual">Get Pro Annual — $49.99/yr</a>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--faint);font-size:13px;margin-top:22px;">
+      Prices in USD. Subscriptions auto-renew until cancelled. Annual plans are billed once per year.
+    </p>
+  </div>
+</section>
+
+<!-- ── Comparison ───────────────────────────────────────────────────────── -->
+<section id="compare" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Free vs Pro</div>
+      <h2>Every feature, side by side</h2>
+      <p>The free tier is genuinely useful. Pro simply leaves nothing unchecked.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th class="row-label">Feature</th>
+            <th>Free</th>
+            <th class="pro-col">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">Included in every plan</td></tr>
+          <tr><td class="row-label">Real-time email scanning — Gmail</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">URL interception &amp; warning page</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Threat feed integration</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Link checker &amp; current-page check</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Behavioral scam detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">On-device processing (no cloud AI)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">No account, no API keys, no data shared</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr class="group-row"><td colspan="3">Unlocked with Pro</td></tr>
+          <tr><td class="row-label">Email scanning — Outlook, Yahoo, Proton &amp; other webmail</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Attachment, QR &amp; calendar-invite scanning</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Payment-detail change detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">ONNX AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Live page scan &amp; real-destination detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Threat history &amp; breach checker</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ──────────────────────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">FAQ</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Where does my email actually go?</summary>
+        <p>Nowhere. Email content is analyzed entirely on your device by heuristics and the bundled ONNX AI model. The optional Gemini Nano engine, when available in Chrome, also runs on-device inside the browser. Nothing about your mail is ever uploaded for analysis.</p>
+      </details>
+      <details>
+        <summary>What data does leave my browser at all?</summary>
+        <p>Three things, and only when relevant: (1) URL or IP checks against public threat feeds when a link is evaluated — URLhaus, PhishTank, ThreatFox, AbuseIPDB, and Spamhaus DNSBL, which query live — plus plain-text blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, blocklist.de, and others) that are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (3) a page fetch when <em>you</em> explicitly trigger a manual page check. No email content, identity, or browsing history is included. See the <a href="privacy.html">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>Which webmail providers are covered?</summary>
+        <p>18+ providers: Gmail, Outlook (including the new Outlook), Yahoo, Proton, Fastmail, iCloud, Zoho, GMX, Web.de, AOL, Tutanota, Mailfence, Posteo, Yandex, Mail.ru, and more — plus a generic fallback for webmail PhishDiver hasn't met yet. Free covers Gmail; Pro covers every provider.</p>
+      </details>
+      <details>
+        <summary>Which browsers are supported?</summary>
+        <p>Any Chromium browser: Chrome, Brave, and Edge. The ONNX AI engine works everywhere. Gemini Nano adds a bonus layer only where Chrome's on-device AI is available (Chrome 127+ with the feature enabled).</p>
+      </details>
+      <details>
+        <summary>Is this a replacement for antivirus?</summary>
+        <p>No. PhishDiver is an aid to your judgment, not a guarantee — and it shouldn't replace antivirus, a password manager, multi-factor authentication, or your own caution. Use it alongside those.</p>
+      </details>
+      <details>
+        <summary>Why two AI engines?</summary>
+        <p>Two independent reads beat one. The built-in ONNX classifier is always on and trained on real phishing emails; Chrome's Gemini Nano (when available) adds a contextual opinion on intent and social engineering. If Nano is unavailable or disabled, ONNX keeps working alone — nothing depends on a cloud.</p>
+      </details>
+      <details>
+        <summary>Will it slow down my browser?</summary>
+        <p>No. Inference runs in roughly 5–15 milliseconds per email, blocklists are cached locally, and the background worker stays warm so tooltips and checks feel instant.</p>
+      </details>
+      <details>
+        <summary>What happens when I click a dangerous link?</summary>
+        <p>The page is blocked before it loads, and you get a warning screen that explains what the link really does in plain language — with Back to Safety, Allow Once, Always Allow, and Block options.</p>
+      </details>
+      <details>
+        <summary>What's the difference between Free and Pro?</summary>
+        <p>Free protects Gmail with heuristics and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, live page scans, real-destination tracking, threat history, and the breach checker.</p>
+      </details>
+      <details>
+        <summary>How do I get Pro, and can I cancel?</summary>
+        <p>Choose a plan and subscribe — billing, renewals, and cancellations are all handled by Stripe, and PhishDiver never stores your card details. Subscriptions auto-renew until you cancel on Stripe's hosted pages, and you can cancel any time before the next renewal. Annual plans save 17% versus monthly.</p>
+      </details>
+      <details>
+        <summary>Does a "Safe" verdict mean the email is definitely safe?</summary>
+        <p>No. PhishDiver is an aid to your own judgment, not a guarantee. A safe verdict means no known signals were found — always verify unexpected requests for money, credentials, or sensitive information through a channel you know is real.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-band">
+      <h2>The scam only works if you don't see it coming.</h2>
+      <p>Install it, and let it watch. Free forever with no strings — Pro when you want the whole shield.</p>
+      <a class="btn btn-lg" href="checkout.html">Get Pro — $4.99/mo or $49.99/yr</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
+          <span>PhishDiver <span class="pro">Pro</span></span>
+        </a>
+        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys. No signup. No data shared.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="eula.html">EULA</a>
+        <a href="disclaimer.html">Legal Disclaimers</a>
+        <a href="licenses.html">Open-Source Licenses</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>
+        <a href="#pricing">Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> PhishDiver. All rights reserved.</span>
+      <span>PhishDiver is an aid to your judgment — it is not a guarantee of security.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
