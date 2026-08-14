@@ -32,13 +32,15 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Privacy Policy</h1>
-  <div class="meta">Effective date: August 9, 2026 · Applies to the PhishDiver browser extension and this website</div>
+  <div class="meta">Effective date: August 14, 2026 · Applies to the PhishDiver browser extension and this website</div>
 
   <div class="callout">
     <strong>The short version:</strong> PhishDiver is built around a privacy promise. Your email content and the
     pages you visit are analyzed <strong>on your device</strong>. The extension has no account, no analytics, no
     advertising, and no remote AI. The only data that ever leaves your browser is the URL or IP you ask to be checked
     against public threat feeds, an optional breach lookup you initiate, and a page fetch you explicitly trigger.
+    Everything the extension reads — domain registrations, DNS records, certificate logs, threat lists — is
+    <strong>already public data</strong>; nothing private ever leaves your device.
   </div>
 
   <div class="legal-toc">
@@ -89,6 +91,12 @@
   <p>The extension makes a small number of network requests. Each is narrowly scoped and none includes email content,
   your identity, or browsing context:</p>
 
+  <p><strong>Public data only.</strong> Every record the extension reads on your behalf is information that is
+  already publicly available to anyone — domain-registration records published by the registries, public DNS records,
+  public SSL-certificate logs, publicly distributed threat and blocklists, and public breach disclosures. The
+  requests carry nothing but the URL, IP address, or domain being evaluated; they never include your email, identity,
+  or browsing context. No data is "scraped" from any private or gated source.</p>
+
   <h3>a) Threat intelligence (automatic)</h3>
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
@@ -123,7 +131,11 @@
 
   <h3>d) DNS and registry lookups</h3>
   <p>Domain reputation checks may resolve DNS records via a public DNS-over-HTTPS service and consult public WHOIS/RDAP
-  registries for domain age and registration data. Only the domain being evaluated is included.</p>
+  registries for domain age and registration data — querying each registry's own RDAP server where one is published
+  (resolved from the IANA RDAP bootstrap), the rdap.org aggregator otherwise, and, for registries with no RDAP at all
+  (e.g. .hu, .us, .se, .it, .ru), a free public WHOIS lookup (who.is) as a last resort. All of this is publicly
+  available domain-registration data; where a registry itself publishes no creation date (e.g. .de), the age is simply
+  reported as unavailable. Only the domain being evaluated is included.</p>
 
   <h2 id="gemini">5. Gemini Nano processing</h2>
   <p>

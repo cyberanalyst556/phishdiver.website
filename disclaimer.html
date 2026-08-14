@@ -32,7 +32,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Legal Disclaimers</h1>
-  <div class="meta">Effective date: August 9, 2026 · Last updated: August 9, 2026</div>
+  <div class="meta">Effective date: August 14, 2026 · Last updated: August 14, 2026</div>
 
   <div class="callout">
     <strong>Read this before relying on PhishDiver.</strong> The following disclaimers are part of the
@@ -76,10 +76,17 @@
     (URLhaus, OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo Tracker, Phishing Army,
     IPsum, blocklist.de, GreenSnow, DShield, SSLBL, Spamhaus DNSBL, aggregate IP blocklists, and
     ransomware.live leak sites), HaveIBeenPwned for breach lookups, public DNS and
-    registry services, and — where available — Chrome's on-device Gemini Nano. These services may be unavailable,
+    registry services (registry RDAP servers, the rdap.org aggregator, and the free public WHOIS lookup who.is used
+    for registries without RDAP), and — where available — Chrome's on-device Gemini Nano. These services may be unavailable,
     delayed, or incomplete, and each operates under its own terms and privacy policy. We are not responsible for the
     accuracy, availability, or security of third-party services, or for anything you do with data obtained through
     them.
+  </p>
+  <p>
+    All information queried or scraped through these services is <strong>publicly available data</strong> —
+    domain-registration records, public DNS and certificate-transparency records, and public security lists — and the
+    requests contain only the URL, IP address, or domain being evaluated. Nothing private is ever sent to, or read
+    from, a third-party service.
   </p>
 
   <h2>6. No professional advice</h2>

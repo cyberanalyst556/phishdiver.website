@@ -40,7 +40,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Open-Source Licenses &amp; Attribution</h1>
-  <div class="meta">Last updated: August 9, 2026</div>
+  <div class="meta">Last updated: August 14, 2026</div>
 
   <p>PhishDiver is built with the open-source components and training data listed below. We are committed to honoring every license. Full license texts ship inside the extension (in the <code>LICENSES/</code> folder) and are summarized here.</p>
 
@@ -114,6 +114,21 @@
 
   <h2>4. Trademarks</h2>
   <p>Product and brand names referenced by the extension (ONNX, Gemini Nano, Gmail, Outlook, HaveIBeenPwned, and others) are trademarks of their respective owners. PhishDiver is an independent project and is not affiliated with, endorsed by, or sponsored by those owners. See the <a href="disclaimer.html">Legal Disclaimers</a> page.</p>
+
+  <h2>5. Public data sources</h2>
+  <p>At runtime the extension also reads live public data. These are external services, not bundled code — they carry
+  no license obligations, but we credit them for transparency. Every record queried or scraped through these services
+  is <strong>publicly available data</strong> (domain-registration records, public DNS and certificate-transparency
+  data, and publicly distributed security lists), and requests contain only the URL, IP address, or domain being
+  evaluated — never personal data:</p>
+  <ul>
+    <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap), the rdap.org RDAP aggregator, and the free public WHOIS page who.is (used only as a last resort for registries without RDAP, e.g. .hu, .us, .se, .it, .ru).</li>
+    <li><strong>Certificate transparency</strong> — crt.sh, with Cert Spotter as a keyless fallback.</li>
+    <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
+    <li><strong>Threat intelligence</strong> — URLhaus, Feodo Tracker, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, GreenSnow, DShield, SSLBL, Spamhaus DNSBL, ransomware.live.</li>
+    <li><strong>Breach checks (user-initiated)</strong> — HaveIBeenPwned.</li>
+  </ul>
+  <p>Each provider operates under its own terms and privacy policy; see the <a href="privacy.html">Privacy Policy</a>.</p>
 
   <p style="margin-top:24px;">Questions about these licenses? Email <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>.</p>
 </main>
