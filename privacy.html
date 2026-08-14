@@ -95,7 +95,9 @@
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
     <strong>URLhaus</strong>, the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS), and certificate
     transparency sources (<strong>crt.sh</strong>, with <strong>Cert Spotter</strong> as a keyless fallback)
-    for SSL-certificate issue dates. Only the URL or IP address being checked is sent to
+    for SSL-certificate issue dates. When a sender's domain is checked, its publicly published
+    <strong>SPF, DMARC, and DKIM</strong> records are also read over DNS-over-HTTPS to corroborate
+    email-authentication policy. Only the URL, IP address, or sender domain being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
     <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>OpenPhish</strong>, <strong>PhishStats</strong>,
     <strong>Phishing.Database</strong>, <strong>Destroylist</strong>, <strong>Feodo Tracker</strong>,

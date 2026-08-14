@@ -98,9 +98,10 @@
       <span class="source-chip local">blocklist.de</span>
       <span class="source-chip local">IP blocklists</span>
       <span class="source-chip local">Ransomware leak sites</span>
+      <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Certificate &amp; registry data</span>
     </div>
-    <p class="sources-note">🔒 URLhaus and the Spamhaus DNSBL are queried live, sending only the URL or IP at stake. Ten more are downloaded blocklists matched entirely in your browser — your links never reach them.</p>
+    <p class="sources-note">🔒 URLhaus, the Spamhaus DNSBL, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. Ten more are downloaded blocklists matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published (resolved from the IANA RDAP bootstrap — e.g. .co.uk via Nominet, .fr via AFNIC), then the rdap.org aggregator, and for registries with no RDAP a free keyless WHOIS lookup — except where the registry itself publishes no creation date (e.g. .de).</p>
     <p class="sources-note" style="margin-top:6px">↻ Blocklists refresh on a schedule — every 10 minutes (Feodo, OpenPhish) up to every 12 hours (ransomware.live) depending on the source — and are re-downloaded fresh whenever the browser starts, so the lists you get are never stale and never persist between sessions.</p>
   </div>
 </section>
@@ -159,7 +160,7 @@
       <div class="feature-card">
         <div class="f-icon">👤</div>
         <h3>Display-name spoofing <span class="tag tag-pro">Pro</span></h3>
-        <p>Notices when the name says PayPal but the address says gmail — the "PayPal Security &lt;randomguy@gmail.com&gt;" trick.</p>
+        <p>Notices when the name says PayPal but the address says gmail — the "PayPal Security &lt;randomguy@gmail.com&gt;" trick. Cross-checks the claimed brand's real DMARC policy and the sender's own SPF/DMARC/DKIM DNS records (keyless) to confirm the forgery. Also flags self-spoofing (standalone inbound mail claiming your own address), surfaces any native warning your provider already attached ("be careful with this message", the "?" avatar, "unverified sender"), and — where a domain publishes a lenient or absent anti-spoofing policy — says plainly that the sender can't be cryptographically verified instead of calling it a pass.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📎</div>
@@ -264,6 +265,8 @@
         <ul class="feature-list">
           <li>Real-time email scanning — Gmail</li>
           <li>Sender, display-name, subject, body &amp; link checks</li>
+          <li>SPF / DMARC / DKIM email-auth policy checks (DNS, keyless) — shown in the popup, on every email banner, and in the inbox hover popup, with honest "can't be cryptographically verified" wording for soft-fail/no-policy domains</li>
+          <li>Instant hover previews on senders, links &amp; attachments — kept open until the check completes so the results always appear, then dismissed on mouse move or after 3 seconds of stillness, and can be switched off entirely from the extension menu</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
           <li>URL interception &amp; warning page</li>
           <li>Live threat feeds (14+ sources: URLhaus, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, Spamhaus DNSBL)</li>
@@ -339,6 +342,7 @@
           <tr><td class="row-label">Real-time email scanning — Gmail</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">URL interception &amp; warning page</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Threat feed integration</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">SPF / DMARC / DKIM email-auth policy checks</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Link checker, current-page check &amp; right-click check</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Behavioral scam detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Encoding-evasion, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
