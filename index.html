@@ -65,7 +65,7 @@
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>Retrained on more than 77,000 samples — genuine phishing and spam lures, legitimate mail from public corpora, and realistic modern everyday inbox messages — it runs in your browser's WebAssembly sandbox in milliseconds. No setup, no network, works in Chrome, Brave, and Edge.</p>
+        <p>Trained on 77,000+ samples of genuine phishing and spam lures and legitimate mail, it runs in your browser's WebAssembly sandbox in milliseconds — no setup, no network, in Chrome, Brave, and Edge.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
@@ -101,8 +101,8 @@
       <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Certificate &amp; registry data</span>
     </div>
-    <p class="sources-note">🔒 URLhaus, the Spamhaus DNSBL, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. Ten more are downloaded blocklists matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published (resolved from the IANA RDAP bootstrap — e.g. .co.uk via Nominet, .fr via AFNIC), then the rdap.org aggregator, and for registries with no RDAP a free keyless WHOIS lookup — except where the registry itself publishes no creation date (e.g. .de).</p>
-    <p class="sources-note" style="margin-top:6px">↻ Blocklists refresh on a schedule — every 10 minutes (Feodo, OpenPhish) up to every 12 hours (ransomware.live) depending on the source — and are re-downloaded fresh whenever the browser starts, so the lists you get are never stale and never persist between sessions.</p>
+    <p class="sources-note">🔒 URLhaus, the Spamhaus DNSBL, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. Ten more are downloaded blocklists matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator, and for registries with no RDAP a free keyless WHOIS lookup — except where the registry publishes no creation date (e.g. .de).</p>
+    <p class="sources-note" style="margin-top:6px">↻ Blocklists refresh on a schedule (every 10 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
   </div>
 </section>
 
@@ -145,12 +145,12 @@
       <div class="feature-card">
         <div class="f-icon">🖱️</div>
         <h3>Right-click check <span class="tag tag-free">Free</span></h3>
-        <p>Right-click any link, image, or selected text anywhere on the web and run the full pipeline on the spot. The report shows the verdict, confidence score, reason, redirect chain, the sources that flagged it, domain age, certificate, DNS, registrar, and a live security-header audit — with a copyable plain-text report.</p>
+        <p>Right-click any link, image, or selection and run the full pipeline on the spot — verdict, confidence, reason, redirect chain, flagged sources, domain age, certificate, DNS, registrar, and a security-header audit, with a copyable report.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">💔</div>
         <h3>Behavioral scam detection <span class="tag tag-both">Free + Pro</span></h3>
-        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, and deadline-pressure tactics by pattern — not by keywords scammers have learned to avoid — across 20+ languages, and groups near-identical campaign emails from many senders.</p>
+        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🏢</div>
@@ -160,7 +160,7 @@
       <div class="feature-card">
         <div class="f-icon">👤</div>
         <h3>Display-name spoofing <span class="tag tag-pro">Pro</span></h3>
-        <p>Notices when the name says PayPal but the address says gmail — the "PayPal Security &lt;randomguy@gmail.com&gt;" trick. Cross-checks the claimed brand's real DMARC policy and the sender's own SPF/DMARC/DKIM DNS records (keyless) to confirm the forgery. Also flags self-spoofing (standalone inbound mail claiming your own address), surfaces any native warning your provider already attached ("be careful with this message", the "?" avatar, "unverified sender"), and — where a domain publishes a lenient or absent anti-spoofing policy — says plainly that the sender can't be cryptographically verified instead of calling it a pass.</p>
+        <p>Catches "PayPal Security &lt;randomguy@gmail.com&gt;" — brand in the name, wrong address. Cross-checks the claimed brand's real DMARC policy and the sender's own SPF/DMARC/DKIM records (keyless) to confirm the forgery. Also flags self-spoofing (mail claiming your own address), surfaces native provider warnings ("be careful with this message", the "?" avatar), and — where a domain has a lenient or absent anti-spoofing policy — says plainly the sender can't be cryptographically verified instead of calling it a pass.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📎</div>
@@ -200,7 +200,7 @@
       <div class="feature-card">
         <div class="f-icon">🌍</div>
         <h3>Typosquatting &amp; homographs <span class="tag tag-pro">Pro</span></h3>
-        <p>Catches "paypa1.com" in the address bar and Cyrillic look-alikes you can't even read, using 80+ Unicode confusables, plus DGA-shaped machine-generated domains.</p>
+        <p>Catches "paypa1.com" in the address bar and Cyrillic look-alikes you can't even read — 80+ Unicode confusables, plus DGA-shaped machine-generated domains.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📋</div>
@@ -225,7 +225,7 @@
       <div class="feature-card">
         <div class="f-icon">🧪</div>
         <h3>Live page scan <span class="tag tag-pro">Pro</span></h3>
-        <p>Fetches and reads the actual page — phishing text, login forms on non-brand domains, brand titles, obfuscated scripts, and script redirects to another domain — catching pages whose URL looks clean.</p>
+        <p>Fetches and reads the actual page — phishing text, login forms on non-brand domains, brand titles, obfuscated scripts, and script redirects — catching pages whose URL looks clean.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔀</div>
@@ -265,8 +265,8 @@
         <ul class="feature-list">
           <li>Real-time email scanning — Gmail</li>
           <li>Sender, display-name, subject, body &amp; link checks</li>
-          <li>SPF / DMARC / DKIM email-auth policy checks (DNS, keyless) — shown in the popup, on every email banner, and in the inbox hover popup, with honest "can't be cryptographically verified" wording for soft-fail/no-policy domains</li>
-          <li>Instant hover previews on senders, links &amp; attachments — kept open until the check completes so the results always appear, then dismissed on mouse move or after 3 seconds of stillness, and can be switched off entirely from the extension menu</li>
+          <li>SPF / DMARC / DKIM email-auth policy checks (DNS, keyless) — with honest "can't be cryptographically verified" wording for soft-fail/no-policy domains</li>
+          <li>Instant hover previews on senders, links &amp; attachments — dismissed on mouse move or after stillness, and switchable off from the extension menu</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
           <li>URL interception &amp; warning page</li>
           <li>Live threat feeds (14+ sources: URLhaus, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, Spamhaus DNSBL)</li>
@@ -380,7 +380,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>Only a handful of narrow, keyless requests — and only when relevant: (1) URL or IP checks against public threat feeds when a link is evaluated — URLhaus and Spamhaus DNSBL, which query live — plus plain-text blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, Phishing Army, IPsum, blocklist.de, GreenSnow, DShield, SSLBL, ransomware.live leak sites, and others) that are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (WHOIS/RDAP) and certificate-transparency lookups for domain age, read from the registries' own public records — or the free who.is WHOIS page for registries without RDAP; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> explicitly trigger a manual page check. Everything read is <strong>publicly available data</strong> — public security lists, public DNS and certificate records, and public domain registrations — and nothing private is ever sent. No email content, identity, or browsing history is included. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>Only narrow, keyless requests, and only when relevant: (1) URL or IP checks against public threat feeds — URLhaus and Spamhaus DNSBL query live; other blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, Phishing Army, IPsum, blocklist.de, GreenSnow, DShield, SSLBL, ransomware.live, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (WHOIS/RDAP) and certificate-transparency lookups for domain age, from the registries' own public records — or a keyless WHOIS page for registries without RDAP; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -400,7 +400,7 @@
       </details>
       <details>
         <summary>Will it slow down my browser?</summary>
-        <p>No. Inference runs in roughly 5–15 milliseconds per email. Blocklists are downloaded on a schedule (from every 10 minutes to every 12 hours, per source) and cached in memory only — they are re-fetched fresh on every browser start and never persisted to disk. The background worker stays warm so tooltips and checks feel instant.</p>
+        <p>No. Inference runs in roughly 5–15 ms per email. Blocklists download on a schedule (every 10 minutes to every 12 hours) and are cached in memory only — re-fetched fresh on each browser start, never written to disk. The background worker stays warm so checks feel instant.</p>
       </details>
       <details>
         <summary>What happens when I click a dangerous link?</summary>

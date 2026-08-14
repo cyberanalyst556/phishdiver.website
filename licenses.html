@@ -68,7 +68,7 @@
   </div>
 
   <h2>2. Training data (not redistributed)</h2>
-  <p>The on-device model shipped with the extension is a trained TF-IDF + logistic-regression classifier. The raw source messages are <strong>not</strong> distributed — only the trained model file is shipped.</p>
+  <p>The on-device models shipped with the extension are trained classifiers. The raw source messages and URLs are <strong>not</strong> distributed — only the trained model files are shipped.</p>
   <div class="compare-wrap">
     <table class="oss">
       <thead>
@@ -92,6 +92,18 @@
           <td>Released publicly by the Federal Energy Regulatory Commission during its 2003 investigation</td>
           <td>FERC and the original Enron Corp. email authors</td>
           <td>Negative (legitimate) training examples — workplace ham</td>
+        </tr>
+        <tr>
+          <td>URLhaus database dump (abuse.ch)</td>
+          <td><a href="https://urlhaus.abuse.ch/terms/" rel="noopener">CC0 1.0</a></td>
+          <td>abuse.ch</td>
+          <td>URL classifier positive training examples</td>
+        </tr>
+        <tr>
+          <td>Cisco Umbrella top-1M ranking</td>
+          <td>Public domain / OpenDNS public list</td>
+          <td>OpenDNS / Cisco</td>
+          <td>URL classifier negative training examples</td>
         </tr>
       </tbody>
     </table>
