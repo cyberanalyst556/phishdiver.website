@@ -117,41 +117,6 @@
 
     <div class="feature-grid">
 
-      <div class="manual-card">
-        <div class="mc-head">
-          <div class="mc-icon">🖱️</div>
-          <div>
-            <div class="mc-title">Manual Check — run the full threat pipeline on demand <span class="tag tag-both">Free + Pro</span></div>
-            <div class="mc-sub">The same engine that guards your inbox, available anywhere — with live progress, every source shown, and a copyable report.</div>
-          </div>
-        </div>
-        <div class="mc-triggers">
-          <span class="mc-trigger"><b>Right-click</b> any link, image, or selection</span>
-          <span class="mc-trigger"><b>Paste</b> a URL into the popup</span>
-          <span class="mc-trigger"><b>Check the current page</b> in one click</span>
-        </div>
-        <div class="mc-cols">
-          <div class="mc-col">
-            <h5>What it checks</h5>
-            <div class="mc-item">Every threat feed — URLhaus (with threat type), OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, Ransomware live, IPsum, blocklist.de, Spamhaus DNSBL, and more</div>
-            <div class="mc-item">Domain intelligence — age, registrar, registration/expiry dates, DNS records and resolution</div>
-            <div class="mc-item">Certificate age and issuer from certificate transparency logs</div>
-            <div class="mc-item">Deep decode — the real destination behind redirects, obfuscated/encoded URLs, punycode and homograph domains, and data:/javascript: links</div>
-            <div class="mc-item">Live page scan — fetches the actual page you're checking (only when you trigger it) to catch phishing content, credential forms, brand impersonation, JS obfuscation, and TLS downgrades</div>
-            <div class="mc-item">Security-header audit — HTTPS, HSTS, CSP, X-Frame-Options, nosniff</div>
-          </div>
-          <div class="mc-col">
-            <h5>What you get</h5>
-            <div class="mc-item">Live progress as each source reports in — real checks, not a fake spinner</div>
-            <div class="mc-item">A clear verdict — Safe / Suspicious / Dangerous — with a confidence score</div>
-            <div class="mc-item">The reason in plain English, plus the redirect chain (exactly where the link lands)</div>
-            <div class="mc-item">Expandable per-source findings — which source flagged what and why, including the threat type from each feed</div>
-            <div class="mc-item">The checked URL stays visible so you can compare it against what's on screen</div>
-            <div class="mc-item">A copyable plain-text report for filing or forwarding</div>
-          </div>
-        </div>
-      </div>
-
       <div class="feature-card">
         <div class="f-icon">🔍</div>
         <h3>Real-time email scanning <span class="tag tag-free">Free</span></h3>
@@ -172,11 +137,28 @@
         <h3>Accuracy-focused heuristics <span class="tag tag-free">Free</span></h3>
         <p>Catches brand + lure domain combos, heavy hyphenation, digit-dense and DGA-shaped hosts, punycode/IDN lookalikes, deep redirects, encoding evasion, deceptive link text, and TLS downgrades — weak signals confirmed against blocklists before any verdict.</p>
       </div>
+
+      <div class="feature-card">
+        <div class="f-icon">🖱️</div>
+        <h3>Manual check <span class="tag tag-both">Free + Pro</span></h3>
+        <p>Right-click any link, image, or selection, paste a URL, or check the current page — run the full threat pipeline on demand: feeds, domain intelligence, deep decode, live page scan, security-header audit. Live progress, verdict with confidence, expandable per-source findings, copyable report.</p>
+      </div>
       <div class="feature-card">
         <div class="f-icon">💔</div>
         <h3>Behavioral scam detection <span class="tag tag-both">Free + Pro</span></h3>
         <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders.</p>
       </div>
+      <div class="feature-card">
+        <div class="f-icon">🧪</div>
+        <h3>Live page scan <span class="tag tag-both">Free + Pro</span></h3>
+        <p>Fetches and reads the actual page — phishing text, login forms on non-brand domains, brand titles, obfuscated scripts, and script redirects — catching pages whose URL looks clean.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔀</div>
+        <h3>Real-destination detection <span class="tag tag-both">Free + Pro</span></h3>
+        <p>Unwraps Safelinks-style redirectors and records where a link actually lands, so a "clean" link can't bounce you to a phishing site.</p>
+      </div>
+
       <div class="feature-card">
         <div class="f-icon">🏢</div>
         <h3>BEC detection <span class="tag tag-pro">Pro</span></h3>
@@ -246,16 +228,6 @@
         <div class="f-icon">🕵️</div>
         <h3>Malicious iframes <span class="tag tag-pro">Pro</span></h3>
         <p>Finds hidden 0×0 frames and zero-size/hidden overlay iframes (clickjacking) loading from threat-listed domains, including ones injected after the page loads.</p>
-      </div>
-      <div class="feature-card">
-        <div class="f-icon">🧪</div>
-        <h3>Live page scan <span class="tag tag-both">Free + Pro</span></h3>
-        <p>Fetches and reads the actual page — phishing text, login forms on non-brand domains, brand titles, obfuscated scripts, and script redirects — catching pages whose URL looks clean.</p>
-      </div>
-      <div class="feature-card">
-        <div class="f-icon">🔀</div>
-        <h3>Real-destination detection <span class="tag tag-both">Free + Pro</span></h3>
-        <p>Unwraps Safelinks-style redirectors and records where a link actually lands, so a "clean" link can't bounce you to a phishing site.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📜</div>
