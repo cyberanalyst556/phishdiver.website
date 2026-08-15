@@ -191,6 +191,32 @@ section.alt { background: var(--bg-soft); border-top: 1px solid var(--border); b
 .tag-pro   { background: rgba(52, 211, 153, 0.12); color: var(--green); border: 1px solid rgba(52, 211, 153, 0.3); }
 .tag-both  { background: rgba(245, 184, 78, 0.12); color: var(--gold);  border: 1px solid rgba(245, 184, 78, 0.3); }
 
+/* ── Manual check detail card (full-width) ─────────────────────────────── */
+.manual-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a1a2e 70%, #0a2540 100%);
+  border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-sm);
+  padding: 26px 28px; color: #fff;
+}
+.manual-card .mc-head { display: flex; gap: 14px; align-items: flex-start; }
+.manual-card .mc-icon { font-size: 30px; flex-shrink: 0; }
+.manual-card .mc-title { font-size: 19px; font-weight: 800; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.manual-card .mc-sub { color: #8ab4d8; font-size: 14px; margin-top: 4px; }
+.manual-card .mc-triggers { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.manual-card .mc-trigger {
+  font-size: 12.5px; font-weight: 700; padding: 7px 14px; border-radius: 999px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #cfe6fb;
+}
+.manual-card .mc-trigger b { color: #fff; }
+.manual-card .mc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; margin-top: 20px; }
+@media (max-width: 768px) { .manual-card .mc-cols { grid-template-columns: 1fr; } }
+.manual-card .mc-col h5 {
+  font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+  color: #8ab4d8; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.manual-card .mc-item { font-size: 13.5px; color: #d7e3f0; line-height: 1.55; padding: 4px 0 4px 18px; position: relative; }
+.manual-card .mc-item::before { content: "›"; position: absolute; left: 3px; color: #7eb6e6; }
+
 /* ── Threat sources strip ──────────────────────────────────────────────── */
 .source-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 26px auto 0; }
 .source-chip {
