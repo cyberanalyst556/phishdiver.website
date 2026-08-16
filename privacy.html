@@ -33,7 +33,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Privacy Policy</h1>
-  <div class="meta">Effective date: August 14, 2026 · Applies to the PhishDiver browser extension and this website</div>
+  <div class="meta">Effective date: August 14, 2026 · Last updated: August 16, 2026 · Applies to the PhishDiver browser extension and this website</div>
 
   <div class="callout">
     <strong>The short version:</strong> PhishDiver is built around a privacy promise. Your email content and the
@@ -53,7 +53,11 @@
       <li><a href="#third-party">What leaves your browser, and why</a></li>
       <li><a href="#gemini">Gemini Nano processing</a></li>
       <li><a href="#website">This website</a></li>
-      <li><a href="#payments">Subscriptions &amp; payments</a></li>
+      <li><a href="#payments">Subscriptions &amp; payments</a>
+        <ul>
+          <li><a href="#licensing">License activation (when you buy Pro)</a></li>
+        </ul>
+      </li>
       <li><a href="#children">Children's privacy</a></li>
       <li><a href="#security">Data security</a></li>
       <li><a href="#retention">Retention</a></li>
@@ -66,15 +70,22 @@
   <h2 id="who">1. Who operates PhishDiver</h2>
   <p>
     "PhishDiver" (referred to as "PhishDiver," "we," "our," or "the extension") is a browser extension that
-    helps you identify phishing, scam, and malware signals in email and web pages. This Privacy Policy explains what
+    helps you identify phishing, scam, and malware signals in email and web pages. For the purposes of the EU
+    General Data Protection Regulation (GDPR) and similar laws, the <strong>data controller</strong> for the
+    limited personal data described in Section 7 is the operator of PhishDiver, reachable at
+    <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>. This Privacy Policy explains what
     the extension and its website process, what is stored, and what — if anything — is shared with third parties.
   </p>
 
   <h2 id="information">2. What we collect</h2>
-  <p><strong>We do not collect personal information.</strong> The extension requires no account creation, no email
-  address, and no API key. We do not operate a server that receives your email, browsing history, or identity, and the
+  <p><strong>We do not collect personal information from free usage.</strong> The extension requires no account
+  creation, no email address, and no API key to work. We do not operate a server that receives your email, browsing
+  history, or identity from free usage, and the
   extension contains no analytics or tracking code.</p>
   <p>All preferences and history are stored locally inside your browser and are under your control.</p>
+  <p>If you purchase a Pro subscription, the only personal data involved is what is strictly needed to deliver and
+  maintain your license, as described in Section 7. That data exists <em>only</em> because you chose to pay for Pro,
+  and it is never combined with anything processed by the extension itself.</p>
 
   <h2 id="device">3. What stays on your device</h2>
   <p>The following data is processed and stored entirely on your device (in your browser's local extension storage). It
@@ -102,28 +113,43 @@
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
-    <strong>URLhaus</strong>, the <strong>Spamhaus DNSBL</strong> (over DNS-over-HTTPS), and certificate
+    <strong>phishunt.io</strong> and certificate
     transparency sources (<strong>crt.sh</strong>, with <strong>Cert Spotter</strong> as a keyless fallback)
     for SSL-certificate issue dates. When a sender's domain is checked, its publicly published
     <strong>SPF, DMARC, and DKIM</strong> records are also read over DNS-over-HTTPS to corroborate
     email-authentication policy. Only the URL, IP address, or sender domain being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
-    <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>OpenPhish</strong>, <strong>PhishStats</strong>,
-    <strong>Phishing.Database</strong>, <strong>Destroylist</strong>, <strong>Feodo Tracker</strong>,
-    <strong>Phishing Army</strong>, <strong>IPsum</strong>, <strong>blocklist.de</strong>,
-    <strong>GreenSnow</strong>, <strong>DShield</strong>, <strong>FireHOL</strong>, <strong>SSLBL</strong>, ransomware.live leak sites,
-    and aggregate IP blocklists) are fetched from their publishers on a schedule and
+    <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>TweetFeed</strong>, <strong>DigitalSide</strong>, <strong>Phishing.Database</strong>, <strong>Destroylist</strong>,
+    <strong>IPsum</strong>, <strong>Blocklist Project</strong>, <strong>blocklist.de</strong>,
+    <strong>CINS</strong>, and related aggregate IP blocklists) are fetched from their publishers on a schedule and
     matched entirely in your browser. Your URLs, IPs, and domains are never sent to these providers.
-    Each list refreshes on its own cadence — from every 10 minutes (Feodo, OpenPhish) up to every
-    12 hours (ransomware.live) — and is re-downloaded fresh on every browser start. Lists are kept
+    Each list refreshes on its own cadence — from every 15 minutes (TweetFeed) up to every
+    4 hours (aggregate IP blocklists) — and is re-downloaded fresh on every browser start. Lists are kept
     only in memory for the session; they are never written to disk, so nothing persists after you
-    close the browser.</li>
+    close the browser. Phishing.Database and DigitalSide also include full URL feeds for exact-URL matching.</li>
   </ul>
 
+  <p>
+    <strong>Lawful basis.</strong> The network requests described in this section carry only public, narrowly scoped
+    identifiers (a URL, IP address, or domain) that you — the user — are evaluating with the extension. They are made
+    only when relevant to a check you trigger, are not linked to your identity, and are processed under the legitimate
+    interest of protecting you from phishing, scam, and malware (Article 6(1)(f) GDPR). The small amount of
+    license-activation data described in Section 7 is processed under contract performance (Article 6(1)(b) GDPR).
+    Where these requests reach services outside the EU/EEA (for example, US-based DNS or certificate-transparency
+    providers, or HaveIBeenPwned in Australia), any transfer of that limited, non-identifying data relies on the
+    applicable adequacy decision or standard contractual safeguards, and it remains limited to the URL, IP address, or
+    domain being evaluated.
+  </p>
+
   <h3>b) Breach checker (user-initiated)</h3>
-  <p>When you run the breach checker from the toolbar, the email address or domain you enter is sent directly from your
-  browser to <strong>haveibeenpwned.com</strong> — never through our infrastructure — so it can be matched against
-  known public breaches.</p>
+  <p>When you run the breach checker from the toolbar, two different paths keep your data private:</p>
+  <ul>
+    <li><strong>Domain check</strong> — the extension downloads the public HIBP breach list once and matches your
+    domain <strong>locally in your browser</strong>. Your domain is never sent anywhere.</li>
+    <li><strong>Email check</strong> — the extension opens <strong>haveibeenpwned.com</strong> in your own browser
+    tab, where you enter the address yourself. The email address is sent directly from your browser to
+    haveibeenpwned.com — never through our infrastructure — and you are explicitly initiating that lookup.</li>
+  </ul>
 
   <h3>c) Manual page checks (user-initiated)</h3>
   <p>The link checker and "Check the current page" features fetch the target page <strong>directly from that website's
@@ -131,10 +157,10 @@
   trigger it — never in the background.</p>
 
   <h3>d) DNS and registry lookups</h3>
-  <p>Domain reputation checks may resolve DNS records via a public DNS-over-HTTPS service and consult public WHOIS/RDAP
+  <p>Domain reputation checks may resolve DNS records via a public DNS-over-HTTPS service and consult public RDAP
   registries for domain age and registration data — querying each registry's own RDAP server where one is published
   (resolved from the IANA RDAP bootstrap), the rdap.org aggregator otherwise, and, for registries with no RDAP at all
-  (e.g. .hu, .us, .se, .it, .ru), a free public WHOIS lookup (who.is) as a last resort. All of this is publicly
+  (e.g. .hu, .us, .se, .it, .ru), the registration date is reported as unavailable. All of this is publicly
   available domain-registration data; where a registry itself publishes no creation date (e.g. .de), the age is simply
   reported as unavailable. Only the domain being evaluated is included.</p>
 
@@ -167,6 +193,24 @@
     cancellation terms.
   </p>
 
+  <h3 id="licensing">a) License activation (when you buy Pro)</h3>
+  <p>
+    Activating a Pro license involves a small, separate system: a <strong>license server</strong> that issues and
+    verifies your entitlement. When licensing is enabled in a future build, this server processes only the data
+    required for that purpose — the license key itself, a locally generated device identifier, and, if you contact us
+    for support, the email address you used at checkout. It does not receive your email content, page content, URLs, or
+    browsing history. The server is operated by a hosting provider (a <a href="https://www.cloudflare.com/privacypolicy/"
+    rel="nofollow noopener" target="_blank">Cloudflare Worker</a>, currently) under its own data-processing terms.
+    This data is processed under the lawful basis of <strong>contract performance</strong> (Article 6(1)(b) GDPR): it
+    exists solely to deliver the paid service you requested. The license server keeps the minimum needed for
+    entitlement checks and deletes it when your subscription ends and the entitlement lapses.
+  </p>
+  <p>
+    <strong>If you are in the EU/EEA or UK,</strong> you can contact us to exercise any GDPR rights over this data —
+    access, correction, erasure, restriction, and portability — as described in Section 11. Because the volume is tiny
+    and purpose-limited, requests are handled quickly and free of charge.
+  </p>
+
   <h2 id="children">8. Children's privacy</h2>
   <p>
     The extension and website are not directed at children under 13, and we do not knowingly collect information from
@@ -189,10 +233,34 @@
 
   <h2 id="rights">11. Your rights</h2>
   <p>
-    Depending on where you live (including under the GDPR, CCPA/CPRA, and similar laws), you may have rights over
-    personal data, including access, correction, and deletion. Because we collect no personal data, there is typically
+    Depending on where you live, you may have rights over personal data under the GDPR, CCPA/CPRA, and similar laws.
+    Because we collect no personal data from free usage, there is typically
     nothing to access, correct, or delete on our side — but if you believe otherwise, contact us and we will act
-    promptly and confirm.
+    promptly and confirm. If you hold a Pro subscription, the GDPR rights in Section 7(a) also apply to the small
+    amount of license-activation data described there.
+  </p>
+
+  <h3>GDPR / UK-GDPR (EU/EEA/UK users)</h3>
+  <p>
+    If you are in the EU/EEA or UK, you may exercise the rights of access, rectification, erasure, restriction of
+    processing, data portability, and the right to object to processing based on legitimate interest, by contacting us
+    at <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>. Requests are handled free of charge and
+    promptly. You also have the right to lodge a complaint with your local supervisory authority (the
+    data-protection authority of the EU/EEA country or UK in which you reside) if you believe your data is processed
+    unlawfully.
+  </p>
+
+  <h3>CCPA/CPRA (California residents)</h3>
+  <p>
+    Under the California Consumer Privacy Act (CCPA) and its amendment (CPRA), California residents have the right to
+    know what personal information is collected, the right to request deletion, the right to correct inaccurate
+    information, and the right to non-discrimination for exercising these rights.
+    <strong>We do not sell or share personal information</strong> (as "sell" or "share" are defined under the
+    CCPA), and we do not use or disclose sensitive personal information for purposes other than those authorized by
+    the CCPA. Because we collect no personal information from free usage, there is generally nothing further to know,
+    delete, or correct; if you hold a Pro subscription, the limited license-activation data described in Section 7
+    applies. To exercise any of these rights, contact us at
+    <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>.
   </p>
 
   <h2 id="changes">12. Changes to this policy</h2>
@@ -217,7 +285,7 @@
           <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
           <span>PhishDiver</span>
         </a>
-        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys. No signup. No data shared.</p>
+        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys or signup for data. Nothing is shared.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>

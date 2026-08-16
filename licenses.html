@@ -89,21 +89,33 @@
           <td>Negative (legitimate) training examples</td>
         </tr>
         <tr>
-          <td>Enron Email Corpus (CMU mirror)</td>
-          <td>Released publicly by the Federal Energy Regulatory Commission during its 2003 investigation</td>
-          <td>FERC and the original Enron Corp. email authors</td>
-          <td>Negative (legitimate) training examples — workplace ham</td>
+          <td>Apache SpamAssassin public spam corpora</td>
+          <td>Freely redistributable public corpus; message copyrights remain with original senders</td>
+          <td>Apache SpamAssassin project and message authors</td>
+          <td>Positive (spam/phishing) training examples</td>
         </tr>
         <tr>
-          <td>URLhaus database dump (abuse.ch)</td>
-          <td><a href="https://urlhaus.abuse.ch/terms/" rel="noopener">CC0 1.0</a></td>
-          <td>abuse.ch</td>
+          <td>phishunt.io phishing URL feed</td>
+          <td><a href="https://phishunt.io/tos/" rel="noopener">CC0 1.0</a></td>
+          <td>Daniel López (phishunt.io)</td>
           <td>URL classifier positive training examples</td>
         </tr>
         <tr>
-          <td>Cisco Umbrella top-1M ranking</td>
-          <td>Public domain / OpenDNS public list</td>
-          <td>OpenDNS / Cisco</td>
+          <td>Phishing.Database active phishing URLs &amp; domains</td>
+          <td><a href="https://github.com/mitchellkrogza/Phishing.Database/blob/master/LICENSE.md" rel="noopener">MIT</a></td>
+          <td>Phishing.Database project (mitchellkrogza)</td>
+          <td>URL classifier positive training examples + runtime feed</td>
+        </tr>
+        <tr>
+          <td>DigitalSide Threat-Intel malware URLs</td>
+          <td><a href="https://github.com/davidonzo/Threat-Intel/blob/master/LICENSE" rel="noopener">MIT</a></td>
+          <td>DigitalSide (davidonzo)</td>
+          <td>URL classifier positive training examples + runtime feed</td>
+        </tr>
+        <tr>
+          <td>Tranco top-1M ranking</td>
+          <td><a href="https://github.com/tranco-list/tranco-list.github.io/blob/master/LICENSE" rel="noopener">MIT</a></td>
+          <td>The Tranco project (tranco-list.eu)</td>
           <td>URL classifier negative training examples</td>
         </tr>
       </tbody>
@@ -122,10 +134,83 @@
     <code>LICENSES/CC-BY-4.0-Nazario-Corpus.txt</code> inside the extension.</p>
   </div>
 
+  <div class="oss-license">
+    <strong>CC0 1.0 notice for phishunt.io</strong>
+    <p style="margin-top:10px;">The phishing URL feed from
+    <a href="https://phishunt.io/tos/" rel="noopener">phishunt.io</a>
+    (by Daniel López) is released into the public domain under the Creative Commons
+    CC0 1.0 Universal dedication. phishunt.io explicitly welcomes use of its data
+    in blocklists and LLM/model training. The feed is <em>adapted</em> — URLs are
+    parsed and normalized into a training set — so only the trained model is
+    distributed. Attribution to phishunt.io is appreciated but not required.</p>
+  </div>
+
+  <div class="oss-license">
+    <strong>MIT license for Phishing.Database</strong>
+    <p style="margin-top:10px;">The active phishing URL and domain lists from
+    <a href="https://github.com/Phishing-Database/Phishing.Database" rel="noopener">Phishing.Database</a>
+    (maintained by mitchellkrogza / Phishing-Database) are used to build the URL
+    classifier's positive training set and to power the runtime Phishing.Database
+    threat feed (exact URL = danger, domain match = danger). They are released under
+    the MIT License, which permits commercial use with attribution. The lists are
+    <em>adapted</em> — URLs and domains are parsed and normalized into a training set
+    and in-memory lookup sets — so only the trained model is distributed.</p>
+  </div>
+
+  <div class="oss-license">
+    <strong>MIT license for DigitalSide Threat-Intel</strong>
+    <p style="margin-top:10px;">The malware URL and domain lists from
+    <a href="https://github.com/davidonzo/Threat-Intel" rel="noopener">DigitalSide Threat-Intel</a>
+    (maintained by davidonzo, osint.digitalside.it) are Open Source Cyber Threat
+    Intelligence derived from malware analysis — unique malicious URLs and domains
+    observed in the last 7 days, refreshed daily. They are released under the MIT
+    License, which permits commercial use with attribution. The URL list is
+    <em>adapted</em> — URLs are parsed and normalized into the URL classifier's
+    positive training set — and the same lists back the runtime DigitalSide threat
+    feed (exact URL = danger, host match = warning), replacing the URLhaus feed
+    that abuse.ch now restricts to not-for-profit use.</p>
+  </div>
+
+  <div class="oss-license">
+    <strong>MIT license for the Tranco list</strong>
+    <p style="margin-top:10px;">The Tranco top-1M ranking
+    (<a href="https://tranco-list.eu" rel="noopener">tranco-list.eu</a>) is used to
+    sample legitimate (negative) URLs for the URL classifier. The list is released
+    under the MIT License; a copy of the license text is included in
+    <code>LICENSES/MIT-Tranco.txt</code> inside the extension, with attribution to
+    the Tranco project.</p>
+  </div>
+
   <h2>3. Development-time tools (not shipped)</h2>
   <p>The training pipeline runs on standard Python packages during development only; none of these are bundled in the extension: scikit-learn (BSD 3-Clause), skl2onnx (Apache 2.0), onnx (Apache 2.0), onnxruntime Python (MIT).</p>
 
-  <h2>4. Trademarks</h2>
+  <h2>4. Bundled runtime dependencies</h2>
+
+  <div class="compare-wrap">
+    <table class="oss">
+      <thead>
+        <tr><th>Package</th><th>Version</th><th>License</th><th>Bundled file</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/remusao/tldts">tldts</a></td>
+          <td>7.4.10</td>
+          <td>MIT</td>
+          <td><code>lib/tldts.min.js</code> (~127 KB)</td>
+          <td>Public-suffix-list-aware domain parser. Replaces the hand-curated TWO_PART_TLDS set with the full Mozilla PSL so all ccSLDs (co.uk, com.au, com.ng, etc.) are handled correctly. PSL data bundled inside tldts under MPL 2.0 (file-level copyleft; does not impose requirements on the extension as a whole).</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/disposable-email-domains/disposable-email-domains">disposable-email-domains</a></td>
+          <td>—</td>
+          <td>MIT</td>
+          <td>Fetched at runtime (~113 KB, not bundled)</td>
+          <td>Community-maintained list of ~8,200 known disposable/throwaway email providers (mailinator, guerrillamail, temp-mail, etc.). Used to flag "throwaway sender" as a warning signal in email analysis. Fetched from the upstream raw list on first use, cached in memory for 24 hours.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>5. Trademarks</h2>
   <p>PhishDiver references the following providers, services, and brand names solely to describe the threats it helps you recognize and the sources it checks. They are the trademarks or service marks of their respective owners. PhishDiver is an independent project and is not affiliated with, endorsed by, or sponsored by those owners. See the <a href="disclaimer.html">Legal Disclaimers</a> page.</p>
 
   <div class="compare-wrap">
@@ -166,35 +251,43 @@
         <tr><td>Brave</td><td>Brave Software, Inc.</td></tr>
         <tr><td>Cloudflare</td><td>Cloudflare, Inc.</td></tr>
         <tr><td>HaveIBeenPwned</td><td>Troy Hunt</td></tr>
-        <tr><td>Cisco Umbrella</td><td>Cisco Systems, Inc.</td></tr>
-        <tr><td>URLhaus, Feodo Tracker, SSLBL</td><td>abuse.ch</td></tr>
-        <tr><td>Spamhaus</td><td>The Spamhaus Project</td></tr>
-        <tr><td>OpenPhish</td><td>OpenPhish</td></tr>
-        <tr><td>PhishStats</td><td>PhishStats</td></tr>
+        <tr><td>PhishTank</td><td>Cisco Talos Intelligence Group (training reference only; no longer used)</td></tr>
+        <tr><td>Tranco</td><td>The Tranco project (tranco-list.eu)</td></tr>
+        <tr><td>phishunt.io</td><td>Daniel López (phishunt.io)</td></tr>
+        <tr><td>TweetFeed</td><td>Daniel López</td></tr>
         <tr><td>Phishing.Database</td><td>Phishing.Database project</td></tr>
-        <tr><td>DShield</td><td>Internet Storm Center, SANS Institute</td></tr>
+        <tr><td>DigitalSide</td><td>DigitalSide (davidonzo)</td></tr>
         <tr><td>blocklist.de</td><td>blocklist.de project</td></tr>
-        <tr><td>FireHOL</td><td>Aggregated netsets from StopForumSpam, CleanTalk, php trackers, and botscout</td></tr>
-        <tr><td>Destroylist, Phishing Army, IPsum, GreenSnow, ransomware.live</td><td>Their respective operators</td></tr>
+        <tr><td>Destroylist, IPsum</td><td>Their respective operators</td></tr>
+        <tr><td>Blocklist Project</td><td>The Block List Project (Unlicense)</td></tr>
       </tbody>
     </table>
   </div>
 
   <p style="margin-top:12px;">Government agencies named in impersonation detection (IRS, SSA, FBI, CBP, DHS, ICE, USCIS, DOJ, U.S. Treasury, U.S. Marshals, Medicare, USPIS) are U.S. government agencies and are referenced solely to describe their legitimate role.</p>
 
-  <h2>5. Public data sources</h2>
+  <h2>6. Public data sources</h2>
   <p>At runtime the extension also reads live public data. These are external services, not bundled code — they carry
-  no license obligations, but we credit them for transparency. Every record queried or scraped through these services
+  no license obligations, but we credit them for transparency. Every record queried through these services
   is <strong>publicly available data</strong> (domain-registration records, public DNS and certificate-transparency
   data, and publicly distributed security lists), and requests contain only the URL, IP address, or domain being
   evaluated — never personal data:</p>
   <ul>
-    <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap), the rdap.org RDAP aggregator, and the free public WHOIS page who.is (used only as a last resort for registries without RDAP, e.g. .hu, .us, .se, .it, .ru).</li>
+    <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap) and the rdap.org RDAP aggregator. Registries with no RDAP anywhere (e.g. .hu, .us, .se, .it, .ru) report the registration date as unavailable.</li>
     <li><strong>Certificate transparency</strong> — crt.sh, with Cert Spotter as a keyless fallback.</li>
     <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
-    <li><strong>Threat intelligence</strong> — URLhaus, Feodo Tracker, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, GreenSnow, DShield, FireHOL, SSLBL, Spamhaus DNSBL, ransomware.live.</li>
+    <li><strong>Threat intelligence</strong> — phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
     <li><strong>Breach checks (user-initiated)</strong> — HaveIBeenPwned.</li>
   </ul>
+  <p style="margin-top:12px;">The TweetFeed IOC feed is published by Daniel López
+  under the Creative Commons CC0 1.0 Universal public-domain dedication (no attribution required). The
+  HaveIBeenPwned public breach list used by the
+  breach checker is published by Troy Hunt under the Creative Commons Attribution 4.0 International license
+  (CC BY 4.0); HIBP's terms request that for-profit applications relying on HIBP data at scale use a paid
+  subscription — the checker runs user-initiated, keyless lookups and never forwards your email or domain to HIBP
+  through the extension (email checks open HIBP directly; the domain checker filters the public list locally). The URL classifier is trained
+  on phishunt.io (CC0 1.0), Phishing.Database (MIT — used for training and as a runtime URL &amp; domain feed), and the Tranco top-1M ranking (MIT).
+  Attribution for all threat sources is provided on the extension's About page.</p>
   <p>Each provider operates under its own terms and privacy policy; see the <a href="privacy.html">Privacy Policy</a>.</p>
 
   <p style="margin-top:24px;">Questions about these licenses? Email <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>.</p>
@@ -208,7 +301,7 @@
           <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
           <span>PhishDiver</span>
         </a>
-        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys. No signup. No data shared.</p>
+        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys or signup for data. Nothing is shared.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>

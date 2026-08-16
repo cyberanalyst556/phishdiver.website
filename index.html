@@ -34,7 +34,7 @@
 <section class="hero">
   <div class="container">
     <img class="hero-icon" src="images/icon128.png" alt="PhishDiver" />
-    <span class="eyebrow">🧠 On-device AI · No keys · No signup</span>
+    <span class="eyebrow">🧠 On-device AI · No keys or signup for data</span>
     <h1>Every scam follows a script.<br /><span class="grad">See it before you click.</span></h1>
     <p class="lede">
       Scammers win when you act fast — the click, the call, the wire. PhishDiver takes the speed away.
@@ -83,28 +83,23 @@
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Intelligence</div>
-      <h2>One verdict, 15+ independent sources</h2>
+      <h2>One verdict, 16+ independent sources</h2>
       <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
     </div>
     <div class="source-strip">
-      <span class="source-chip live">URLhaus</span>
-      <span class="source-chip live">Spamhaus DNSBL</span>
-      <span class="source-chip local">OpenPhish</span>
-      <span class="source-chip local">PhishStats</span>
+      <span class="source-chip live">phishunt.io</span>
+      <span class="source-chip local">TweetFeed</span>
       <span class="source-chip local">Phishing.Database</span>
+      <span class="source-chip local">DigitalSide</span>
       <span class="source-chip local">Destroylist</span>
-      <span class="source-chip local">Phishing Army</span>
-      <span class="source-chip local">Feodo Tracker</span>
       <span class="source-chip local">IPsum</span>
       <span class="source-chip local">blocklist.de</span>
-      <span class="source-chip local">FireHOL</span>
       <span class="source-chip local">IP blocklists</span>
-      <span class="source-chip local">Ransomware leak sites</span>
       <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Certificate &amp; registry data</span>
     </div>
-    <p class="sources-note">🔒 URLhaus, the Spamhaus DNSBL, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. A dozen-plus more are downloaded blocklists matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator, and for registries with no RDAP a free keyless WHOIS lookup — except where the registry publishes no creation date (e.g. .de).</p>
-    <p class="sources-note" style="margin-top:6px">↻ Blocklists refresh on a schedule (every 10 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
+    <p class="sources-note">🔒 phishunt.io and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. A dozen-plus more are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
+    <p class="sources-note" style="margin-top:6px">↻ Blocklists and feeds refresh on a schedule (every 15 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
   </div>
 </section>
 
@@ -132,7 +127,7 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>15+ independent sources stacked into every verdict — URLhaus, Spamhaus DNSBL, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, FireHOL, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists matched entirely on-device.</p>
+        <p>16+ independent sources stacked into every verdict — phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔢</div>
@@ -268,7 +263,7 @@
           <li>Instant hover previews on senders, links &amp; attachments — dismissed on mouse move or after stillness, and switchable off from the extension menu</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
           <li>URL interception &amp; warning page</li>
-          <li>Live threat feeds (15+ sources: URLhaus, Feodo, OpenPhish, PhishStats, Phishing.Database, Destroylist, Phishing Army, IPsum, blocklist.de, FireHOL, Spamhaus DNSBL)</li>
+          <li>Live threat feeds (16+ sources: phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, IP blocklists)</li>
           <li>Evasion, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
@@ -379,7 +374,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>Only narrow, keyless requests, and only when relevant: (1) URL or IP checks against public threat feeds — URLhaus and Spamhaus DNSBL query live; other blocklists (OpenPhish, PhishStats, Phishing.Database, Destroylist, Feodo, Phishing Army, IPsum, blocklist.de, FireHOL, GreenSnow, DShield, SSLBL, ransomware.live, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (WHOIS/RDAP) and certificate-transparency lookups for domain age, from the registries' own public records — or a keyless WHOIS page for registries without RDAP; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io queries live; other blocklists (TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, IP blocklists, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) and certificate-transparency lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -441,7 +436,7 @@
           <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
           <span>PhishDiver</span>
         </a>
-        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys. No signup. No data shared.</p>
+        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys or signup for data. Nothing is shared.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
