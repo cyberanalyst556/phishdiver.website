@@ -93,8 +93,9 @@
       <span class="source-chip local">DigitalSide</span>
       <span class="source-chip local">Destroylist</span>
       <span class="source-chip local">IPsum</span>
+      <span class="source-chip local">Blocklist Project</span>
       <span class="source-chip local">blocklist.de</span>
-      <span class="source-chip local">IP blocklists</span>
+      <span class="source-chip local">CINS</span>
       <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Certificate &amp; registry data</span>
     </div>
@@ -127,7 +128,7 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>16+ independent sources stacked into every verdict — phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
+        <p>16+ independent sources stacked into every verdict — phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔢</div>
@@ -263,7 +264,7 @@
           <li>Instant hover previews on senders, links &amp; attachments — dismissed on mouse move or after stillness, and switchable off from the extension menu</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
           <li>URL interception &amp; warning page</li>
-          <li>Live threat feeds (16+ sources: phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, IP blocklists)</li>
+          <li>Live threat feeds (16+ sources: phishunt.io, TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
           <li>Evasion, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
@@ -339,7 +340,8 @@
           <tr><td class="row-label">SPF / DMARC / DKIM email-auth policy checks</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Link checker, current-page check &amp; right-click check</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Behavioral scam detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">Encoding-evasion, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+           <tr><td class="row-label">Encoding-evasion, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Live page scan &amp; real-destination detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">On-device processing (no cloud AI)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">No account, no API keys, no data shared</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr class="group-row"><td colspan="3">Unlocked with Pro</td></tr>
@@ -351,8 +353,7 @@
           <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">Live page scan &amp; real-destination detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+           <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Threat history &amp; breach checker</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
         </tbody>
       </table>
@@ -374,7 +375,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io queries live; other blocklists (TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, blocklist.de, IP blocklists, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) and certificate-transparency lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io queries live; other blocklists (TweetFeed, Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) and certificate-transparency lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
