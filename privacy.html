@@ -119,11 +119,11 @@
     <strong>SPF, DMARC, and DKIM</strong> records are also read over DNS-over-HTTPS to corroborate
     email-authentication policy. Only the URL, IP address, or sender domain being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
-    <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>TweetFeed</strong>, <strong>DigitalSide</strong>, <strong>Phishing.Database</strong>, <strong>Destroylist</strong>,
+    <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>TweetFeed</strong> (URLs & IPs), <strong>DigitalSide</strong>, <strong>Phishing.Database</strong>, <strong>Destroylist</strong>,
     <strong>IPsum</strong>, <strong>Blocklist Project</strong>, <strong>blocklist.de</strong>,
     <strong>CINS</strong>, and related aggregate IP blocklists) are fetched from their publishers on a schedule and
     matched entirely in your browser. Your URLs, IPs, and domains are never sent to these providers.
-    Each list refreshes on its own cadence — from every 15 minutes (TweetFeed) up to every
+    Each list refreshes on its own cadence — from every 15 minutes (TweetFeed URLs &amp; IPs) up to every
     4 hours (aggregate IP blocklists) — and is re-downloaded fresh on every browser start. Lists are kept
     only in memory for the session; they are never written to disk, so nothing persists after you
     close the browser. Phishing.Database and DigitalSide also include full URL feeds for exact-URL matching.</li>
