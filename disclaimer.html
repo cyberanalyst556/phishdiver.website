@@ -122,10 +122,11 @@
   <p>
     The on-device ONNX AI model is trained on public corpora, including the
     <a href="https://monkey.org/~jose/phishing/" rel="noopener">Jose Nazario "Phishing corpus"</a>
-    (Creative Commons Attribution 4.0, © Jose Nazario) and the
+    (Creative Commons Attribution 4.0, © Jose Nazario), the
     <a href="https://spamassassin.apache.org/old/publiccorpus/" rel="noopener">Apache SpamAssassin public corpus</a>
-    (spam and ham) as phishing and legitimate-mail examples. The URL classifier is additionally trained on
-    a synthetic attack-URL corpus blended with <strong>phishunt.io</strong> (CC0 1.0),
+    (spam and ham), and a first-party synthetic ham corpus (30,000 generated emails across 34 categories
+    covering modern legitimate email patterns absent from older public corpora). The URL classifier is
+    additionally trained on a synthetic attack-URL corpus blended with <strong>phishunt.io</strong> (CC0 1.0),
     <strong>Phishing.Database</strong> (MIT — URLs &amp; domains),
     <strong>DigitalSide Threat-Intel</strong> (MIT), and the
     <strong>Tranco top-1M</strong> ranking (MIT).

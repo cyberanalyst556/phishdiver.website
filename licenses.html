@@ -97,6 +97,12 @@
           <td>Positive (spam/phishing) training examples</td>
         </tr>
         <tr>
+          <td>First-party synthetic ham corpus</td>
+          <td>MIT (first-party)</td>
+          <td>PhishDiver</td>
+          <td>Negative (legitimate) training examples — 30,000 synthetic emails across 34 categories covering modern legitimate email patterns absent from older public corpora</td>
+        </tr>
+        <tr>
           <td>phishunt.io phishing URL feed</td>
           <td><a href="https://phishunt.io/tos/" rel="noopener">CC0 1.0</a></td>
           <td>Daniel López (phishunt.io)</td>
@@ -288,7 +294,10 @@
   </ul>
   <p style="margin-top:12px;">The TweetFeed IOC feed (URLs &amp; malicious IPs) is published by Daniel López
   under the Creative Commons CC0 1.0 Universal public-domain dedication (no attribution required). The
-  HaveIBeenPwned public breach list used by the
+  PhishTank verified phishing URL database is published under the Creative Commons Attribution-ShareAlike 2.5
+  license (CC BY-SA 2.5); PhishTank's terms state that data is available for commercial use without charge.
+  PhishDiver fetches the public CSV feed hourly and matches URLs locally — it does not redistribute the raw data.
+  The HaveIBeenPwned public breach list used by the
   breach checker is published by Troy Hunt under the Creative Commons Attribution 4.0 International license
   (CC BY 4.0); HIBP's terms request that for-profit applications relying on HIBP data at scale use a paid
   subscription — the checker runs user-initiated, keyless lookups and never forwards your email or domain to HIBP
