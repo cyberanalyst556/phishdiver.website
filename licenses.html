@@ -175,10 +175,13 @@
     <strong>MIT license for the Tranco list</strong>
     <p style="margin-top:10px;">The Tranco top-1M ranking
     (<a href="https://tranco-list.eu" rel="noopener">tranco-list.eu</a>) is used to
-    sample legitimate (negative) URLs for the URL classifier. The list is released
-    under the MIT License; a copy of the license text is included in
+    sample legitimate URLs for ML training. The list is released under the MIT license by the
+    Tranco project; a copy of the license text is shipped as
     <code>LICENSES/MIT-Tranco.txt</code> inside the extension, with attribution to
-    the Tranco project.</p>
+    the Tranco project. Note: the Tranco list incorporates upstream data from multiple
+    sources including Cloudflare Radar (CC BY-NC 4.0). The Tranco project distributes the
+    combined list under MIT. PhishDiver uses the list solely as ML training input — the
+    list itself is never redistributed or embedded in the extension.</p>
   </div>
 
   <h2>3. Development-time tools (not shipped)</h2>
@@ -251,7 +254,7 @@
         <tr><td>Brave</td><td>Brave Software, Inc.</td></tr>
         <tr><td>Cloudflare</td><td>Cloudflare, Inc.</td></tr>
         <tr><td>HaveIBeenPwned</td><td>Troy Hunt</td></tr>
-        <tr><td>PhishTank</td><td>Cisco Talos Intelligence Group (training reference only; no longer used)</td></tr>
+        <tr><td>PhishTank</td><td>Cisco Talos Intelligence Group (free commercial use; <a href="https://www.cisco.com/c/en/us/about/legal/cloud-and-software/end_user_license_agreement.html">Cisco EULA</a>)</td></tr>
         <tr><td>Tranco</td><td>The Tranco project (tranco-list.eu)</td></tr>
         <tr><td>phishunt.io</td><td>Daniel López (phishunt.io)</td></tr>
         <tr><td>TweetFeed</td><td>Daniel López</td></tr>
@@ -277,7 +280,8 @@
     <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap) and the rdap.org RDAP aggregator. Registries with no RDAP anywhere (e.g. .hu, .us, .se, .it, .ru) report the registration date as unavailable.</li>
     <li><strong>Certificate transparency</strong> — crt.sh, with Cert Spotter as a keyless fallback.</li>
     <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
-    <li><strong>Threat intelligence</strong> — phishunt.io, TweetFeed (URLs & IPs), Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
+    <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
+    <li><strong>Note on blocklist.de</strong> — the blocklist.de IP list has no explicit open-source license; it has been publicly available and widely consumed by security tools (fail2ban, IDS/IPS) for years. Attribution: blocklist.de project (https://blocklist.de).</li>
     <li><strong>Breach checks (user-initiated)</strong> — HaveIBeenPwned.</li>
   </ul>
   <p style="margin-top:12px;">The TweetFeed IOC feed (URLs &amp; malicious IPs) is published by Daniel López
