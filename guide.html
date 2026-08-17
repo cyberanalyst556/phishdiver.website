@@ -35,7 +35,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>PhishDiver User Guide</h1>
-  <div class="meta">A plain-English quickstart and manual for home users · Updated: August 16, 2026</div>
+  <div class="meta">A plain-English quickstart and manual for home users · Updated: August 17, 2026</div>
 
   <div class="callout">
     <strong>In a hurry?</strong> Install PhishDiver, pin it to your toolbar, and keep browsing. From then on it watches
@@ -52,6 +52,7 @@
       <li><a href="#verdicts">Reading a verdict</a></li>
       <li><a href="#dangerous-link">When you click a dangerous link</a></li>
       <li><a href="#manual-checks">Manual checks</a></li>
+      <li><a href="#dashboard">The Dashboard</a></li>
       <li><a href="#settings">Settings explained</a></li>
       <li><a href="#lists">Blocked, allowed &amp; trusted lists</a></li>
       <li><a href="#free-vs-pro">Free vs Pro</a></li>
@@ -160,7 +161,32 @@
       HaveIBeenPwned's public breach database. Only this lookup leaves your browser — and only because you asked for it.</li>
   </ul>
 
-  <h2 id="settings">7. Settings explained</h2>
+  <h2 id="dashboard">7. The Dashboard</h2>
+  <p>
+    Click the <strong>Dashboard</strong> button in the popup header to open a full-page overview of everything
+    PhishDiver is tracking. It gives you a single place to see your protection status at a glance.
+  </p>
+  <p>The dashboard includes:</p>
+  <ul>
+    <li><strong>Overview cards</strong> — total threats, warnings, checks, and blocked links. Click any card to expand
+      a detailed breakdown with filtered threat lists, stats, blocked domains, or a timeline chart.</li>
+    <li><strong>Threat Breakdown</strong> — threat counts by category (phishing, malware, scam, etc.) with expandable
+      detail panels showing the actual threats in each group.</li>
+    <li><strong>Recent Activity</strong> — a collapsible feed of recent threat events, expanded on demand.</li>
+    <li><strong>Session Info</strong> — extension version, browser, license tier, and feed status at a glance.</li>
+    <li><strong>Own Addresses &amp; Providers</strong> — email addresses PhishDiver has learned for self-spoof
+      detection, grouped by provider.</li>
+    <li><strong>Allowed &amp; Trusted</strong> — your allowed domains and trusted senders with one-click removal.</li>
+    <li><strong>System Health</strong> — AI engine status (ONNX, Gemini Nano) and protection module states.</li>
+    <li><strong>Threat Sources</strong> — live status of each threat feed, showing freshness and last-check times.</li>
+    <li><strong>Quick Actions</strong> — check a URL or run a breach lookup directly from the dashboard.</li>
+  </ul>
+  <p>
+    All data stays on your device. The dashboard reads from the same local storage the extension uses — nothing is
+    uploaded or shared.
+  </p>
+
+  <h2 id="settings">8. Settings explained</h2>
   <p>Everything is controlled from the popup's Settings tab. Here's what each switch does:</p>
   <ul>
     <li><strong>Enable PhishDiver</strong> — the master switch. Turns all scanning on or off.</li>
@@ -178,7 +204,7 @@
       restarts.</li>
   </ul>
 
-  <h2 id="lists">8. Blocked, allowed &amp; trusted lists</h2>
+  <h2 id="lists">9. Blocked, allowed &amp; trusted lists</h2>
   <p>
     The popup's Lists tab shows three lists you control:
   </p>
@@ -191,7 +217,7 @@
     These lists live entirely on your device. Add or remove domains any time; changes take effect immediately.
   </p>
 
-  <h2 id="free-vs-pro">9. Free vs Pro</h2>
+  <h2 id="free-vs-pro">10. Free vs Pro</h2>
   <p>
     The free plan is genuinely useful: Gmail scanning, hover previews, link interception, live threat feeds, and the
     manual checks. Pro removes every remaining blind spot:
@@ -203,7 +229,7 @@
     <li>BEC, spoofing, job-offer, reply-chain, and vishing detectors</li>
     <li>Payment-detail change detection, homographs, clipboard &amp; credential protection, ClickFix and iframe
       detection</li>
-    <li>Live page scans, real-destination tracking, threat history, and the breach checker</li>
+    <li>Live page scans, real-destination tracking, threat history, breach checker, and the full-page Dashboard</li>
   </ul>
   <p>
     Subscriptions are handled by Stripe — PhishDiver never sees your card details — and you can cancel any time before
@@ -213,7 +239,7 @@
     <a class="btn btn-primary" href="checkout.html">Get Pro — $4.99/mo or $49.99/yr</a>
   </p>
 
-  <h2 id="troubleshooting">10. Troubleshooting</h2>
+  <h2 id="troubleshooting">11. Troubleshooting</h2>
   <h3>No hover preview appears</h3>
   <p>Make sure Hover tooltips are on in Settings. The preview dismisses on mouse movement — keep the cursor still over
     the item for a moment. If it still doesn't appear, reload the page once.</p>
@@ -237,7 +263,7 @@
     Still stuck? Email <a href="mailto:contact@phishdiver.com">contact@phishdiver.com</a>.
   </p>
 
-  <h2 id="privacy">11. Your privacy</h2>
+  <h2 id="privacy">12. Your privacy</h2>
   <p>
     Your email is analyzed on your device. The only data that leaves your browser is narrow and keyless — and only when
     relevant: a URL or IP checked against public threat feeds, public domain-registration and certificate records for
