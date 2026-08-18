@@ -403,8 +403,15 @@
         <p>Two independent reads beat one. The built-in ONNX classifier is always on and trained on real phishing emails; Chrome's Gemini Nano (when available) adds a contextual opinion on intent and social engineering. If Nano is unavailable or disabled, ONNX keeps working alone — nothing depends on a cloud.</p>
       </details>
       <details>
+        <summary>Does it work offline?</summary>
+        <p><strong>Yes.</strong> The ONNX AI engine, all heuristics, and downloaded blocklists work entirely offline — no internet connection needed for email analysis. Gemini Nano also runs on-device, but Chrome may need an initial connection to download the model. Live threat-feed queries (phishunt.io, PhishTank) and domain-age lookups (RDAP, certificate transparency) require an internet connection, but the extension degrades gracefully — if those fail, the cached blocklists and local AI still protect you. The core protection never depends on a cloud.</p>
+      </details>
+      <details>
         <summary>Will it slow down my browser?</summary>
-        <p>No. Inference runs in roughly 5–15 ms per email. Blocklists download on a schedule (every 10 minutes to every 12 hours) and are cached in memory only — re-fetched fresh on each browser start, never written to disk. The background worker stays warm so checks feel instant.</p>
+        <p><strong>Short answer: no for most people.</strong> The ONNX AI model is a lightweight linear classifier (TF-IDF + logistic regression, ~4.6 MB) that runs in roughly 5–15 ms per email inside a WebAssembly sandbox. You will not notice it.</p>
+        <p style="margin-top:8px;">The <strong>Gemini Nano</strong> engine is heavier — it is a full neural network running on your device's NPU or GPU. On modern hardware (recent Intel/AMD laptops, Apple Silicon, discrete GPU), inference typically takes 50–200 ms and causes no visible delay. On older or low-end machines (pre-2018 laptops, low-power Chromebooks), Gemini Nano may cause a brief stutter (100–300 ms) when it runs. If that happens, you can turn Gemini Nano off in Settings — the ONNX engine keeps running alone with negligible impact.</p>
+        <p style="margin-top:8px;"><strong>Battery:</strong> ONNX has a negligible battery footprint (linear model, runs once per email). Gemini Nano uses more power when active — comparable to any on-device ML workload. On laptops, if you notice faster battery drain during long mail sessions, disabling Nano in Settings will help. <strong>Memory:</strong> the extension's background worker uses roughly 30–50 MB of RAM (ONNX + heuristics + cached blocklists). Gemini Nano adds its own memory footprint managed by Chrome's built-in AI infrastructure, typically 100–300 MB when the model is loaded.</p>
+        <p style="margin-top:8px;"><strong>Blocklist downloads</strong> happen on a schedule (every 15 minutes to every 12 hours, per source) and are small text files (a few KB to a few hundred KB each). They are cached in memory only, re-fetched fresh on each browser start, and never written to disk. Background bandwidth usage is minimal — a few MB per day total across all sources.</p>
       </details>
       <details>
         <summary>What happens when I click a dangerous link?</summary>
