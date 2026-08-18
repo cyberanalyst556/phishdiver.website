@@ -97,10 +97,40 @@
           <td>Positive (spam/phishing) training examples</td>
         </tr>
         <tr>
+          <td>MeAJOR Corpus</td>
+          <td><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a></td>
+          <td>GECAD, ISEP, Polytechnic of Porto</td>
+          <td>30,000 ham + 30,000 phishing — multi-source corpus merging TREC-05/06/07, Nazario, and Nigerian Fraud. Largest curated phishing dataset available.</td>
+        </tr>
+        <tr>
+          <td>Zero-Day Phishing Emails Corpus</td>
+          <td><a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0 1.0 (Public Domain)</a></td>
+          <td>Mutahir Shaukat (Kaggle)</td>
+          <td>30,194 modern AI-generated phishing emails (BEC, crypto, IRS, social media) + 29,806 legitimate emails.</td>
+        </tr>
+        <tr>
+          <td>Enron Email Dataset</td>
+          <td>Public Domain (FERC)</td>
+          <td>Federal Energy Regulatory Commission / CMO Project</td>
+          <td>50,000 real corporate emails — negative (legitimate) training examples providing genuine business patterns.</td>
+        </tr>
+        <tr>
           <td>First-party synthetic ham corpus</td>
           <td>MIT (first-party)</td>
           <td>PhishDiver</td>
-          <td>Negative (legitimate) training examples — 30,000 synthetic emails across 34 categories covering modern legitimate email patterns absent from older public corpora</td>
+          <td>Negative (legitimate) training examples — 30,000 synthetic emails across 43 categories covering modern legitimate email patterns absent from older public corpora.</td>
+        </tr>
+        <tr>
+          <td>First-party synthetic BEC corpus</td>
+          <td>MIT (first-party)</td>
+          <td>PhishDiver</td>
+          <td>15,000 synthetic Business Email Compromise emails (CEO wire transfer, vendor invoice fraud, gift card scam, payroll diversion, W-2 request, attorney impersonation, etc.).</td>
+        </tr>
+        <tr>
+          <td>First-party synthetic modern phishing corpus</td>
+          <td>MIT (first-party)</td>
+          <td>PhishDiver</td>
+          <td>20,000 synthetic modern phishing emails (account verification, shipping/delivery, password reset, voicemail, social media alerts, government impersonation, crypto fraud, etc.).</td>
         </tr>
         <tr>
           <td>phishunt.io phishing URL feed</td>
@@ -140,6 +170,21 @@
     and attachments are not redistributed with PhishDiver; only the trained model
     is distributed. Full change indication and the license reference are provided in
     <code>LICENSES/CC-BY-4.0-Nazario-Corpus.txt</code> inside the extension.</p>
+  </div>
+
+  <div class="oss-license">
+    <strong>CC BY 4.0 attribution for the MeAJOR Corpus</strong>
+    <p style="margin-top:10px;">The MeAJOR Corpus
+    (<a href="https://zenodo.org/records/14010250" rel="noopener">Zenodo</a>)
+    by GECAD / ISEP / Polytechnic of Porto is licensed under the Creative
+    Commons Attribution 4.0 International license. 60,000 anonymized emails
+    (30K ham + 30K phishing) from TREC-05/06/07, Nazario, and Nigerian Fraud
+    datasets were <em>adapted</em> — converted from CSV into a normalized
+    training set — to train the on-device classifier. The raw CSV files and
+    original anonymized messages are not redistributed with PhishDiver; only
+    the trained model is distributed. Full change indication and the license
+    reference are provided in <code>LICENSES/CC-BY-4.0-MeAJOR-Corpus.txt</code>
+    inside the extension.</p>
   </div>
 
   <div class="oss-license">
@@ -297,7 +342,9 @@
   PhishTank verified phishing URL database is published under the Creative Commons Attribution-ShareAlike 2.5
   license (CC BY-SA 2.5); PhishTank's terms state that data is available for commercial use without charge.
   PhishDiver fetches the public CSV feed hourly and matches URLs locally — it does not redistribute the raw data.
-  The HaveIBeenPwned public breach list used by the
+  The Destroylist primary active phishing domain list is released under the MIT License (copyright 2019
+  PhishDestroy), which permits commercial use with attribution. PhishDiver fetches the domain list every 2
+  hours and matches locally — the raw list is not redistributed. The HaveIBeenPwned public breach list used by the
   breach checker is published by Troy Hunt under the Creative Commons Attribution 4.0 International license
   (CC BY 4.0); HIBP's terms request that for-profit applications relying on HIBP data at scale use a paid
   subscription — the checker runs user-initiated, keyless lookups and never forwards your email or domain to HIBP

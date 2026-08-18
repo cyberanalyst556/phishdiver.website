@@ -68,7 +68,7 @@
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>Trained on 77,000+ samples of genuine phishing and spam lures and legitimate mail, it runs in your browser's WebAssembly sandbox in milliseconds — no setup, no network, in Chrome, Brave, and Edge.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
@@ -136,7 +136,7 @@
       <div class="feature-card">
         <div class="f-icon">🔢</div>
         <h3>Accuracy-focused heuristics <span class="tag tag-free">Free</span></h3>
-        <p>Catches brand + lure domain combos, heavy hyphenation, digit-dense and DGA-shaped hosts, punycode/IDN lookalikes, deep redirects, encoding evasion, deceptive link text, and TLS downgrades — weak signals confirmed against blocklists before any verdict.</p>
+        <p>Catches suspicious domain patterns, internationalized domain names, redirect chains, encoding tricks, deceptive link text, and TLS downgrades — weak signals confirmed against blocklists before any verdict.</p>
       </div>
 
       <div class="feature-card">
@@ -208,7 +208,7 @@
       <div class="feature-card">
         <div class="f-icon">🌍</div>
         <h3>Typosquatting &amp; homographs <span class="tag tag-pro">Pro</span></h3>
-        <p>Catches "paypa1.com" in the address bar and Cyrillic look-alikes you can't even read — 80+ Unicode confusables, plus DGA-shaped machine-generated domains.</p>
+        <p>Catches look-alike domains in the address bar — including Cyrillic and other Unicode characters that look identical to the real thing.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📋</div>
@@ -218,7 +218,7 @@
       <div class="feature-card">
         <div class="f-icon">🎣</div>
         <h3>Credential harvesting <span class="tag tag-pro">Pro</span></h3>
-        <p>Flags login forms that submit to an unrelated domain, with 30+ trusted auth providers excluded.</p>
+        <p>Flags login forms that submit to a different domain than the one you're on.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🤖</div>
@@ -228,7 +228,7 @@
       <div class="feature-card">
         <div class="f-icon">🕵️</div>
         <h3>Malicious iframes <span class="tag tag-pro">Pro</span></h3>
-        <p>Finds hidden 0×0 frames and zero-size/hidden overlay iframes (clickjacking) loading from threat-listed domains, including ones injected after the page loads.</p>
+        <p>Finds hidden frames and overlays loading from known-malicious domains — including ones injected after the page loads.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📜</div>
@@ -273,7 +273,7 @@
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
           <li>URL interception &amp; warning page</li>
           <li>Live threat feeds (18+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
-          <li>Evasion, DGA &amp; link-text heuristics + correlation scoring</li>
+          <li>Suspicious-pattern, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
         <a class="btn btn-ghost" href="#faq">Learn more</a>
@@ -348,7 +348,7 @@
           <tr><td class="row-label">SPF / DMARC / DKIM email-auth policy checks</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Link checker, current-page check &amp; right-click check</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Behavioral scam detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-           <tr><td class="row-label">Encoding-evasion, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+           <tr><td class="row-label">Encoding, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Live page scan &amp; real-destination detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">On-device processing (no cloud AI)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">No account, no API keys, no data shared</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
@@ -380,7 +380,7 @@
     <div class="faq">
       <details>
         <summary>Where does my email actually go?</summary>
-        <p>Nowhere. Email content is analyzed entirely on your device by heuristics and the bundled ONNX AI model. The optional Gemini Nano engine, when available in Chrome, also runs on-device inside the browser. Nothing about your mail is ever uploaded for analysis.</p>
+        <p>Nowhere. Email content is analyzed entirely on your device by heuristics and the built-in AI model. The optional Gemini Nano engine, when available in Chrome, also runs on-device inside the browser. Nothing about your mail is ever uploaded for analysis.</p>
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
@@ -400,18 +400,18 @@
       </details>
       <details>
         <summary>Why two AI engines?</summary>
-        <p>Two independent reads beat one. The built-in ONNX classifier is always on and trained on real phishing emails; Chrome's Gemini Nano (when available) adds a contextual opinion on intent and social engineering. If Nano is unavailable or disabled, ONNX keeps working alone — nothing depends on a cloud.</p>
+        <p>Two independent reads beat one. The built-in AI classifier is always on; Chrome's Gemini Nano (when available) adds a contextual opinion on intent and social engineering. If Nano is unavailable or disabled, the built-in engine keeps working alone — nothing depends on a cloud.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
-        <p><strong>Yes.</strong> The ONNX AI engine, all heuristics, and downloaded blocklists work entirely offline — no internet connection needed for email analysis. Gemini Nano also runs on-device, but Chrome may need an initial connection to download the model. Live threat-feed queries (phishunt.io, PhishTank) and domain-age lookups (RDAP, certificate transparency) require an internet connection, but the extension degrades gracefully — if those fail, the cached blocklists and local AI still protect you. The core protection never depends on a cloud.</p>
+        <p><strong>Yes.</strong> The built-in AI engine, all heuristics, and downloaded blocklists work entirely offline — no internet connection needed for email analysis. Gemini Nano also runs on-device, but Chrome may need an initial connection to download the model. Live threat-feed queries (phishunt.io, PhishTank) and domain-age lookups (RDAP, certificate transparency) require an internet connection, but the extension degrades gracefully — if those fail, the cached blocklists and local AI still protect you. The core protection never depends on a cloud.</p>
       </details>
       <details>
         <summary>Will it slow down my browser?</summary>
-        <p><strong>Short answer: no for most people.</strong> The ONNX AI model is a lightweight linear classifier (TF-IDF + logistic regression, ~4.6 MB) that runs in roughly 5–15 ms per email inside a WebAssembly sandbox. You will not notice it.</p>
-        <p style="margin-top:8px;">The <strong>Gemini Nano</strong> engine is heavier — it is a full neural network running on your device's NPU or GPU. On modern hardware (recent Intel/AMD laptops, Apple Silicon, discrete GPU), inference typically takes 50–200 ms and causes no visible delay. On older or low-end machines (pre-2018 laptops, low-power Chromebooks), Gemini Nano may cause a brief stutter (100–300 ms) when it runs. If that happens, you can turn Gemini Nano off in Settings — the ONNX engine keeps running alone with negligible impact.</p>
-        <p style="margin-top:8px;"><strong>Battery:</strong> ONNX has a negligible battery footprint (linear model, runs once per email). Gemini Nano uses more power when active — comparable to any on-device ML workload. On laptops, if you notice faster battery drain during long mail sessions, disabling Nano in Settings will help. <strong>Memory:</strong> the extension's background worker uses roughly 30–50 MB of RAM (ONNX + heuristics + cached blocklists). Gemini Nano adds its own memory footprint managed by Chrome's built-in AI infrastructure, typically 100–300 MB when the model is loaded.</p>
-        <p style="margin-top:8px;"><strong>Blocklist downloads</strong> happen on a schedule (every 15 minutes to every 12 hours, per source) and are small text files (a few KB to a few hundred KB each). They are cached in memory only, re-fetched fresh on each browser start, and never written to disk. Background bandwidth usage is minimal — a few MB per day total across all sources.</p>
+        <p><strong>Short answer: no for most people.</strong> The built-in AI model is lightweight and runs in your browser in negligible time — you will not notice it.</p>
+        <p style="margin-top:8px;">The <strong>Gemini Nano</strong> engine is heavier. On modern hardware (recent Intel/AMD laptops, Apple Silicon, discrete GPU), it runs with no visible delay. On older or low-end machines, it may cause a brief stutter. If that happens, you can turn Gemini Nano off in Settings — the built-in engine keeps running alone.</p>
+        <p style="margin-top:8px;"><strong>Battery:</strong> The built-in engine has a negligible battery footprint. Gemini Nano uses more power when active. On laptops, if you notice faster battery drain during long mail sessions, disabling Nano in Settings will help. <strong>Memory:</strong> The extension uses minimal memory for its core operation. Gemini Nano adds its own memory footprint managed by Chrome's built-in AI infrastructure.</p>
+        <p style="margin-top:8px;"><strong>Blocklist downloads</strong> happen periodically and are small text files. They are cached in memory only, re-fetched fresh on each browser start, and never written to disk. Background bandwidth usage is minimal.</p>
       </details>
       <details>
         <summary>What happens when I click a dangerous link?</summary>

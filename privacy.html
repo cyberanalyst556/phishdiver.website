@@ -94,11 +94,11 @@
   is never transmitted:</p>
   <ul>
     <li><strong>Email content</strong> — sender, subject, body, links, and attachment metadata, analyzed in your browser to produce a verdict banner.</li>
-    <li><strong>Page content</strong> — the content of pages you visit, scanned for phishing, credential-harvesting, clipboard-hijacking, ClickFix, and iframe threats.</li>
+    <li><strong>Page content</strong> — the content of pages you visit, scanned for phishing and other security threats.</li>
     <li><strong>Settings and preferences</strong> — e.g., which checks are enabled, allow/block lists you create.</li>
     <li><strong>Threat history</strong> — a local log of non-safe verdicts, filterable and clearable by you at any time.</li>
     <li><strong>Payment-detail fingerprints</strong> — bank, routing, IBAN, and crypto-wallet details observed in emails are stored as <strong>hashes only</strong>, never as raw text, so the original values cannot be recovered from the stored data.</li>
-    <li><strong>AI analysis</strong> — the bundled ONNX classifier runs entirely on your device via the ONNX Runtime; no email content is sent anywhere for AI analysis.</li>
+    <li><strong>AI analysis</strong> — the built-in AI classifier runs entirely on your device; no email content is sent anywhere for AI analysis.</li>
   </ul>
 
   <h2 id="third-party">4. What leaves your browser, and why</h2>
@@ -115,20 +115,17 @@
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
-    <strong>phishunt.io</strong> and <strong>PhishTank</strong> and certificate
-    transparency sources (<strong>crt.sh</strong>, with <strong>Cert Spotter</strong> as a keyless fallback)
-    for SSL-certificate issue dates. When a sender's domain is checked, its publicly published
+    public phishing databases and certificate
+    transparency sources for SSL-certificate issue dates. When a sender's domain is checked, its publicly published
     <strong>SPF, DMARC, and DKIM</strong> records are also read over DNS-over-HTTPS to corroborate
     email-authentication policy. Only the URL, IP address, or sender domain being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
-    <li><strong>Downloaded blocklists</strong> — plain-text lists (<strong>TweetFeed</strong> (URLs & IPs), <strong>DigitalSide</strong>, <strong>Phishing.Database</strong>, <strong>Destroylist</strong>,
-    <strong>IPsum</strong>, <strong>Blocklist Project</strong>, <strong>blocklist.de</strong>,
-    <strong>CINS</strong>, and related aggregate IP blocklists) are fetched from their publishers on a schedule and
+    <li><strong>Downloaded blocklists</strong> — community-maintained threat lists
+    are fetched from their publishers periodically and
     matched entirely in your browser. Your URLs, IPs, and domains are never sent to these providers.
-    Each list refreshes on its own cadence — from every 15 minutes (TweetFeed URLs &amp; IPs) up to every
-    4 hours (aggregate IP blocklists) — and is re-downloaded fresh on every browser start. Lists are kept
+    Each list refreshes on its own cadence and is re-downloaded fresh on every browser start. Lists are kept
     only in memory for the session; they are never written to disk, so nothing persists after you
-    close the browser. Phishing.Database and DigitalSide also include full URL feeds for exact-URL matching.</li>
+    close the browser.</li>
   </ul>
 
   <p>
@@ -168,10 +165,10 @@
 
   <h2 id="gemini">5. Gemini Nano processing</h2>
   <p>
-    On Chrome builds where Google's built-in Gemini Nano model is available (Chrome 127+ with on-device AI enabled),
-    Pro may pass email sender, subject, and body text to that model for a second opinion. This processing happens
+    On Chrome builds where Google's built-in Gemini Nano model is available,
+    Pro may pass email content to that model for a second opinion. This processing happens
     <strong>inside Chrome on your device</strong> — it is not sent to Google's servers. It is governed by Chrome's
-    on-device AI privacy terms, not Google's cloud AI terms. If Gemini Nano is unavailable, the ONNX engine runs alone
+    on-device AI privacy terms, not Google's cloud AI terms. If Gemini Nano is unavailable, the built-in engine runs alone
     and no additional data movement occurs. You can disable this at any time.
   </p>
 
