@@ -46,7 +46,7 @@
   <p>
     PhishDiver is an <strong>aid to help you stay alert and vigilant</strong> — it is not proactive threat
     protection, and it does not guarantee your safety. It analyzes email and page content using local heuristics and
-    on-device AI models to surface signals commonly associated with phishing, scams, and malware. No detection system,
+    on-device AI models to surface signals commonly associated with phishing, scams, and malicious links. No detection system,
     automated or human, catches every threat, and sophisticated or novel attacks may not trigger a warning at all.
   </p>
 
@@ -120,7 +120,7 @@
 
   <h2 id="ai">9. AI model &amp; data sources</h2>
   <p>
-    The on-device AI classifier was trained on publicly available phishing, BEC, scam, and legitimate email and web page corpora. Datasets used include the Jose Nazario phishing corpus, the MeAJOR corpus, the Zero-Day Initiative / PhishStats corpus, the Enron Email Dataset, and additional first-party synthetic data built to cover modern scam and business email compromise patterns. Full attribution, dataset names, creators, licenses, and sources are listed on the <a href="licenses.html">Open-Source Licenses</a> page.
+    The on-device AI classifier was trained on publicly available phishing, BEC, scam, and legitimate email and web page corpora. Datasets used include the Jose Nazario phishing corpus, the MeAJOR corpus, the Zero-Day Phishing Emails Corpus (Mutahir Shaukat), the Enron Email Dataset, the Cross-model LLM Phishing Corpus (Gutierrez et al. 2026), and additional first-party synthetic data built to cover modern scam and business email compromise patterns. Full attribution, dataset names, creators, licenses, and sources are listed on the <a href="licenses.html">Open-Source Licenses</a> page.
   </p>
   <p>
     The classifier itself is a machine-learning model (TF-IDF feature extraction with a logistic-regression classifier exported to ONNX Runtime Web). It runs entirely in your browser via WebAssembly and does not phone home. Runtime false-positive and false-negative rates are reported on the <a href="index.html#faq">FAQ</a> page.
@@ -150,7 +150,7 @@
           <span class="logo"><img src="images/icon48.png" alt="PhishDiver" /></span>
           <span>PhishDiver</span>
         </a>
-        <p class="blurb">On-device AI phishing, scam, and malware protection for your email and the pages you visit. No keys or signup for data. Nothing is shared.</p>
+        <p class="blurb">On-device AI phishing, scam, and malicious link protection for your email and the pages you visit. No keys or signup for data. Nothing is shared.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
