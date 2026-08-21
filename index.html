@@ -30,15 +30,22 @@
   .example-box p { color: var(--text); font-style: italic; margin-bottom: 0.5rem; }
   .tip-box { background: var(--surface-2); border-left: 3px solid var(--green); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
   .tip-box .label { color: var(--green); font-weight: 600; margin-bottom: 0.5rem; }
-  #grandparent-scam details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); margin-top: 1.5rem; }
-  #grandparent-scam details[open] { border-color: var(--blue); }
-  #grandparent-scam summary { cursor: pointer; padding: 1.25rem 1.5rem; list-style: none; display: flex; align-items: center; }
-  #grandparent-scam summary::-webkit-details-marker { display: none; }
-  #grandparent-scam summary::after { content: '+'; margin-left: auto; font-size: 1.4rem; color: var(--faint); font-weight: 300; transition: transform 0.2s; }
-  #grandparent-scam details[open] summary::after { content: '−'; }
-  #grandparent-scam summary h2 { margin: 0; font-size: 1.3rem; }
-  #grandparent-scam details > *:not(summary) { padding: 0 1.5rem; }
-  #grandparent-scam details > *:last-child { padding-bottom: 1.5rem; }
+  .scam-deep-dive { max-width: 780px; margin: 2.5rem auto 0; }
+  .scam-deep-dive details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+  .scam-deep-dive details[open] { border-color: var(--blue); }
+  .scam-deep-dive summary { cursor: pointer; padding: 1.25rem 1.5rem; list-style: none; display: flex; align-items: center; gap: 1rem; }
+  .scam-deep-dive summary::-webkit-details-marker { display: none; }
+  .scam-deep-dive summary::after { content: '+'; margin-left: auto; font-size: 1.4rem; color: var(--faint); font-weight: 300; }
+  .scam-deep-dive details[open] summary::after { content: '−'; }
+  .deep-dive-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .deep-dive-text { display: flex; flex-direction: column; gap: 0.15rem; }
+  .deep-dive-text strong { font-size: 1rem; }
+  .deep-dive-text span { font-size: 0.85rem; color: var(--faint); }
+  .deep-dive-body { padding: 0 1.5rem 1.5rem; }
+  .deep-dive-body h3 { font-size: 1.2rem; margin: 2rem 0 0.75rem; color: var(--blue); }
+  .deep-dive-body p { margin-bottom: 1rem; color: var(--muted); }
+  .deep-dive-body ul, .deep-dive-body ol { margin: 0.5rem 0 1.5rem 1.5rem; color: var(--muted); }
+  .deep-dive-body li { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body>
@@ -402,7 +409,7 @@
 </section>
 
 <!-- ── Scam Library ───────────────────────────────────────────────────────── -->
-<section id="scams">
+<section id="scams" class="alt">
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Scam Library</div>
@@ -485,102 +492,89 @@
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ── Grandparent Scam Deep Dive ─────────────────────────────────────────── -->
-<section id="grandparent-scam">
-  <div class="scam-detail">
-    <details>
-      <summary>
-        <h2>The Grandparent Scam: How It Works and How to Stop It</h2>
-      </summary>
+    <div class="scam-deep-dive">
+      <details>
+        <summary>
+          <span class="deep-dive-icon">👴</span>
+          <span class="deep-dive-text">
+            <strong>Deep dive: The Grandparent Scam</strong>
+            <span>How it works, real examples, and how to protect your family →</span>
+          </span>
+        </summary>
+        <div class="deep-dive-body">
+          <p>The grandparent scam (also called the "emergency scam" or "grandchild in trouble" scam) targets elderly people with an urgent message: "Grandma, I'm in jail and need bail money." "I had a car accident and need you to wire money." The scammer pretends to be a grandchild, a lawyer, a doctor, or a police officer — anyone who sounds authoritative and urgent.</p>
+          <p>The scam works because it exploits love and fear. When a scared voice says "please don't tell Mom and Dad," the grandparent's instinct is to help immediately — not to verify.</p>
 
-      <p>
-        The grandparent scam (also called the "emergency scam" or "grandchild in trouble" scam)
-        targets elderly people with an urgent message: "Grandma, I'm in jail and need bail money."
-        "I had a car accident and need you to wire money." The scammer pretends to be a grandchild,
-        a lawyer, a doctor, or a police officer — anyone who sounds authoritative and urgent.
-      </p>
-      <p>
-        The scam works because it exploits love and fear. When a scared voice says "please don't
-        tell Mom and Dad," the grandparent's instinct is to help immediately — not to verify.
-      </p>
+          <h3>How It Works</h3>
+          <ol>
+            <li><strong>The bait:</strong> An email or phone call from someone claiming to be your grandchild (or their lawyer/doctor).</li>
+            <li><strong>The emergency:</strong> "I'm in jail." "I was in a car accident." "I'm stuck overseas." "I need surgery."</li>
+            <li><strong>The urgency:</strong> "I need money right now." "Please don't tell Mom and Dad — they'll be so mad."</li>
+            <li><strong>The payment:</strong> Wire transfer, gift cards, cryptocurrency, or a "safe" courier.</li>
+            <li><strong>The hook:</strong> Once you send money, the scammer disappears — or calls back for more.</li>
+          </ol>
 
-      <h3>How It Works</h3>
-      <ol>
-        <li><strong>The bait:</strong> An email or phone call from someone claiming to be your grandchild (or their lawyer/doctor).</li>
-        <li><strong>The emergency:</strong> "I'm in jail." "I was in a car accident." "I'm stuck overseas." "I need surgery."</li>
-        <li><strong>The urgency:</strong> "I need money right now." "Please don't tell Mom and Dad — they'll be so mad."</li>
-        <li><strong>The payment:</strong> Wire transfer, gift cards, cryptocurrency, or a "safe" courier.</li>
-        <li><strong>The hook:</strong> Once you send money, the scammer disappears — or calls back for more.</li>
-      </ol>
+          <h3>Real Examples</h3>
+          <div class="example-box">
+            <div class="label">Email — Grandparent Scam</div>
+            <p>Subject: Urgent - I need your help</p>
+            <p>Hi Grandma, I'm so sorry to bother you but I'm in a really bad situation. I got arrested last night and I don't want Mom and Dad to find out. I need $3,500 for bail. Can you please wire it to me? I'll pay you back I promise. Please don't tell anyone. I'm so embarrassed. Love you.</p>
+          </div>
+          <div class="example-box">
+            <div class="label">Email — Lawyer Impersonation</div>
+            <p>Subject: Your grandson needs legal representation</p>
+            <p>Dear Mrs. Johnson, I am Attorney Robert Williams. Your grandson Tyler was involved in a serious incident last evening and has been detained. He has asked me to contact you for bail assistance. The amount is $4,200. Time is critical — please wire funds immediately to avoid overnight detention. I can provide my bar credentials upon request.</p>
+          </div>
+          <div class="example-box">
+            <div class="label">Email — Medical Emergency</div>
+            <p>Subject: Emergency - your grandson is in the hospital</p>
+            <p>Dear Parent, This is Dr. Sarah Chen at Metro General Hospital. Your grandson Michael was admitted last night with a serious injury. He is conscious but unable to make calls. He has requested that you handle the medical expenses. Please contact our billing department at [number] to arrange immediate payment of $6,800.</p>
+          </div>
 
-      <h3>Real Examples</h3>
+          <h3>Red Flags to Watch For</h3>
+          <ul>
+            <li><strong>Urgency:</strong> "You must act now." "Time is running out." Real emergencies give you time to verify.</li>
+            <li><strong>Secrecy:</strong> "Don't tell Mom and Dad." "Keep this between us." Scammers isolate their victims.</li>
+            <li><strong>Unusual payment methods:</strong> Wire transfers, gift cards, cryptocurrency. No legitimate organization requests these.</li>
+            <li><strong>Generic details:</strong> "Your grandson" instead of a name. Vague answers when you ask questions.</li>
+            <li><strong>Emotional pressure:</strong> Crying, panic, begging. Scammers are actors — they play the emotion hard.</li>
+            <li><strong>Bad grammar or odd phrasing:</strong> Many grandparent scam emails originate from non-native English speakers.</li>
+            <li><strong>New email address:</strong> The message comes from an address you've never seen before.</li>
+          </ul>
 
-      <div class="example-box">
-        <div class="label">Email — Grandparent Scam</div>
-        <p>Subject: Urgent - I need your help</p>
-        <p>Hi Grandma, I'm so sorry to bother you but I'm in a really bad situation. I got arrested last night and I don't want Mom and Dad to find out. I need $3,500 for bail. Can you please wire it to me? I'll pay you back I promise. Please don't tell anyone. I'm so embarrassed. Love you.</p>
-      </div>
+          <div class="tip-box">
+            <div class="label">How to Verify</div>
+            <p>Hang up. Call your grandchild directly on their real phone number. Call their parents. Call the hospital or police station directly — not the number in the email. Real emergencies don't prevent you from verifying.</p>
+          </div>
 
-      <div class="example-box">
-        <div class="label">Email — Lawyer Impersonation</div>
-        <p>Subject: Your grandson needs legal representation</p>
-        <p>Dear Mrs. Johnson, I am Attorney Robert Williams. Your grandson Tyler was involved in a serious incident last evening and has been detained. He has asked me to contact you for bail assistance. The amount is $4,200. Time is critical — please wire funds immediately to avoid overnight detention. I can provide my bar credentials upon request.</p>
-      </div>
+          <h3>How PhishDiver Catches It</h3>
+          <p>PhishDiver's on-device AI and 17+ threat intelligence sources scan every email as it arrives. When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous" banner and explains why:</p>
+          <ul>
+            <li><strong>Social engineering patterns:</strong> The AI detects urgency language, secrecy requests, and emotional manipulation.</li>
+            <li><strong>Suspicious sender:</strong> The email comes from a free provider (gmail, yahoo, outlook) with no connection to your family.</li>
+            <li><strong>Wire transfer requests:</strong> The body mentions wire transfers, gift cards, or cryptocurrency — classic payment methods for scams.</li>
+            <li><strong>Threat feed confirmation:</strong> The sender domain or linked URLs are flagged by phishunt.io, PhishTank, or other feeds.</li>
+          </ul>
 
-      <div class="example-box">
-        <div class="label">Email — Medical Emergency</div>
-        <p>Subject: Emergency - your grandson is in the hospital</p>
-        <p>Dear Parent, This is Dr. Sarah Chen at Metro General Hospital. Your grandson Michael was admitted last night with a serious injury. He is conscious but unable to make calls. He has requested that you handle the medical expenses. Please contact our billing department at [number] to arrange immediate payment of $6,800.</p>
-      </div>
+          <h3>What to Do If You Receive a Grandparent Scam</h3>
+          <ol>
+            <li><strong>Don't click any links</strong> in the email — they may lead to credential-harvesting pages.</li>
+            <li><strong>Don't reply</strong> — even to say "this is a scam." Replying confirms your email is active.</li>
+            <li><strong>Verify independently</strong> — call your grandchild on their real number, or call their parents.</li>
+            <li><strong>Report it</strong> — forward the email to the FTC at <a href="mailto:spam@uce.gov">spam@uce.gov</a> and to <a href="https://reportfraud.ftc.gov">reportfraud.ftc.gov</a>.</li>
+            <li><strong>Delete the email</strong> — don't keep it in your inbox where you might accidentally click it later.</li>
+            <li><strong>Tell your family</strong> — warn your grandchildren and other family members that this scam is targeting you.</li>
+          </ol>
 
-      <h3>Red Flags to Watch For</h3>
-      <ul>
-        <li><strong>Urgency:</strong> "You must act now." "Time is running out." Real emergencies give you time to verify.</li>
-        <li><strong>Secrecy:</strong> "Don't tell Mom and Dad." "Keep this between us." Scammers isolate their victims.</li>
-        <li><strong>Unusual payment methods:</strong> Wire transfers, gift cards, cryptocurrency. No legitimate organization requests these.</li>
-        <li><strong>Generic details:</strong> "Your grandson" instead of a name. Vague answers when you ask questions.</li>
-        <li><strong>Emotional pressure:</strong> Crying, panic, begging. Scammers are actors — they play the emotion hard.</li>
-        <li><strong>Bad grammar or odd phrasing:</strong> Many grandparent scam emails originate from non-native English speakers.</li>
-        <li><strong>New email address:</strong> The message comes from an address you've never seen before.</li>
-      </ul>
+          <div class="tip-box">
+            <div class="label">Protect Your Parents</div>
+            <p>The best defense is awareness. Install PhishDiver on your parents' or grandparents' browsers — it's free for Gmail and catches these scams automatically. Talk to your family about grandparent scams before they receive one.</p>
+          </div>
+        </div>
+      </details>
+    </div>
 
-      <div class="tip-box">
-        <div class="label">How to Verify</div>
-        <p>Hang up. Call your grandchild directly on their real phone number. Call their parents. Call the hospital or police station directly — not the number in the email. Real emergencies don't prevent you from verifying.</p>
-      </div>
-
-      <h3>How PhishDiver Catches It</h3>
-      <p>
-        PhishDiver's on-device AI and 17+ threat intelligence sources scan every email as it arrives.
-        When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous"
-        banner and explains why:
-      </p>
-      <ul>
-        <li><strong>Social engineering patterns:</strong> The AI detects urgency language, secrecy requests, and emotional manipulation.</li>
-        <li><strong>Suspicious sender:</strong> The email comes from a free provider (gmail, yahoo, outlook) with no connection to your family.</li>
-        <li><strong>Wire transfer requests:</strong> The body mentions wire transfers, gift cards, or cryptocurrency — classic payment methods for scams.</li>
-        <li><strong>Threat feed confirmation:</strong> The sender domain or linked URLs are flagged by phishunt.io, PhishTank, or other feeds.</li>
-      </ul>
-
-      <h3>What to Do If You Receive a Grandparent Scam</h3>
-      <ol>
-        <li><strong>Don't click any links</strong> in the email — they may lead to credential-harvesting pages.</li>
-        <li><strong>Don't reply</strong> — even to say "this is a scam." Replying confirms your email is active.</li>
-        <li><strong>Verify independently</strong> — call your grandchild on their real number, or call their parents.</li>
-        <li><strong>Report it</strong> — forward the email to the FTC at <a href="mailto:spam@uce.gov">spam@uce.gov</a> and to <a href="https://reportfraud.ftc.gov">reportfraud.ftc.gov</a>.</li>
-        <li><strong>Delete the email</strong> — don't keep it in your inbox where you might accidentally click it later.</li>
-        <li><strong>Tell your family</strong> — warn your grandchildren and other family members that this scam is targeting you.</li>
-      </ol>
-
-      <div class="tip-box">
-        <div class="label">Protect Your Parents</div>
-        <p>The best defense is awareness. Install PhishDiver on your parents' or grandparents' browsers — it's free for Gmail and catches these scams automatically. Talk to your family about grandparent scams before they receive one.</p>
-      </div>
-
-    </details>
   </div>
 </section>
 
