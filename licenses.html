@@ -151,12 +151,6 @@
           <td>URL classifier positive training examples + runtime feed</td>
         </tr>
         <tr>
-          <td>DigitalSide Threat-Intel malware URLs</td>
-          <td><a href="https://github.com/davidonzo/Threat-Intel/blob/master/LICENSE" rel="noopener">MIT</a></td>
-          <td>DigitalSide (davidonzo)</td>
-          <td>URL classifier positive training examples + runtime feed</td>
-        </tr>
-        <tr>
           <td>Tranco top-1M ranking</td>
           <td><a href="https://github.com/tranco-list/tranco-list.github.io/blob/master/LICENSE" rel="noopener">MIT</a></td>
           <td>The Tranco project (tranco-list.eu)</td>
@@ -214,20 +208,6 @@
     the MIT License, which permits commercial use with attribution. The lists are
     <em>adapted</em> — URLs and domains are parsed and normalized into a training set
     and in-memory lookup sets — so only the trained model is distributed.</p>
-  </div>
-
-  <div class="oss-license">
-    <strong>MIT license for DigitalSide Threat-Intel</strong>
-    <p style="margin-top:10px;">The malware URL and domain lists from
-    <a href="https://github.com/davidonzo/Threat-Intel" rel="noopener">DigitalSide Threat-Intel</a>
-    (maintained by davidonzo, osint.digitalside.it) are Open Source Cyber Threat
-    Intelligence derived from malware analysis — unique malicious URLs and domains
-    observed in the last 7 days, refreshed daily. They are released under the MIT
-    License, which permits commercial use with attribution. The URL list is
-    <em>adapted</em> — URLs are parsed and normalized into the URL classifier's
-    positive training set — and the same lists back the runtime DigitalSide threat
-    feed (exact URL = danger, host match = warning), replacing the URLhaus feed
-    that abuse.ch now restricts to not-for-profit use.</p>
   </div>
 
   <div class="oss-license">
@@ -318,7 +298,6 @@
         <tr><td>phishunt.io</td><td>Daniel López (phishunt.io)</td></tr>
         <tr><td>TweetFeed</td><td>Daniel López</td></tr>
         <tr><td>Phishing.Database</td><td>Phishing.Database project</td></tr>
-        <tr><td>DigitalSide</td><td>DigitalSide (davidonzo)</td></tr>
         <tr><td>blocklist.de</td><td>blocklist.de project</td></tr>
         <tr><td>Destroylist, IPsum</td><td>Their respective operators</td></tr>
         <tr><td>Blocklist Project</td><td>The Block List Project (Unlicense)</td></tr>
@@ -339,7 +318,7 @@
     <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap) and the rdap.org RDAP aggregator. Registries with no RDAP anywhere (e.g. .hu, .us, .se, .it, .ru) report the registration date as unavailable.</li>
     <li><strong>Certificate transparency</strong> — crt.sh, with Cert Spotter as a keyless fallback.</li>
     <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
-    <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, DigitalSide, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
+    <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
     <li><strong>Note on blocklist.de</strong> — the blocklist.de IP list has no explicit open-source license; it has been publicly available and widely consumed by security tools (fail2ban, IDS/IPS) for years. Attribution: blocklist.de project (https://blocklist.de).</li>
     <li><strong>Breach checks (user-initiated)</strong> — HaveIBeenPwned.</li>
   </ul>
