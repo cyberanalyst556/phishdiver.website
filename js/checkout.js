@@ -8,8 +8,8 @@
   var API = new URLSearchParams(location.search).get("api") || "https://lic.phishdiver.com";
 
   var PLAN_DATA = {
-    monthly: { name: "Pro Monthly", bill: "$4.99 billed monthly", total: "$4.99" },
-    annual:  { name: "Pro Annual",  bill: "$49.99 billed once a year", total: "$49.99" },
+    monthly: { name: "Pro Monthly", bill: "$5.99 billed monthly", total: "$5.99" },
+    annual:  { name: "Pro Annual",  bill: "$59.99 billed once a year", total: "$59.99" },
   };
 
   var selected = new URLSearchParams(location.search).get("plan") === "annual" ? "annual" : "monthly";
