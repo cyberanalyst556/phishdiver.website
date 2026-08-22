@@ -24,6 +24,7 @@
       <a href="index.html#pricing">Pricing</a>
       <a href="index.html#faq">FAQ</a>
       <a href="guide.html">Guide</a>
+      <a href="about.html">About</a>
       <a href="privacy.html">Privacy</a>
       <a href="eula.html">EULA</a>
       <a href="disclaimer.html">Legal</a>
@@ -35,7 +36,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>PhishDiver User Guide</h1>
-  <div class="meta">A plain-English quickstart and manual for home users · Updated: August 17, 2026</div>
+  <div class="meta">A plain-English quickstart and manual for home users · Updated: August 22, 2026</div>
 
   <div class="callout">
     <strong>In a hurry?</strong> Install PhishDiver, pin it to your toolbar, and keep browsing. From then on it watches
@@ -102,8 +103,14 @@
     <li><strong>Hover previews.</strong> Hover over a sender, link, or attachment and a small preview appears while the
       check runs, then dismisses once you move the mouse. It stays open until the result is ready so you always see the
       answer.</li>
-    <li><strong>Link interception.</strong> Dangerous links are blocked before the page loads, with a warning screen
-      that explains what the link actually does.</li>
+    <li><strong>Instant link blocking.</strong> Known phishing domains are blocked at the network level before the page
+      even starts loading — no flash, no partial load. Heuristic threats are caught on navigation. Both show a warning
+      screen with Back, Allow Once, Always Allow, and Block options.</li>
+    <li><strong>First-contact sender tracking.</strong> Messages from senders you've never received mail from before
+      get flagged with a visible chip — the exact vector scammers rely on.</li>
+    <li><strong>Scam pattern education.</strong> When a flag triggers, you see exactly which pattern was detected —
+      not just "suspicious" but the specific rule behind it (wire-transfer urgency, gift-card push, brand
+      impersonation, etc.) with a full explanation.</li>
     <li><strong>Threat intelligence.</strong> Every check is cross-referenced against live threat queries and downloaded
       blocklists — the "Active threat sources" list in the popup shows their freshness at a glance.</li>
   </ul>
@@ -135,8 +142,10 @@
 
   <h2 id="dangerous-link">5. When you click a dangerous link</h2>
   <p>
-    Instead of loading the page, PhishDiver shows a warning screen with the blocked URL and what was found. You have
-    four choices:
+    Instead of loading the page, PhishDiver shows a warning screen with the blocked URL and what was found. Known
+    phishing domains are blocked at the network level before the page even starts loading — no flash, no partial
+    load. Heuristic threats are caught on navigation. Either way, you see a warning screen with the blocked URL
+    and what was found. You have four choices:
   </p>
   <ul>
     <li><strong>Back to Safety</strong> — the safe default. Takes you away from the page.</li>
@@ -182,6 +191,21 @@
     <li><strong>Quick Actions</strong> — check a URL or run a breach lookup directly from the dashboard.</li>
     <li><strong>CSV Export</strong> — download your filtered threat data with date range, type, and severity filters.</li>
   </ul>
+
+  <h3>Advanced Detection (Pro)</h3>
+  <p>Pro users see five additional sections in the dashboard:</p>
+  <ul>
+    <li><strong>First-Contact Sender Tracking</strong> — how many unique senders you've seen, how many have been
+      flagged, and recent first-contact matches.</li>
+    <li><strong>Persona Guard</strong> — matches where a contact's name was used from an unexpected domain, with
+      full context on the impersonation attempt.</li>
+    <li><strong>Scam Pattern Detection</strong> — frequency of each scam pattern type across your threat history,
+      so you can see which categories are most common.</li>
+    <li><strong>Signal Correlation</strong> — breakdown of how independent signals combined into verdicts, with
+      correlation category counts and bar charts.</li>
+    <li><strong>Brand Tracking Domains</strong> — active monitoring status for major brand-impersonation domains
+      (Walmart, Amazon, Target, etc.).</li>
+  </ul>
   <p>
     All data stays on your device. The dashboard reads from the same local storage the extension uses — nothing is
     uploaded or shared.
@@ -220,16 +244,19 @@
 
   <h2 id="free-vs-pro">10. Free vs Pro</h2>
   <p>
-    The free plan is genuinely useful: Gmail scanning, hover previews, link interception, live threat feeds, and the
-    manual checks. Pro removes every remaining blind spot:
+    The free plan is genuinely useful: Gmail scanning, hover previews, instant link blocking, first-contact sender
+    tracking, scam-pattern explainers, signal correlation, live threat feeds, and the manual checks. Pro removes
+    every remaining blind spot:
   </p>
   <ul>
     <li>Email scanning on all supported providers</li>
     <li>Both on-device AI engines</li>
     <li>Attachment, QR-code, and calendar-invite scanning</li>
     <li>BEC, spoofing, job-offer, reply-chain, and vishing detectors</li>
+    <li>Persona Guard — contact-impersonation detection</li>
+    <li>Brand tracking domain monitoring</li>
     <li>Payment-detail change detection, homograph protection, clipboard &amp; credential protection, and more</li>
-    <li>Live page scans, real-destination tracking, threat history, breach checker, and the full-page Dashboard</li>
+    <li>Live page scans, real-destination tracking, threat history, breach checker, and the Advanced Dashboard</li>
   </ul>
   <p>
     Subscriptions are handled by Stripe — PhishDiver never sees your card details — and you can cancel any time before
@@ -295,7 +322,8 @@
         <a href="index.html#pricing">Pricing</a>
         <a href="index.html#faq">FAQ</a>
         <a href="guide.html">User Guide</a>
-        <a href="#scams">Scam Library</a>
+        <a href="about.html">About</a>
+        <a href="index.html#scams">Scam Library</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>

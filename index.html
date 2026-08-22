@@ -62,6 +62,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="guide.html">Guide</a>
+      <a href="about.html">About</a>
       <a href="privacy.html">Privacy</a>
       <a href="eula.html">EULA</a>
       <a href="disclaimer.html">Legal</a>
@@ -162,8 +163,8 @@
       </div>
       <div class="feature-card">
         <div class="f-icon">🚨</div>
-        <h3>URL interception <span class="tag tag-free">Free</span></h3>
-        <p>Every link is checked before the page loads. Dangerous ones hit a warning page with back, allow-once, and block options.</p>
+        <h3>Instant link blocking <span class="tag tag-free">Free</span></h3>
+        <p>Two layers of protection: known phishing domains are blocked at the network level before the page even starts loading, while heuristic threats get caught on navigation — all with a clear warning, back, allow-once, and block options.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🌐</div>
@@ -278,9 +279,34 @@
         <p>Check an email or domain against HaveIBeenPwned's public breach database — only the lookup itself leaves your browser.</p>
       </div>
       <div class="feature-card">
+        <div class="f-icon">👤</div>
+        <h3>First-contact sender tracking <span class="tag tag-free">Free</span></h3>
+        <p>Flags messages from senders you've never received mail from before — the exact vector scammers rely on. Shows sender history and domain context so you know whether to trust it.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">💡</div>
+        <h3>Scam pattern education <span class="tag tag-free">Free</span></h3>
+        <p>35+ built-in explainers show exactly what triggered a flag — not just "suspicious" but the specific pattern behind it: wire-transfer urgency, gift-card pushes, brand impersonation, callback/vishing, and more.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📐</div>
+        <h3>Signal correlation scoring <span class="tag tag-free">Free</span></h3>
+        <p>When independent signals agree — suspicious domain, URL shortener, urgency language — the combined score multiplies, catching emails that pass any single check alone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🛡️</div>
+        <h3>Persona Guard <span class="tag tag-pro">Pro</span></h3>
+        <p>Catches attackers impersonating your own contacts by name — a contact who usually writes from Gmail suddenly "sends" from a domain you've never seen. Flags the mismatch before you trust the message.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🏢</div>
+        <h3>Brand tracking domains <span class="tag tag-pro">Pro</span></h3>
+        <p>Monitors domains known to impersonate major retailers and brands — Walmart, Amazon, Target, Best Buy, Costco, Home Depot, Lowe's — flagging impersonation before you click.</p>
+      </div>
+      <div class="feature-card">
         <div class="f-icon">📊</div>
-        <h3>Dashboard <span class="tag tag-pro">Pro</span></h3>
-        <p>Full-page overview with expandable stat cards, threat breakdown, collapsible activity feed, session info, own addresses &amp; providers, allowed &amp; trusted lists, system health, quick actions, and CSV data export — all in one place.</p>
+        <h3>Advanced Dashboard <span class="tag tag-pro">Pro</span></h3>
+        <p>Full-page overview with expandable stat cards, threat breakdown, collapsible activity feed, session info, own addresses &amp; providers, allowed &amp; trusted lists, system health, and CSV export — plus dedicated sections for first-contact tracking, Persona Guard matches, scam pattern frequency, signal correlation breakdown, and brand tracking domains.</p>
       </div>
 
     </div>
@@ -307,8 +333,11 @@
           <li>Sender, display-name, subject, body &amp; link checks</li>
           <li>SPF / DMARC / DKIM email-auth policy checks (DNS, keyless) — with honest "can't be cryptographically verified" wording for soft-fail/no-policy domains</li>
           <li>Instant hover previews on senders, links &amp; attachments — dismissed on mouse move or after stillness, and switchable off from the extension menu</li>
+          <li>Instant link blocking — network-level + heuristic two-layer interception</li>
+          <li>First-contact sender tracking with history &amp; domain context</li>
+          <li>35+ scam pattern explainers — see exactly what triggered a flag</li>
+          <li>Signal correlation scoring — combined multiplies when independent signals agree</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
-          <li>URL interception &amp; warning page</li>
           <li>Live threat feeds (17+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
           <li>Suspicious-pattern, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
@@ -328,8 +357,10 @@
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Persona Guard — contact-impersonation detection</li>
+          <li>Brand tracking domain monitoring</li>
           <li>Live page scan &amp; real-destination detection</li>
-          <li>Threat history, breach checker &amp; full-page Dashboard</li>
+          <li>Threat history, breach checker &amp; Advanced Dashboard</li>
         </ul>
         <a class="btn btn-ghost" href="checkout.html?plan=monthly">Get Pro — $5.99/mo</a>
       </div>
@@ -347,8 +378,10 @@
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Persona Guard — contact-impersonation detection</li>
+          <li>Brand tracking domain monitoring</li>
           <li>Live page scan &amp; real-destination detection</li>
-          <li>Threat history, breach checker &amp; full-page Dashboard</li>
+          <li>Threat history, breach checker &amp; Advanced Dashboard</li>
         </ul>
         <a class="btn btn-primary" href="checkout.html?plan=annual">Get Pro Annual — $59.99/yr</a>
       </div>
@@ -380,7 +413,10 @@
         <tbody>
           <tr class="group-row"><td colspan="3">Included in every plan</td></tr>
           <tr><td class="row-label">Real-time email scanning — Gmail</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">URL interception &amp; warning page</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Instant link blocking (network-level + heuristic)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">First-contact sender tracking</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Scam pattern education (35+ explainers)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Signal correlation scoring</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Threat feed integration</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">SPF / DMARC / DKIM email-auth policy checks</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Link checker, current-page check &amp; right-click check</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
@@ -399,8 +435,10 @@
           <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
            <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Persona Guard (contact-impersonation detection)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Brand tracking domain monitoring</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Advanced Dashboard (first-contact, Persona Guard, scam patterns, signal correlation, brand tracking)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Threat history &amp; breach checker</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">Full-page Dashboard</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">CSV data export</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
         </tbody>
       </table>
@@ -623,11 +661,19 @@
       </details>
       <details>
         <summary>What happens when I click a dangerous link?</summary>
-        <p>The page is blocked before it loads, and you get a warning screen that explains what the link really does in plain language — with Back to Safety, Allow Once, Always Allow, and Block options.</p>
+        <p>PhishDiver uses two layers of protection. Known phishing domains are blocked at the network level before the page even starts loading — no flash, no partial load. For heuristic threats caught by the AI engine, the page is stopped on navigation and you get a warning screen that explains what the link really does in plain language — with Back to Safety, Allow Once, Always Allow, and Block options.</p>
+      </details>
+      <details>
+        <summary>What is first-contact sender tracking?</summary>
+        <p>When a message arrives from a sender you've never received mail from before, PhishDiver flags it with a visible chip. First-contact senders are the exact vector scammers rely on — you've never seen them before, so you have no baseline to compare against. The flag shows the sender's domain context and history so you can decide whether to trust the message, without blocking it outright.</p>
+      </details>
+      <details>
+        <summary>What is Persona Guard?</summary>
+        <p>Persona Guard catches attackers who impersonate your own contacts by display name. If "John Smith" suddenly writes from a domain you've never seen before — but John usually writes from Gmail — PhishDiver flags the mismatch. It's contact-impersonation detection that looks beyond the name to the actual sending domain.</p>
       </details>
       <details>
         <summary>What's the difference between Free and Pro?</summary>
-        <p>Free protects Gmail with heuristics and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, live page scans, real-destination tracking, threat history, the breach checker, and the full-page Dashboard.</p>
+        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
       </details>
       <details>
         <summary>How do I get Pro, and can I cancel?</summary>
@@ -669,6 +715,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="guide.html">User Guide</a>
+        <a href="about.html">About</a>
         <a href="#scams">Scam Library</a>
       </div>
       <div class="footer-col">
