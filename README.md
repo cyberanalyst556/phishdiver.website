@@ -3,12 +3,6 @@
 Marketing and support site for the PhishDiver browser extension — on-device AI
 phishing, scam, and malicious-link protection for email.
 
-> **Note:** This site exists independently of the Chrome extension source at
-> `G:\__extensions\Exp`. It is **not** part of the extension build, test, or lint
-> pipeline. This folder was restored from the GitHub backup
-> (`https://github.com/cyberanalyst556/phishdiver.website`) on 2026-08-30 and
-> updated to reflect the current product (see "Recent updates" below).
-
 ## Pages
 
 | File                    | Purpose                                        |
