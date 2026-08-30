@@ -225,9 +225,9 @@
       still get flagged, but the page isn't stopped first.</li>
     <li><strong>Email scanning</strong> — analyzes the full email when you open it. Off means only links and images are
       checked, not the full message.</li>
-    <li><strong>Gemini Nano AI</strong> — Chrome's optional built-in AI, adding a second on-device read of intent. Turn
-      it off to use the built-in ONNX AI engine alone. On browsers without Nano (Brave, Edge, older Chrome), ONNX
-      protects you regardless.</li>
+    <li><strong>Gemini Nano AI</strong> — Google's free AI that's built into Chrome on some computers. It gives your
+      email a second, on-device read of the sender's intent. Turn it off to use the built-in ONNX AI engine alone. On
+      browsers without it (Brave, Edge, older Chrome), ONNX protects you regardless, and nothing is sent to Google.</li>
     <li><strong>Right-click check</strong> — adds the PhishDiver entry to your right-click menu.</li>
     <li><strong>Reset counts on browser start</strong> — clears the link statistics in the popup every time the browser
       restarts.</li>
@@ -278,13 +278,16 @@
   <p>Make sure Email scanning is on, then reload the email tab. On the free plan, only Gmail is scanned; other providers
     need Pro. After upgrading, reload open tabs once.</p>
   <h3>Gemini Nano isn't active</h3>
-  <p>Nano is a Chrome feature, not something PhishDiver installs. To enable it:</p>
+  <p>Gemini Nano is a free AI that comes with Chrome — PhishDiver doesn't install it. On computers where Chrome
+    hasn't switched it on yet, here's how to enable it:</p>
   <ol>
     <li>Go to <code>chrome://flags</code> and enable <strong>Prompt API for Gemini Nano</strong>, then relaunch.</li>
     <li>Go to <code>chrome://components</code> and update the <strong>Optimization Guide On Device Model</strong>.</li>
     <li>Open the PhishDiver popup and use the <strong>Download Gemini Nano model</strong> button if it's shown.</li>
   </ol>
-  <p>The built-in AI keeps protecting your email throughout, so there's no gap while you set this up.</p>
+  <p>The built-in AI keeps protecting your email throughout, so there's no gap while you set this up. If you'd rather
+    not use Gemini at all, just leave it off — protection, and your privacy, are exactly the same with the built-in
+    engine.</p>
   <h3>My browser blocked PhishDiver</h3>
   <p>Chrome sometimes disables extensions it can't verify. Re-enable it from <code>chrome://extensions</code>. If you're
     running a development copy rather than the Web Store build, expect this — it's the browser protecting you.</p>

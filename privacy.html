@@ -46,6 +46,10 @@
     against public threat feeds, an optional breach lookup you initiate, and a page fetch you explicitly trigger.
     Everything the extension reads — domain registrations, DNS records, certificate logs, threat lists — is
     <strong>already public data</strong>; nothing private ever leaves your device.
+    <br><br>
+    <em>About Gemini:</em> the optional Gemini Nano helper also runs entirely on your computer inside Chrome —
+    your email never goes to Google&rsquo;s servers. It is controlled by Google&rsquo;s on-device AI settings in
+    Chrome, can be turned off any time, and only helps when you have it enabled.
   </div>
 
   <div class="legal-toc">
@@ -167,11 +171,18 @@
 
   <h2 id="gemini">5. Gemini Nano processing</h2>
   <p>
-    On Chrome builds where Google's built-in Gemini Nano model is available,
-    Pro may pass email content to that model for a second opinion. This processing happens
-    <strong>inside Chrome on your device</strong> — it is not sent to Google's servers. It is governed by Chrome's
-    on-device AI privacy terms, not Google's cloud AI terms. If Gemini Nano is unavailable, the built-in engine runs alone
-    and no additional data movement occurs. You can disable this at any time.
+    Gemini Nano is Google&rsquo;s free AI that comes built into the Chrome browser, on computers where it is
+    available. It is like a small helper that already lives on your computer — not a service on the internet.
+    When Nano is present, Pro may let it take a second look at an email for an extra opinion. This happens
+    <strong>right on your device, inside Chrome</strong> — your email content is <strong>not</strong> sent to
+    Google&rsquo;s servers, and no copy is uploaded anywhere.
+  </p>
+  <p>
+    Because it runs on your device, it follows the privacy rules for on-device AI that Google enables in Chrome,
+    not the rules for a cloud service. If Nano is not available on your computer, not enabled, or turned off,
+    PhishDiver simply uses its own built-in AI instead — nothing changes about how your email is protected, and
+    nothing is sent anywhere. You can turn Gemini Nano off at any time from the extension settings, with no loss
+    of protection.
   </p>
 
   <h2 id="website">6. This website</h2>
