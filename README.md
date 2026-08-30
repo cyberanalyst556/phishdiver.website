@@ -45,22 +45,3 @@ email into six scam families:
 - **Gemini plain-language pass:** rewrote every Gemini Nano mention in everyday terms —
   free AI built into Chrome, runs on-device, never sends email to Google's servers,
   optional and off-able with no loss of protection.
-
-## Preview locally
-
-Any static file server works — there are no build steps:
-
-```powershell
-# from this folder
-python -m http.server 8000
-# or
-npx serve .
-```
-
-Then open http://localhost:8000.
-
-## Keep in sync
-
-The `website/` folder mirrors the GitHub backup. After editing pages here, push or
-re-upload to `https://github.com/cyberanalyst556/phishdiver.website` so the backup
-stays current. The extension at `G:\__extensions\Exp` never depends on these files.
