@@ -99,14 +99,14 @@
     <div class="section-head">
       <div class="section-kicker">Two engines, one job</div>
       <h2>One engine always. Two on Chrome.</h2>
-      <p>The ONNX AI model reads every email on every browser. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
+      <p>The on-device ONNX classifier reads every email on every browser and sorts it into six scam families — credential theft, business email compromise, gift-card, advance-fee, romance, and prize/giveaway scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
     </div>
     <div class="engines">
       <div class="engine-card onnx">
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family (credential, BEC, gift-card, advance-fee, romance, or prize), so the warning tells you what the scam is trying to do.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
@@ -184,7 +184,7 @@
       <div class="feature-card">
         <div class="f-icon">💔</div>
         <h3>Behavioral scam detection <span class="tag tag-both">Free + Pro</span></h3>
-        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders. Also tracks per-sender grooming progression across messages, plus grandparent/family-emergency scams, pivots to WhatsApp/Telegram/Signal, and false "FCA/SEC-regulated" investment pitches.</p>
+        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, prize/giveaway lures, advance-fee fraud, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders. The on-device classifier calls the scam family by name. Also tracks per-sender grooming progression across messages, plus grandparent/family-emergency scams, pivots to WhatsApp/Telegram/Signal, and false "FCA/SEC-regulated" investment pitches.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🧪</div>
@@ -481,6 +481,14 @@
       </div>
 
       <div class="scam-card">
+        <h3>🏆 Prize &amp; Giveaway Scam</h3>
+        <p>"Congratulations! You've won a free wellness kit." Fake prize lures from health and retail brands that ask you to pay a small delivery fee for a 'free' gift.</p>
+        <span class="tag">Prize</span>
+        <span class="tag">Giveaway</span>
+        <span class="tag">Advance Fee</span>
+      </div>
+
+      <div class="scam-card">
         <h3>💕 Romance Scam</h3>
         <p>"I love you, but I need money to come visit." Long-con relationships built over weeks or months, ending with financial requests.</p>
         <span class="tag">Romance</span>
@@ -646,6 +654,10 @@
       <details>
         <summary>Why two AI engines?</summary>
         <p>Two independent reads beat one. The built-in AI classifier is always on; Chrome's Gemini Nano (when available) adds a contextual opinion on intent and social engineering. If Nano is unavailable or disabled, the built-in engine keeps working alone — nothing depends on a cloud.</p>
+      </details>
+      <details>
+        <summary>What scam families does the on-device classifier detect?</summary>
+        <p>The built-in ONNX classifier labels each message with one of six scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, and prize/giveaway scams. It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
