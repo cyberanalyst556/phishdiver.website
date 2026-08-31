@@ -311,12 +311,11 @@
   <h2>6. Public data sources</h2>
   <p>At runtime the extension also reads live public data. These are external services, not bundled code — they carry
   no license obligations, but we credit them for transparency. Every record queried through these services
-  is <strong>publicly available data</strong> (domain-registration records, public DNS and certificate-transparency
-  data, and publicly distributed security lists), and requests contain only the URL, IP address, or domain being
+  is <strong>publicly available data</strong> (domain-registration records, public DNS,
+  and publicly distributed security lists), and requests contain only the URL, IP address, or domain being
   evaluated — never personal data:</p>
   <ul>
     <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap) and the rdap.org RDAP aggregator. Registries with no RDAP anywhere (e.g. .hu, .us, .se, .it, .ru) report the registration date as unavailable.</li>
-    <li><strong>Certificate transparency</strong> — crt.sh, with Cert Spotter as a keyless fallback.</li>
     <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
     <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
     <li><strong>Note on blocklist.de</strong> — the blocklist.de IP list has no explicit open-source license; it has been publicly available and widely consumed by security tools (fail2ban, IDS/IPS) for years. Attribution: blocklist.de project (https://blocklist.de).</li>
@@ -328,7 +327,8 @@
   license (CC BY-SA 2.5); PhishTank's terms state that data is available for commercial use without charge.
   PhishDiver fetches the public CSV feed hourly and matches URLs locally — it does not redistribute the raw data.
   The Destroylist primary active phishing domain list is released under the MIT License (copyright 2019
-  PhishDestroy), which permits commercial use with attribution. PhishDiver fetches the domain list every 2
+  PhishDestroy), which permits commercial use with attribution (the provider's terms also prohibit use by any
+  entity or individual subject to sanctions or located in Russia or other sanctioned jurisdictions). PhishDiver fetches the domain list every 2
   hours and matches locally — the raw list is not redistributed. The HaveIBeenPwned public breach list used by the
   breach checker is published by Troy Hunt under the Creative Commons Attribution 4.0 International license
   (CC BY 4.0); HIBP's terms request that for-profit applications relying on HIBP data at scale use a paid

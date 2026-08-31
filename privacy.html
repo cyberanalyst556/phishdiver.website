@@ -44,7 +44,7 @@
     pages you visit are analyzed <strong>on your device</strong>. The extension has no account, no analytics, no
     advertising, and no remote AI. The only data that ever leaves your browser is the URL or IP you ask to be checked
     against public threat feeds, an optional breach lookup you initiate, and a page fetch you explicitly trigger.
-    Everything the extension reads — domain registrations, DNS records, certificate logs, threat lists — is
+    Everything the extension reads — domain registrations, DNS records, threat lists — is
     <strong>already public data</strong>; nothing private ever leaves your device.
     <br><br>
     <em>About Gemini:</em> the optional Gemini Nano helper also runs entirely on your computer inside Chrome —
@@ -113,7 +113,7 @@
 
   <p><strong>Public data only.</strong> Every record the extension reads on your behalf is information that is
   already publicly available to anyone — domain-registration records published by the registries, public DNS records,
-  public SSL-certificate logs, publicly distributed threat and blocklists, and public breach disclosures. The
+  publicly distributed threat and blocklists, and public breach disclosures. The
   requests carry nothing but the URL, IP address, or domain being evaluated; they never include your email, identity,
   or browsing context. No data is "scraped" from any private or gated source.</p>
 
@@ -121,8 +121,7 @@
   <p>Link, IP, and domain evaluations draw on two kinds of threat data:</p>
   <ul>
     <li><strong>Live queries</strong> — when a link, IP, or domain is evaluated, the extension may query
-    public phishing databases and certificate
-    transparency sources for SSL-certificate issue dates. When a sender's domain is checked, its publicly published
+    public phishing databases and public domain-registration (RDAP) records for domain age. When a sender's domain is checked, its publicly published
     <strong>SPF, DMARC, and DKIM</strong> records are also read over DNS-over-HTTPS to corroborate
     email-authentication policy. Only the URL, IP address, or sender domain being checked is sent to
     these services. Each operates under its own privacy policy and terms.</li>
@@ -140,7 +139,7 @@
     only when relevant to a check you trigger, are not linked to your identity, and are processed under the legitimate
     interest of protecting you from phishing, scam, and malicious links (Article 6(1)(f) GDPR). The small amount of
     license-activation data described in Section 7 is processed under contract performance (Article 6(1)(b) GDPR).
-    Where these requests reach services outside the EU/EEA (for example, US-based DNS or certificate-transparency
+    Where these requests reach services outside the EU/EEA (for example, US-based DNS
     providers, or HaveIBeenPwned in Australia), any transfer of that limited, non-identifying data relies on the
     applicable adequacy decision or standard contractual safeguards, and it remains limited to the URL, IP address, or
     domain being evaluated.
@@ -208,9 +207,9 @@
   <h3 id="licensing">a) License activation (when you buy Pro)</h3>
   <p>
     Activating a Pro license involves a small, separate system: a <strong>license server</strong> that issues and
-    verifies your entitlement. When licensing is enabled in a future build, this server processes only the data
-    required for that purpose — the license key itself, a locally generated device identifier, and, if you contact us
-    for support, the email address you used at checkout. It does not receive your email content, page content, URLs, or
+    verifies your entitlement. This server processes only the data required for that purpose — the license key
+    itself, a locally generated device identifier, and, if you contact us for support, the email address you used at
+    checkout. It does not receive your email content, page content, URLs, or
     browsing history. The server is operated by a hosting provider (a <a href="https://www.cloudflare.com/privacypolicy/"
     rel="nofollow noopener" target="_blank">Cloudflare Worker</a>, currently) under its own data-processing terms.
     This data is processed under the lawful basis of <strong>contract performance</strong> (Article 6(1)(b) GDPR): it

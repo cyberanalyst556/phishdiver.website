@@ -99,14 +99,14 @@
     <div class="section-head">
       <div class="section-kicker">Two engines, one job</div>
       <h2>One engine always. Two on Chrome.</h2>
-      <p>The on-device ONNX classifier reads every email on every browser and sorts it into six scam families — credential theft, business email compromise, gift-card, advance-fee, romance, and prize/giveaway scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
+      <p>The on-device ONNX classifier reads every email on every browser and sorts it into seven scam families — credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
     </div>
     <div class="engines">
       <div class="engine-card onnx">
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family (credential, BEC, gift-card, advance-fee, romance, or prize), so the warning tells you what the scam is trying to do.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family (credential, BEC, gift-card, advance-fee, romance, prize, or sextortion), so the warning tells you what the scam is trying to do.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
@@ -123,7 +123,7 @@
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Intelligence</div>
-      <h2>One verdict, 17+ independent sources</h2>
+      <h2>One verdict, 15+ independent sources</h2>
       <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
     </div>
     <div class="source-strip">
@@ -137,7 +137,7 @@
       <span class="source-chip local">blocklist.de</span>
       <span class="source-chip local">CINS</span>
       <span class="source-chip live">SPF / DMARC / DKIM</span>
-      <span class="source-chip">Certificate &amp; registry data</span>
+      <span class="source-chip">Registry (RDAP) data</span>
     </div>
     <p class="sources-note">🔒 phishunt.io, PhishTank, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. A dozen-plus more are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
     <p class="sources-note" style="margin-top:6px">↻ Blocklists and feeds refresh on a schedule (every 15 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
@@ -168,7 +168,7 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>17+ independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, plus registry &amp; certificate data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
+        <p>15+ independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, plus registry data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔢</div>
@@ -337,7 +337,7 @@
           <li>35+ scam pattern explainers — see exactly what triggered a flag</li>
           <li>Signal correlation scoring — combined multiplies when independent signals agree</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
-          <li>Live threat feeds (17+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
+          <li>Live threat feeds (15+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
           <li>Suspicious-pattern, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
@@ -594,7 +594,7 @@
           </div>
 
           <h3>How PhishDiver Catches It</h3>
-          <p>PhishDiver's on-device AI and 17+ threat intelligence sources scan every email as it arrives. When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous" banner and explains why:</p>
+          <p>PhishDiver's on-device AI and 15+ threat intelligence sources scan every email as it arrives. When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous" banner and explains why:</p>
           <ul>
             <li><strong>Social engineering patterns:</strong> The AI detects urgency language, secrecy requests, and emotional manipulation.</li>
             <li><strong>Suspicious sender:</strong> The email comes from a free provider (gmail, yahoo, outlook) with no connection to your family.</li>
@@ -637,7 +637,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) and certificate-transparency lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -657,11 +657,11 @@
       </details>
       <details>
         <summary>What scam families does the on-device classifier detect?</summary>
-        <p>The built-in ONNX classifier labels each message with one of six scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, and prize/giveaway scams. It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
+        <p>The built-in ONNX classifier labels each message with one of seven scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, prize/giveaway scams, and sextortion/extortion scams (blackmail demanding Bitcoin). It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
-        <p><strong>Yes.</strong> The built-in AI engine, all heuristics, and downloaded blocklists work entirely offline — no internet connection needed for email analysis. The optional Gemini Nano helper also runs on your device, though Chrome may need to download that helper once over the internet before first use. Live threat-feed queries (phishunt.io, PhishTank) and domain-age lookups (RDAP, certificate transparency) require an internet connection, but the extension degrades gracefully — if those fail, the cached blocklists and local AI still protect you. The core protection never depends on a cloud.</p>
+        <p><strong>Yes.</strong> The built-in AI engine, all heuristics, and downloaded blocklists work entirely offline — no internet connection needed for email analysis. The optional Gemini Nano helper also runs on your device, though Chrome may need to download that helper once over the internet before first use. Live threat-feed queries (phishunt.io, PhishTank) and domain-age lookups (RDAP) require an internet connection, but the extension degrades gracefully — if those fail, the cached blocklists and local AI still protect you. The core protection never depends on a cloud.</p>
       </details>
       <details>
         <summary>Will it slow down my browser?</summary>

@@ -26,10 +26,10 @@ phishing, scam, and malicious-link protection for email.
 - `images/` — extension icons (16/48/128) reused for branding.
 - `favicon.ico`, `favicon-32.png` — site favicons.
 
-## Scam families (6-category on-device classifier)
+## Scam families (7-category on-device classifier)
 
 The landing page and guides reference the shipped extension model, which classifies
-email into six scam families:
+email into seven scam families:
 
 1. Credential theft
 2. Business Email Compromise (BEC)
@@ -37,9 +37,12 @@ email into six scam families:
 4. Advance-fee scams
 5. Romance scams
 6. Prize / giveaway scams
+7. Sextortion / extortion scams
 
 ## Recent updates
 
+- **7th scam family:** added "Sextortion / Extortion" detection and named the seven
+  families in the engines section, features, guide, and FAQ.
 - **6th scam family:** added a "Prize & Giveaway" icon card to the scam library and
   named the six families in the engines section, features, and FAQ.
 - **Gemini plain-language pass:** rewrote every Gemini Nano mention in everyday terms —
