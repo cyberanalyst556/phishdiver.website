@@ -317,7 +317,8 @@
   <ul>
     <li><strong>Domain registration</strong> — registry RDAP servers (resolved from the IANA RDAP bootstrap) and the rdap.org RDAP aggregator. Registries with no RDAP anywhere (e.g. .hu, .us, .se, .it, .ru) report the registration date as unavailable.</li>
     <li><strong>DNS</strong> — public DNS-over-HTTPS (Cloudflare, Google).</li>
-    <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de.</li>
+    <li><strong>Threat intelligence</strong> — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, and the FTC Do-Not-Call complaint data (US/CA).</li>
+    <li><strong>Phone vetting (Pro)</strong> — US FTC Do-Not-Call complaint numbers from the official <code>ftc.gov</code> daily CSV (a US federal government work in the public domain, explicitly intended for call-blocking by carriers) and fetched locally on a 24-hour cadence. Aggregated on-device into per-number complaint counts and robocall ratios. Used strictly as a <em>soft corroborating signal</em> (unverified consumer input + caller-ID spoofing); it never hard-triggers a verdict and numbers are never sent anywhere.</li>
     <li><strong>Note on blocklist.de</strong> — the blocklist.de IP list has no explicit open-source license; it has been publicly available and widely consumed by security tools (fail2ban, IDS/IPS) for years. Attribution: blocklist.de project (https://blocklist.de).</li>
     <li><strong>Breach checks (user-initiated)</strong> — HaveIBeenPwned.</li>
   </ul>

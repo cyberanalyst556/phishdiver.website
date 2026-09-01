@@ -168,12 +168,12 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>15+ independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, plus registry data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
+        <p>17+ independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints, plus registry data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔢</div>
         <h3>Accuracy-focused heuristics <span class="tag tag-free">Free</span></h3>
-        <p>Catches suspicious domain patterns, internationalized domain names, redirect chains, encoding tricks, deceptive link text, and TLS downgrades — weak signals confirmed against blocklists before any verdict.</p>
+        <p>Catches suspicious domain patterns, internationalized domain names, redirect chains, encoding tricks, deceptive link text, and TLS downgrades — weak signals confirmed against blocklists before any verdict. A shared set of known-good company roots keeps normal transactional mail from your bank or carrier (receipts, autopay reminders) from being flagged — while a forged lookalike from that same sender is still caught.</p>
       </div>
 
       <div class="feature-card">
@@ -230,12 +230,12 @@
       <div class="feature-card">
         <div class="f-icon">🔗</div>
         <h3>Reply-chain hijacking <span class="tag tag-pro">Pro</span></h3>
-        <p>Catches a stranger who slipped into a real conversation, or a payment ask layered onto a genuine thread.</p>
+        <p>Catches a stranger who slipped into a real conversation, or a payment ask layered onto a genuine thread. When you reply inside a thread, the sender is correctly attributed to the person you're actually writing to — not one of your own addresses — and that counterparty is fully vetted, so a hijacker who slips into your own reply chain is still caught.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">☎️</div>
         <h3>Callback / vishing scams <span class="tag tag-pro">Pro</span></h3>
-        <p>Catches fake renewal and charge notices that point you at a phone number — no link to scan, no attachment to check.</p>
+        <p>Catches fake renewal and charge notices that point you at a phone number — no link to scan, no attachment to check. Numbers are vetted offline against official support lines, premium-rate scam patterns, and US FTC Do-Not-Call complaints.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🏦</div>
@@ -266,6 +266,11 @@
         <div class="f-icon">🕵️</div>
         <h3>Malicious iframes <span class="tag tag-pro">Pro</span></h3>
         <p>Finds hidden frames and overlays loading from known-malicious domains — including ones injected after the page loads.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🛡️</div>
+        <h3>Subresource blocking <span class="tag tag-pro">Pro</span></h3>
+        <p>Instantly stops scripts, images, fonts &amp; embeds served from heavily-flagged malicious hosts — without touching normal page navigation. Per-site override in Settings.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📜</div>
@@ -337,7 +342,7 @@
           <li>35+ scam pattern explainers — see exactly what triggered a flag</li>
           <li>Signal correlation scoring — combined multiplies when independent signals agree</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
-          <li>Live threat feeds (15+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS)</li>
+          <li>Live threat feeds (17+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints)</li>
           <li>Suspicious-pattern, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
@@ -355,7 +360,7 @@
           <li>ONNX AI + Gemini Nano on-device engines</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
-          <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
           <li>Persona Guard — contact-impersonation detection</li>
           <li>Brand tracking domain monitoring</li>
           <li>Live page scan &amp; real-destination detection</li>
@@ -376,7 +381,7 @@
           <li>ONNX AI + Gemini Nano on-device engines</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
-          <li>Homograph, clipboard, credential, ClickFix &amp; iframe protection</li>
+          <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
           <li>Persona Guard — contact-impersonation detection</li>
           <li>Brand tracking domain monitoring</li>
           <li>Live page scan &amp; real-destination detection</li>
@@ -433,7 +438,8 @@
           <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-           <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td class="row-label">ClickFix / fake CAPTCHA &amp; malicious iframe detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td class="row-label">Subresource blocking (scripts/images/embeds from flagged hosts)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Persona Guard (contact-impersonation detection)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Brand tracking domain monitoring</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Advanced Dashboard (first-contact, Persona Guard, scam patterns, signal correlation, brand tracking)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
@@ -637,7 +643,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -684,7 +690,7 @@
       </details>
       <details>
         <summary>What's the difference between Free and Pro?</summary>
-        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
+        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, subresource blocking, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
       </details>
       <details>
         <summary>How do I get Pro, and can I cancel?</summary>

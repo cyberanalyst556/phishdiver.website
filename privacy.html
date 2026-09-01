@@ -131,6 +131,13 @@
     Each list refreshes on its own cadence and is re-downloaded fresh on every browser start. Lists are kept
     only in memory for the session; they are never written to disk, so nothing persists after you
     close the browser.</li>
+    <li><strong>Phone vetting data (Pro, automatic)</strong> — aggregated US FTC
+    Do-Not-Call complaint numbers (US federal government public-domain data) are
+    downloaded on a 24-hour schedule and matched locally against phone numbers
+    found in callback-style emails. Only the downloaded number list leaves the
+    network; your emails' phone numbers are never sent anywhere, and the list is
+    kept in memory for the session like other blocklists. A match is only ever a
+    soft corroborating signal (unverified complaint data + caller-ID spoofing).</li>
   </ul>
 
   <p>

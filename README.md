@@ -41,6 +41,10 @@ email into seven scam families:
 
 ## Recent updates
 
+- **Own-reply sender attribution:** replies inside a thread are attributed to the real external
+  counterparty and vetted normally, so a hijacker in your own reply chain is still caught.
+- **Reduced false positives on legit mail:** a single shared legitimate-root set keeps normal
+  transactional mail from known banks/carriers un-flagged while still detecting forged look-alikes.
 - **7th scam family:** added "Sextortion / Extortion" detection and named the seven
   families in the engines section, features, guide, and FAQ.
 - **6th scam family:** added a "Prize & Giveaway" icon card to the scam library and
