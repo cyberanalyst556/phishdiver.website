@@ -201,6 +201,7 @@
     <li><strong>Threat Sources</strong> — live status of each threat feed, showing freshness and last-check times.</li>
     <li><strong>Quick Actions</strong> — check a URL or run a breach lookup directly from the dashboard.</li>
     <li><strong>CSV Export</strong> — download your filtered threat data with date range, type, and severity filters.</li>
+    <li><strong>Image OCR Log (Pro)</strong> — images whose built-in OCR extracted a flagged URL or phone number, with the scanned text and source.</li>
   </ul>
 
   <h3>Advanced Detection (Pro)</h3>
@@ -238,13 +239,14 @@
     <li><strong>Right-click check</strong> — adds the PhishDiver entry to your right-click menu.</li>
     <li><strong>Reset counts on browser start</strong> — clears the link statistics in the popup every time the browser
       restarts.</li>
-    <li><strong>Subresource blocking</strong> — stops scripts, images, fonts &amp; embeds served from heavily-flagged
-      malicious hosts (≥3 independent feeds). It never interferes with normal page navigation or APIs. If a safe site
-      ever looks broken, exempt that one site from the Settings or dashboard — the per-origin override is on-device.</li>
-    <li><strong>Phone vetting (Pro)</strong> — phone numbers in callback-style emails are checked offline against
-      official support lines, premium-rate scam patterns, and the US FTC Do-Not-Call complaint data (a soft
-      corroborating signal only, never a hard verdict; numbers never leave your device).</li>
   </ul>
+  <p>
+    Two Pro protections are always on and need no switch: <strong>subresource blocking</strong> (stops scripts, images,
+    fonts &amp; embeds served from hosts flagged by ≥3 independent feeds; it never interferes with normal page
+    navigation or APIs) and <strong>offline phone vetting</strong> (phone numbers in callback-style emails are checked
+    on-device against official support lines, premium-rate scam patterns, and the US FTC Do-Not-Call complaint data — a
+    soft corroborating signal only, never a hard verdict, and numbers never leave your device).
+  </p>
 
   <h2 id="lists">9. Blocked, allowed &amp; trusted lists</h2>
   <p>
@@ -268,7 +270,7 @@
   <ul>
     <li>Email scanning on all supported providers</li>
     <li>Both on-device AI engines</li>
-    <li>Attachment, QR-code, and calendar-invite scanning</li>
+    <li>Attachment, QR-code, image-OCR, and calendar-invite scanning</li>
     <li>BEC, spoofing, job-offer, reply-chain, and vishing detectors</li>
     <li>Persona Guard — contact-impersonation detection</li>
     <li>Brand tracking domain monitoring</li>

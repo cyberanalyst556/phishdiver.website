@@ -123,7 +123,7 @@
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Intelligence</div>
-      <h2>One verdict, 15+ independent sources</h2>
+      <h2>One verdict, 17+ independent sources</h2>
       <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
     </div>
     <div class="source-strip">
@@ -139,7 +139,7 @@
       <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Registry (RDAP) data</span>
     </div>
-    <p class="sources-note">🔒 phishunt.io, PhishTank, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. A dozen-plus more are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
+    <p class="sources-note">🔒 phishunt.io, PhishTank, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. PhishTank is treated as corroborating evidence only — a listing by itself never forces a verdict. A dozen-plus more are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
     <p class="sources-note" style="margin-top:6px">↻ Blocklists and feeds refresh on a schedule (every 15 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
   </div>
 </section>
@@ -218,6 +218,11 @@
         <p>Decodes QR codes inside image attachments on your device, then runs the embedded link through the full threat pipeline.</p>
       </div>
       <div class="feature-card">
+        <div class="f-icon">🔤</div>
+        <h3>On-device image OCR <span class="tag tag-pro">Pro</span></h3>
+        <p>Reads the text inside image attachments and inline images for hidden URLs and phone numbers, then runs what it finds through the same URL and phone-vetting pipelines — so a link or callback number buried in a picture is still caught. Images never leave your browser.</p>
+      </div>
+      <div class="feature-card">
         <div class="f-icon">📅</div>
         <h3>Calendar invite phishing <span class="tag tag-pro">Pro</span></h3>
         <p>Parses .ics invites and checks every URL in the description, location, and summary before you hit accept.</p>
@@ -270,7 +275,7 @@
       <div class="feature-card">
         <div class="f-icon">🛡️</div>
         <h3>Subresource blocking <span class="tag tag-pro">Pro</span></h3>
-        <p>Instantly stops scripts, images, fonts &amp; embeds served from heavily-flagged malicious hosts — without touching normal page navigation. Per-site override in Settings.</p>
+        <p>Instantly stops scripts, images, fonts &amp; embeds served from heavily-flagged malicious hosts — without touching normal page navigation. On by default, no setup needed.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📜</div>
