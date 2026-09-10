@@ -97,8 +97,8 @@
     Nothing special is required — but here is what you'll notice working in the background:
   </p>
   <ul>
-    <li><strong>Email verdicts.</strong> Every email you open returns one clear verdict — sender, subject, links, and
-      content all checked in a single pass.</li>
+    <li><strong>Email verdicts.</strong> Every email you open returns one clear verdict — sender, subject, links,
+      attachments, and embedded images all checked in a single pass.</li>
     <li><strong>Hover previews.</strong> Hover over a sender, link, or attachment and a small preview appears while the
       check runs, then dismisses once you move the mouse. It stays open until the result is ready so you always see the
       answer.</li>
@@ -146,9 +146,10 @@
     lookalike from that same sender still is.
   </p>
   <p>
-    When the built-in ONNX classifier flags a message, it also names the scam family it found — credential theft, BEC,
-    gift-card, advance-fee, romance, prize/giveaway, or sextortion — so a "Dangerous" verdict tells you not just that something's
-    wrong, but what the email is trying to do.
+    When the built-in ONNX classifier flags a message, it also names the scam family it found — one of 22, from
+    credential theft, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support,
+    government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing — so a "Dangerous"
+    verdict tells you not just that something's wrong, but what the email is trying to do.
   </p>
 
   <h2 id="dangerous-link">5. When you click a dangerous link</h2>
@@ -264,7 +265,8 @@
   <h2 id="free-vs-pro">10. Free vs Pro</h2>
   <p>
     The free plan is genuinely useful: Gmail scanning, hover previews, instant link blocking, first-contact sender
-    tracking, scam-pattern explainers, signal correlation, live threat feeds, and the manual checks. Pro removes
+    tracking, scam-pattern explainers, signal correlation, live threat feeds, the embedded-image scan (counts inline
+    pictures, checks their URLs, and decodes QR codes), and the manual checks. Pro removes
     every remaining blind spot:
   </p>
   <ul>

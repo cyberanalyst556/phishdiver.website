@@ -78,7 +78,7 @@
     <h1>Every scam follows a script.<br /><span class="grad">See it before you click.</span></h1>
     <p class="lede">
       Scammers win when you act fast — the click, the call, the wire. PhishDiver takes the pressure off.
-      It scans every email as it arrives, decoding links, sender details, attachments, and QR codes —
+      It scans every email as it arrives, decoding links, sender details, attachments, embedded images, and QR codes —
       so you can see what's suspicious before you click.
     </p>
     <div class="hero-ctas">
@@ -99,14 +99,14 @@
     <div class="section-head">
       <div class="section-kicker">Two engines, one job</div>
       <h2>One engine always. Two on Chrome.</h2>
-      <p>The on-device ONNX classifier reads every email on every browser and sorts it into seven scam families — credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
+      <p>The on-device ONNX classifier reads every email on every browser and sorts it into 22 scam families — from credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion, to job, callback/vishing, tech-support, government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
     </div>
     <div class="engines">
       <div class="engine-card onnx">
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family (credential, BEC, gift-card, advance-fee, romance, prize, or sextortion), so the warning tells you what the scam is trying to do.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family — one of 22, from credential, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support, government, crypto-investment, delivery, refund, and QR-code phishing — so the warning tells you what the scam is trying to do.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
@@ -215,12 +215,12 @@
       <div class="feature-card">
         <div class="f-icon">📷</div>
         <h3>QR code scanning <span class="tag tag-pro">Pro</span></h3>
-        <p>Decodes QR codes inside image attachments on your device, then runs the embedded link through the full threat pipeline.</p>
+        <p>Decodes QR codes inside embedded body images and image attachments on your device, then runs each decoded link through the full threat pipeline.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔤</div>
         <h3>On-device image OCR <span class="tag tag-pro">Pro</span></h3>
-        <p>Reads the text inside image attachments and inline images for hidden URLs and phone numbers, then runs what it finds through the same URL and phone-vetting pipelines — so a link or callback number buried in a picture is still caught. Images never leave your browser.</p>
+        <p>Reads the text inside image attachments and embedded body images for hidden URLs and phone numbers, then runs what it finds through the same URL and phone-vetting pipelines — so a link or callback number buried in a picture is still caught. A free embedded-image scan also counts every inline picture, checks its URL, and decodes any QR codes, so a planted image can't slip past unnoticed. Images never leave your browser.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">📅</div>
@@ -432,12 +432,13 @@
           <tr><td class="row-label">Behavioral scam detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
            <tr><td class="row-label">Encoding, DGA &amp; deceptive link-text heuristics</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Live page scan &amp; real-destination detection</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Embedded-image scan — counts inline images, checks URLs, decodes QR codes</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">On-device processing (no cloud AI)</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">No account, no API keys, no data shared</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr class="group-row"><td colspan="3">Unlocked with Pro</td></tr>
           <tr><td class="row-label">Email scanning — Outlook, Yahoo, Proton &amp; other webmail</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">Attachment, QR &amp; calendar-invite scanning</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">Attachment inspection, image-OCR &amp; calendar-invite scanning</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Payment-detail change detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">ONNX AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
@@ -668,7 +669,7 @@
       </details>
       <details>
         <summary>What scam families does the on-device classifier detect?</summary>
-        <p>The built-in ONNX classifier labels each message with one of seven scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, prize/giveaway scams, and sextortion/extortion scams (blackmail demanding Bitcoin). It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
+        <p>The built-in ONNX classifier labels each message with one of 22 scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, prize/giveaway scams, sextortion/extortion scams (blackmail demanding Bitcoin), job/recruitment scams, callback/vishing scams, tech-support scams, government/tax impersonation scams, crypto-investment and crypto-recovery scams, delivery/package scams, wire-transfer scams, persona/CEO impersonation scams, fake-investment/regulator scams, payment-redirect/vendor scams, refund/reimbursement scams, account-scare/tech-panic scams, scareware/fake-AV scams, and QR-code phishing. It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
