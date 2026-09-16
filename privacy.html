@@ -43,7 +43,9 @@
     <strong>The short version:</strong> PhishDiver is built around a privacy promise. Your email content and the
     pages you visit are analyzed <strong>on your device</strong>. The extension has no account, no analytics, no
     advertising, and no remote AI. The only data that ever leaves your browser is the URL or IP you ask to be checked
-    against public threat feeds, an optional breach lookup you initiate, and a page fetch you explicitly trigger.
+    against public threat feeds, an optional breach lookup you initiate, and a page fetch you trigger —
+    plus, only in the narrow moment a page check is about to return a danger verdict, an automatic re-fetch of that
+    same page&rsquo;s source for a quick on-device verification (always from the target server, never in the background otherwise).
     Everything the extension reads — domain registrations, DNS records, threat lists — is
     <strong>already public data</strong>; nothing private ever leaves your device.
     <br><br>
@@ -165,7 +167,9 @@
   <h3>c) Manual page checks (user-initiated)</h3>
   <p>The link checker and "Check the current page" features fetch the target page <strong>directly from that website's
   own server</strong>, in your browser, so its content can be scanned locally. This happens only when you explicitly
-  trigger it — never in the background.</p>
+  trigger it. One narrow exception: when a page check is about to return a danger verdict, the extension may re-fetch
+  that same page's source once for a lightweight on-device content-verification pass before blocking — always from
+  that target website's own server, never in the background otherwise.</p>
 
   <h3>d) DNS and registry lookups</h3>
   <p>Domain reputation checks may resolve DNS records via a public DNS-over-HTTPS service and consult public RDAP

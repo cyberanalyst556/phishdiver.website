@@ -271,7 +271,7 @@
   </p>
   <ul>
     <li>Email scanning on all supported providers</li>
-    <li>Both on-device AI engines</li>
+    <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
     <li>Attachment, QR-code, image-OCR, and calendar-invite scanning</li>
     <li>BEC, spoofing, job-offer, reply-chain, and vishing detectors</li>
     <li>Persona Guard — contact-impersonation detection</li>
@@ -319,7 +319,9 @@
     Your email is analyzed on your device. The only data that leaves your browser is narrow and keyless — and only when
     relevant: a URL or IP checked against public threat feeds, public domain-registration (RDAP) records, a
     breach lookup when <em>you</em> run it, and a page fetch when <em>you</em> trigger a manual page
-    check. Everything read is publicly available data — never your email content, identity, or browsing history.
+    check — plus, only in the narrow moment a page check is about to return a danger verdict, an automatic re-fetch of
+    that same page's source for a quick on-device verification, always from the target server and never in the
+    background otherwise. Everything read is publicly available data — never your email content, identity, or browsing history.
   </p>
   <p>
     There are no accounts, no API keys, and no trackers for the protection itself — the only optional exception is

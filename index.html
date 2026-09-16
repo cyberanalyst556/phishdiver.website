@@ -97,22 +97,22 @@
 <section id="engines">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Two engines, one job</div>
-      <h2>One engine always. Two on Chrome.</h2>
-      <p>The on-device ONNX classifier reads every email on every browser and sorts it into 22 scam families — from credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion, to job, callback/vishing, tech-support, government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing scams. On Chrome 127+, Gemini Nano reads it again whenever it's available. Both run inside your browser — nothing is ever sent to a cloud.</p>
+      <div class="section-kicker">Three models, one job</div>
+      <h2>Two models always. Three on Chrome.</h2>
+      <p>The on-device ONNX runtime runs two models on every browser: an email classifier that sorts each message into 22 scam families — from credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion, to job, callback/vishing, tech-support, government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing scams — and a URL classifier that scores every link. On Chrome 127+, Gemini Nano reads email again whenever it's available. All three models run inside your browser — nothing is ever sent to a cloud.</p>
     </div>
     <div class="engines">
       <div class="engine-card onnx">
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family — one of 22, from credential, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support, government, crypto-investment, delivery, refund, and QR-code phishing — so the warning tells you what the scam is trying to do.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family — one of 22, from credential, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support, government, crypto-investment, delivery, refund, and QR-code phishing — so the warning tells you what the scam is trying to do. A second ONNX model scores every link it sees, so URL checks share the same always-on, on-device engine.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
         <h3>Gemini Nano — Bonus Layer</h3>
         <span class="eng-pill">Chrome 127+ · Free & on-device · Optional</span>
-        <p>Gemini Nano is Google's free AI that's already built into Chrome — no account, no cloud, no data sent to Google. When it's available, it adds a second read, catching social-engineering language that simple keyword rules miss. It all happens on your device. On browsers without it (Brave, Edge, older Chrome), the built-in ONNX engine handles everything on its own.</p>
+        <p>Gemini Nano is Google's free AI that's already built into Chrome — no account, no cloud, no data sent to Google. When it's available, it adds a third read, catching social-engineering language that simple keyword rules miss. It all happens on your device. On browsers without it (Brave, Edge, older Chrome), the built-in ONNX models handle everything on their own.</p>
       </div>
     </div>
   </div>
@@ -123,7 +123,7 @@
   <div class="container">
     <div class="section-head">
       <div class="section-kicker">Intelligence</div>
-      <h2>One verdict, 17+ independent sources</h2>
+      <h2>One verdict, 15 independent sources</h2>
       <p>Every link and sender is cross-checked against live threat queries and downloaded blocklists — never taken on a single provider's word.</p>
     </div>
     <div class="source-strip">
@@ -139,7 +139,7 @@
       <span class="source-chip live">SPF / DMARC / DKIM</span>
       <span class="source-chip">Registry (RDAP) data</span>
     </div>
-    <p class="sources-note">🔒 phishunt.io, PhishTank, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. PhishTank is treated as corroborating evidence only — a listing by itself never forces a verdict. A dozen-plus more are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
+    <p class="sources-note">🔒 phishunt.io, PhishTank, and sender-domain SPF/DMARC/DKIM records are queried live, sending only the URL, IP, or sender domain at stake. PhishTank is treated as corroborating evidence only — a listing by itself never forces a verdict. The rest are downloaded blocklists and URL feeds matched entirely in your browser — your links never reach them. Domain ages are read from each registry's own authoritative RDAP server where one is published, then the rdap.org aggregator; registries that publish no RDAP (e.g. .de) have no registration date available.</p>
     <p class="sources-note" style="margin-top:6px">↻ Blocklists and feeds refresh on a schedule (every 15 minutes to every 12 hours, per source) and are re-downloaded fresh on every browser start — never stale, never persisted between sessions.</p>
   </div>
 </section>
@@ -168,7 +168,7 @@
       <div class="feature-card">
         <div class="f-icon">🌐</div>
         <h3>Threat feed integration <span class="tag tag-free">Free</span></h3>
-        <p>17+ independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints, plus registry data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
+        <p>15 independent sources stacked into every verdict — phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints, plus registry data. Live URL/IP checks against some, plus several downloaded blocklists and URL feeds matched entirely on-device.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🔢</div>
@@ -328,7 +328,7 @@
     <div class="section-head">
       <div class="section-kicker">Pricing</div>
       <h2>Start free. Upgrade when you want the whole shield.</h2>
-      <p>No hidden fees. Cancel any time. Pro unlocks every provider, every scanner, and both AI engines.</p>
+      <p>No hidden fees. Cancel any time. Pro unlocks every provider, every scanner, and all three on-device AI engines.</p>
     </div>
 
     <div class="plans">
@@ -347,7 +347,7 @@
           <li>35+ scam pattern explainers — see exactly what triggered a flag</li>
           <li>Signal correlation scoring — combined multiplies when independent signals agree</li>
           <li>Behavioral scam detection (incl. cross-email template clustering)</li>
-          <li>Live threat feeds (17+ sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints)</li>
+          <li>Live threat feeds (15 sources: phishunt.io, PhishTank, TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call complaints)</li>
           <li>Suspicious-pattern, DGA &amp; link-text heuristics + correlation scoring</li>
           <li>Link checker, current-page check &amp; right-click check</li>
         </ul>
@@ -356,13 +356,13 @@
 
       <div class="plan">
         <h3>Pro</h3>
-        <p class="plan-desc">Every provider, every scanner, and both on-device AI engines — billed monthly.</p>
+        <p class="plan-desc">Every provider, every scanner, and all three on-device AI models — billed monthly.</p>
         <div class="price">$5.99<small> / month</small></div>
         <div class="price-note">per month, billed monthly</div>
         <ul class="feature-list">
           <li>Everything in Free</li>
           <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
-          <li>ONNX AI + Gemini Nano on-device engines</li>
+          <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
@@ -383,7 +383,7 @@
         <ul class="feature-list">
           <li>Everything in Free</li>
           <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
-          <li>ONNX AI + Gemini Nano on-device engines</li>
+          <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
@@ -440,7 +440,7 @@
           <tr><td class="row-label">BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Attachment inspection, image-OCR &amp; calendar-invite scanning</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Payment-detail change detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">ONNX AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">ONNX AI engine (email + URL classifier models)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
@@ -606,7 +606,7 @@
           </div>
 
           <h3>How PhishDiver Catches It</h3>
-          <p>PhishDiver's on-device AI and 15+ threat intelligence sources scan every email as it arrives. When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous" banner and explains why:</p>
+          <p>PhishDiver's on-device AI and 15 threat intelligence sources scan every email as it arrives. When a grandparent scam email hits your inbox, PhishDiver flags it with a red "Dangerous" banner and explains why:</p>
           <ul>
             <li><strong>Social engineering patterns:</strong> The AI detects urgency language, secrecy requests, and emotional manipulation.</li>
             <li><strong>Suspicious sender:</strong> The email comes from a free provider (gmail, yahoo, outlook) with no connection to your family.</li>
@@ -649,7 +649,7 @@
       </details>
       <details>
         <summary>What data does leave my browser at all?</summary>
-        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>        Only narrow, keyless requests, and only when relevant: (1) URL or IP       checks against public threat feeds — phishunt.io and PhishTank queries live; other blocklists (TweetFeed (URLs & IPs), Phishing.Database, Destroylist, IPsum, Blocklist Project, blocklist.de, CINS, FTC Do-Not-Call, and more) are downloaded on a schedule and matched entirely in your browser, so they never see your URLs; (2) public domain-registration (RDAP) lookups for domain age, from the registries' own public records; (3) a breach lookup to haveibeenpwned.com when <em>you</em> run the breach checker; and (4) a page fetch when <em>you</em> trigger a manual page check — plus, only in the narrow moment a page check is about to return a danger verdict, an automatic re-fetch of that same page's own source for a quick on-device content-verification pass, always from the target server and never in the background otherwise. Everything read is <strong>publicly available data</strong> — never email content, identity, or browsing history. See the <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
         <summary>Which webmail providers are covered?</summary>
@@ -664,8 +664,8 @@
         <p>No. PhishDiver is an aid to your judgment, not a guarantee — and it shouldn't replace antivirus, a password manager, multi-factor authentication, or your own caution. Use it alongside those.</p>
       </details>
       <details>
-        <summary>Why two AI engines?</summary>
-        <p>Two independent checks are better than one. The built-in AI classifier is always on. When Chrome's own free Gemini Nano AI is available, it adds a second opinion on the intent and social-engineering behind a message. Both run on your computer — Google never receives your email. If Nano isn't available or you turn it off, the built-in engine keeps protecting you on its own, with nothing depending on an internet service.</p>
+        <summary>Why three AI engines?</summary>
+        <p>Three independent on-device AI checks are better than one. The built-in ONNX runtime runs two models — an email classifier and a URL classifier — that are always on. When Chrome's own free Gemini Nano AI is available, it adds a third read of the intent and social-engineering behind a message. All three run on your computer — Google never receives your email. If Nano isn't available or you turn it off, the built-in ONNX models keep protecting you on their own, with nothing depending on an internet service.</p>
       </details>
       <details>
         <summary>What scam families does the on-device classifier detect?</summary>
@@ -696,7 +696,7 @@
       </details>
       <details>
         <summary>What's the difference between Free and Pro?</summary>
-        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds both on-device AI engines, attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, subresource blocking, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
+        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds all three on-device AI models (ONNX email + URL classifiers plus Gemini Nano), attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, subresource blocking, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
       </details>
       <details>
         <summary>How do I get Pro, and can I cancel?</summary>

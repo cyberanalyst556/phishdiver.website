@@ -123,7 +123,14 @@
 
   <h2 id="ai">9. AI model &amp; data sources</h2>
   <p>
-    The on-device AI classifier was trained on publicly available phishing, BEC, scam, and legitimate email and web page corpora. Datasets used include the Jose Nazario phishing corpus, the Cross-model LLM Phishing Corpus (Gutierrez, Villegas-Ch &amp; Govea, 2026), the Enron Email Dataset, the Apache SpamAssassin public corpora, and additional first-party synthetic data built to cover modern scam and business email compromise patterns. Full attribution, dataset names, creators, licenses, and sources are listed on the <a href="licenses.html">Open-Source Licenses</a> page.
+    The on-device AI classifier ships trained on a <strong>69,940-record corpus</strong> built from first-party
+    synthetic data plus public corpora. Datasets used include the Jose Nazario phishing corpus (CC BY 4.0),
+    the Cross-model LLM Phishing Corpus (Gutierrez, Villegas-Ch &amp; Govea, 2026, CC BY 4.0), the Apache
+    SpamAssassin spam/ham corpora (used for filter development — copyright remains with the senders, not public
+    domain), the MeAJOR corpus (CC BY 4.0, anonymized), and the Zero-Day Phishing Corpus (CC0).
+    The <strong>Enron Email Dataset is explicitly excluded from all training</strong> (2026-09-07): Carnegie
+    Mellon distributes it "as a resource for researchers" under no formal license, and it contains real personal
+    data. Full attribution, dataset names, creators, licenses, and sources are listed on the <a href="licenses.html">Open-Source Licenses</a> page.
   </p>
   <p>
     The classifier itself is a machine-learning model (TF-IDF feature extraction with a logistic-regression classifier exported to ONNX Runtime Web). It runs entirely in your browser via WebAssembly and does not phone home. Runtime false-positive and false-negative rates are reported on the <a href="index.html#faq">FAQ</a> page.
