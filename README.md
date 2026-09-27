@@ -56,10 +56,25 @@ email into twenty-two scam families:
 
 ## Recent updates
 
+- **Current shipped version: 1.8.0** (matches `manifest.json`).
+- **Allow once / Always allow:** the link-warning dialog now offers a session-only "Allow once"
+  and a permanent "Always allow this domain" for trusted senders, instead of forcing a
+  block/close decision. A block is still the default action for anything dangerous.
+- **Fewer false alarms on real promotions:** a discount-code offer from a brand you already
+  receive mail from no longer reads as suspicious on its own, even when the wording is
+  pushy. Genuine phishing from lookalike brands is still caught.
+- **Offline phone vetting (Pro):** a phone number in an email, signature, or embedded image is
+  checked on-device against known scam-call patterns and the public FTC Do-Not-Call list. A
+  number on a list is only ever a soft, corroborating signal — never a verdict by itself.
+- **Webmail attachment & read-state accuracy:** attachment chips in Gmail and Yahoo now
+  survive the mail client's own re-rendering (so the right file is the one inspected),
+  Yahoo's native attachment preview and hover cards keep working, and the extension
+  re-reads a message only when Gmail has actually finished marking it read — so a verdict
+  never rests on a half-loaded email.
 - **22 scam families:** the on-device classifier now names twenty-two families (job offers,
   callback/vishing, tech support, government impersonation, crypto-investment and crypto-recovery,
   delivery, wire transfer, persona/CEO, fake-investment, payment-redirect, refund, account-scare,
-  scareware, and QR-code phishing — alongside the original seven). All family recalls ≥0.987 on
+  scareware, and QR-code phishing — alongside the original seven). All family recalls ≥0.996 on
   holdout; binary phishing detection unchanged.
 - **Embedded-image scan:** the banner now shows how many inline body images were checked, with a
   Details section for the URL checks and QR decode (free) and OCR text reads (Pro). Purely
