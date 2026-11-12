@@ -37,7 +37,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Legal Disclaimers</h1>
-  <div class="meta">Effective date: August 14, 2026 · Last updated: August 17, 2026</div>
+  <div class="meta">Effective date: August 14, 2026 · Last updated: November 12, 2026</div>
 
   <div class="callout">
     <strong>Read this before relying on PhishDiver.</strong> The following disclaimers are part of the
@@ -134,6 +134,13 @@
   </p>
   <p>
     The classifier itself is a machine-learning model (TF-IDF feature extraction with a logistic-regression classifier exported to ONNX Runtime Web). It runs entirely in your browser via WebAssembly and does not phone home. Runtime false-positive and false-negative rates are reported on the <a href="index.html#faq">FAQ</a> page.
+  </p>
+  <p>
+    A third on-device model supplies a <strong>sender-domain trust prior</strong>. It reads only the sender's
+    registrable root and is trained on the Majestic Million (CC BY 3.0) plus MIT-licensed phishing and
+    throwaway-domain feeds and first-party curated/synthetic data. It never returns a verdict and never adds
+    risk; it can only substitute for a missing domain-age signal, and a known domain age under 90 days is never
+    overridden. Data attribution is listed on the <a href="licenses.html">Open-Source Licenses</a> page.
   </p>
   <p>
     Training data is re-processed periodically as new corpora are released or curated. The model is retrained on a rolling window; no user email content or page content is ever used for training.

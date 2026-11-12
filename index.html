@@ -97,22 +97,22 @@
 <section id="engines">
   <div class="container">
     <div class="section-head">
-      <div class="section-kicker">Three models, one job</div>
-      <h2>Two models always. Three on Chrome.</h2>
-      <p>The on-device ONNX runtime runs two models on every browser: an email classifier that sorts each message into 22 scam families — from credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion, to job, callback/vishing, tech-support, government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing scams — and a URL classifier that scores every link. On Chrome 127+, Gemini Nano reads email again whenever it's available. All three models run inside your browser — nothing is ever sent to a cloud.</p>
+      <div class="section-kicker">Four models, one job</div>
+      <h2>Three models always. Four on Chrome.</h2>
+      <p>The on-device ONNX runtime runs three models on every browser: an email classifier that sorts each message into 22 scam families — from credential theft, business email compromise, gift-card, advance-fee, romance, prize/giveaway, and sextortion, to job, callback/vishing, tech-support, government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing scams — a URL classifier that scores every link, and a sender-domain trust model that supplies a reputation prior (never a verdict). Separately, a deterministic health-bait detector names a 23rd scam family when the classifier's family scores are low. On Chrome 127+, Gemini Nano reads email again whenever it's available. All four models run inside your browser — nothing is ever sent to a cloud.</p>
     </div>
     <div class="engines">
       <div class="engine-card onnx">
         <div class="eng-icon">🧠</div>
         <h3>ONNX AI — Always Active</h3>
         <span class="eng-pill">No setup · All browsers · Works offline</span>
-        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family — one of 22, from credential, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support, government, crypto-investment, delivery, refund, and QR-code phishing — so the warning tells you what the scam is trying to do. A second ONNX model scores every link it sees, so URL checks share the same always-on, on-device engine.</p>
+        <p>It runs in your browser in milliseconds — no setup, no network, in Chrome, Brave, and Edge. The classifier labels each message with its scam family — one of 22, from credential, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support, government, crypto-investment, delivery, refund, and QR-code phishing — so the warning tells you what the scam is trying to do. A second ONNX model scores every link it sees, and a third supplies a sender-domain trust prior (never a verdict) — so URL checks and sender trust share the same always-on, on-device engine.</p>
       </div>
       <div class="engine-card nano">
         <div class="eng-icon">💎</div>
         <h3>Gemini Nano — Bonus Layer</h3>
         <span class="eng-pill">Chrome 127+ · Free & on-device · Optional</span>
-        <p>Gemini Nano is Google's free AI that's already built into Chrome — no account, no cloud, no data sent to Google. When it's available, it adds a third read, catching social-engineering language that simple keyword rules miss. It all happens on your device. On browsers without it (Brave, Edge, older Chrome), the built-in ONNX models handle everything on their own.</p>
+        <p>Gemini Nano is Google's free AI that's already built into Chrome — no account, no cloud, no data sent to Google. When it's available, it adds one more read, catching social-engineering language that simple keyword rules miss. It all happens on your device. On browsers without it (Brave, Edge, older Chrome), the built-in ONNX models handle everything on their own.</p>
       </div>
     </div>
   </div>
@@ -184,7 +184,7 @@
       <div class="feature-card">
         <div class="f-icon">💔</div>
         <h3>Behavioral scam detection <span class="tag tag-both">Free + Pro</span></h3>
-        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, prize/giveaway lures, advance-fee fraud, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders. The on-device classifier calls the scam family by name. Also tracks per-sender grooming progression across messages, plus grandparent/family-emergency scams, pivots to WhatsApp/Telegram/Signal, and false "FCA/SEC-regulated" investment pitches.</p>
+        <p>Spots romance scams, sextortion, pig-butchering, gift-card pushes, prize/giveaway lures, advance-fee fraud, health-plan/Medicare card-bait lures, and deadline-pressure tactics by pattern — not keywords — across 20+ languages, and groups near-identical campaign emails from many senders. The on-device classifier calls the scam family by name. Also tracks per-sender grooming progression across messages, plus grandparent/family-emergency scams, pivots to WhatsApp/Telegram/Signal, and false "FCA/SEC-regulated" investment pitches.</p>
       </div>
       <div class="feature-card">
         <div class="f-icon">🧪</div>
@@ -328,7 +328,7 @@
     <div class="section-head">
       <div class="section-kicker">Pricing</div>
       <h2>Start free. Upgrade when you want the whole shield.</h2>
-      <p>No hidden fees. Cancel any time. Pro unlocks every provider, every scanner, and all three on-device AI engines.</p>
+      <p>No hidden fees. Cancel any time. Pro unlocks every provider, every scanner, and all four on-device AI models.</p>
     </div>
 
     <div class="plans">
@@ -356,13 +356,13 @@
 
       <div class="plan">
         <h3>Pro</h3>
-        <p class="plan-desc">Every provider, every scanner, and all three on-device AI models — billed monthly.</p>
+        <p class="plan-desc">Every provider, every scanner, and all four on-device AI models — billed monthly.</p>
         <div class="price">$5.99<small> / month</small></div>
         <div class="price-note">per month, billed monthly</div>
         <ul class="feature-list">
           <li>Everything in Free</li>
           <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
-          <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
+          <li>All four on-device AI models — ONNX email, URL &amp; sender-domain classifiers plus Gemini Nano</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
@@ -383,7 +383,7 @@
         <ul class="feature-list">
           <li>Everything in Free</li>
           <li>Email scanning on all 18+ providers (Outlook, Yahoo, Proton &amp; more)</li>
-          <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
+          <li>All four on-device AI models — ONNX email, URL &amp; sender-domain classifiers plus Gemini Nano</li>
           <li>Attachment, QR &amp; calendar-invite scanning</li>
           <li>BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</li>
           <li>Homograph, clipboard, credential, ClickFix, iframe &amp; subresource-block protection</li>
@@ -440,7 +440,7 @@
           <tr><td class="row-label">BEC, spoofing, job-offer, reply-chain &amp; vishing detectors</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Attachment inspection, image-OCR &amp; calendar-invite scanning</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Payment-detail change detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td class="row-label">ONNX AI engine (email + URL classifier models)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td class="row-label">ONNX AI engine (email, URL &amp; sender-domain models)</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Gemini Nano AI engine</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Homograph / IDN detection</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td class="row-label">Clipboard hijacking &amp; credential harvesting</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
@@ -498,6 +498,14 @@
         <span class="tag">Prize</span>
         <span class="tag">Giveaway</span>
         <span class="tag">Advance Fee</span>
+      </div>
+
+      <div class="scam-card">
+        <h3>🩺 Medicare &amp; Health-Plan Card Scam</h3>
+        <p>"Your free Medicare card or health kit is ready — confirm your details to activate it." Fake health-plan offers that harvest identity and payment data for a benefit that never arrives.</p>
+        <span class="tag">Health</span>
+        <span class="tag">Medicare</span>
+        <span class="tag">Identity Theft</span>
       </div>
 
       <div class="scam-card">
@@ -664,12 +672,12 @@
         <p>No. PhishDiver is an aid to your judgment, not a guarantee — and it shouldn't replace antivirus, a password manager, multi-factor authentication, or your own caution. Use it alongside those.</p>
       </details>
       <details>
-        <summary>Why three AI engines?</summary>
-        <p>Three independent on-device AI checks are better than one. The built-in ONNX runtime runs two models — an email classifier and a URL classifier — that are always on. When Chrome's own free Gemini Nano AI is available, it adds a third read of the intent and social-engineering behind a message. All three run on your computer — Google never receives your email. If Nano isn't available or you turn it off, the built-in ONNX models keep protecting you on their own, with nothing depending on an internet service.</p>
+        <summary>Why four AI engines?</summary>
+        <p>Four independent on-device AI checks are better than one. The built-in ONNX runtime runs three models — an email classifier, a URL classifier, and a sender-domain trust model — that are always on. When Chrome's own free Gemini Nano AI is available, it adds one more read of the intent and social-engineering behind a message. All four run on your computer — Google never receives your email. If Nano isn't available or you turn it off, the built-in ONNX models keep protecting you on their own, with nothing depending on an internet service.</p>
       </details>
       <details>
         <summary>What scam families does the on-device classifier detect?</summary>
-        <p>The built-in ONNX classifier labels each message with one of 22 scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, prize/giveaway scams, sextortion/extortion scams (blackmail demanding Bitcoin), job/recruitment scams, callback/vishing scams, tech-support scams, government/tax impersonation scams, crypto-investment and crypto-recovery scams, delivery/package scams, wire-transfer scams, persona/CEO impersonation scams, fake-investment/regulator scams, payment-redirect/vendor scams, refund/reimbursement scams, account-scare/tech-panic scams, scareware/fake-AV scams, and QR-code phishing. It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
+        <p>The built-in ONNX classifier labels each message with one of 22 scam families: credential theft (fake login pages), business email compromise (CEO/vendor payment fraud), gift-card scams, advance-fee scams (prize fees, prepayments, "approved" loans), romance scams, prize/giveaway scams, sextortion/extortion scams (blackmail demanding Bitcoin), job/recruitment scams, callback/vishing scams, tech-support scams, government/tax impersonation scams, crypto-investment and crypto-recovery scams, delivery/package scams, wire-transfer scams, persona/CEO impersonation scams, fake-investment/regulator scams, payment-redirect/vendor scams, refund/reimbursement scams, account-scare/tech-panic scams, scareware/fake-AV scams, and QR-code phishing. A dedicated health-bait detector adds a 23rd family — health-plan / Medicare card-bait scams — so a confident lure is named even when the classifier's family scores are low. It runs entirely on your device in milliseconds, and the warning names the family so you understand what the email is trying to do.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
@@ -696,7 +704,7 @@
       </details>
       <details>
         <summary>What's the difference between Free and Pro?</summary>
-        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds all three on-device AI models (ONNX email + URL classifiers plus Gemini Nano), attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, subresource blocking, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
+        <p>Free protects Gmail with heuristics, instant link blocking, first-contact tracking, scam-pattern explainers, signal correlation, and URL defense. Pro extends scanning to all 18+ providers, adds all four on-device AI models (ONNX email, URL &amp; sender-domain classifiers plus Gemini Nano), attachment/QR/calendar scanning, Persona Guard, brand-tracking domains, and every advanced detector — BEC, spoofing, job-offer, reply-chain, vishing, payment-detail changes, homographs, clipboard, credential harvesting, ClickFix, iframes, subresource blocking, live page scans, real-destination tracking, threat history, the breach checker, and the Advanced Dashboard.</p>
       </details>
       <details>
         <summary>How do I get Pro, and can I cancel?</summary>

@@ -26,10 +26,11 @@ phishing, scam, and malicious-link protection for email.
 - `images/` — extension icons (16/48/128) reused for branding.
 - `favicon.ico`, `favicon-32.png` — site favicons.
 
-## Scam families (22-category on-device classifier)
+## Scam families (22-class on-device classifier + 1 deterministic family)
 
 The landing page and guides reference the shipped extension model, which classifies
-email into twenty-two scam families:
+email into twenty-two scam families, plus a dedicated deterministic detector that
+names a 23rd:
 
 1. Credential theft
 2. Business Email Compromise (BEC)
@@ -53,45 +54,40 @@ email into twenty-two scam families:
 20. Account-scare / tech-panic scams
 21. Scareware / fake-AV scams
 22. QR-code phishing scams
+23. Health-plan / Medicare card-bait scams — supplied by the deterministic health-bait
+    detector (`lib/health-bait.js`), which names the family even when the classifier's
+    family scores are low.
 
 ## Recent updates
 
 - **Current shipped version: 1.8.0** (matches `manifest.json`).
-- **Allow once / Always allow:** the link-warning dialog now offers a session-only "Allow once"
-  and a permanent "Always allow this domain" for trusted senders, instead of forcing a
-  block/close decision. A block is still the default action for anything dangerous.
-- **Fewer false alarms on real promotions:** a discount-code offer from a brand you already
-  receive mail from no longer reads as suspicious on its own, even when the wording is
-  pushy. Genuine phishing from lookalike brands is still caught.
-- **Offline phone vetting (Pro):** a phone number in an email, signature, or embedded image is
-  checked on-device against known scam-call patterns and the public FTC Do-Not-Call list. A
-  number on a list is only ever a soft, corroborating signal — never a verdict by itself.
-- **Webmail attachment & read-state accuracy:** attachment chips in Gmail and Yahoo now
-  survive the mail client's own re-rendering (so the right file is the one inspected),
-  Yahoo's native attachment preview and hover cards keep working, and the extension
-  re-reads a message only when Gmail has actually finished marking it read — so a verdict
-  never rests on a half-loaded email.
-- **22 scam families:** the on-device classifier now names twenty-two families (job offers,
-  callback/vishing, tech support, government impersonation, crypto-investment and crypto-recovery,
-  delivery, wire transfer, persona/CEO, fake-investment, payment-redirect, refund, account-scare,
-  scareware, and QR-code phishing — alongside the original seven). All family recalls ≥0.996 on
-  holdout; binary phishing detection unchanged.
-- **Embedded-image scan:** the banner now shows how many inline body images were checked, with a
-  Details section for the URL checks and QR decode (free) and OCR text reads (Pro). Purely
+- **Third on-device model — sender-domain trust:** a bundled ONNX model scores the sender's
+  registrable root using only local popularity hashes. It is a soft prior, never a verdict:
+  it can substitute for a missing domain-age signal, never adds risk, and never overrides a
+  known domain age under 90 days. Small legitimate businesses outside the popularity list
+  stay `unknown` by design.
+- **23rd scam family:** a deterministic health-bait detector now names health-plan /
+  Medicare card-bait lures ("free Medicare kit/card, confirm your details") even when the
+  22-class model has no confident family for them.
+- **Fewer false positives on real senders:** fixed legitimate mail from a retirement
+  provider (Empower), Shopify order confirmations, an ISC² town-hall notice routed through
+  Salesforce Marketing Cloud, a Samsung/Medallia survey, and a DraftKings Predictions
+  notice. A bare crypto word is no longer a scam signal without a same-sentence
+  investment/claim hook.
+- **Vendor-zone and ESP recognition:** controlled vendor zones (e.g. `medallia.com`,
+  `shopifyemail.com`) and provider-owned email-service redirect hosts are recognized as
+  infrastructure, not evidence. A link that redirects to the sender's own registrable root
+  is exempt at the warning band; danger-band hits are never exempted.
+- **Threat-source sync line:** the popup now shows when the sources last synced
+  (e.g. "Last download 4 min ago · 11/12 feeds current") under Active threat sources.
+- **Gmail read-state safety:** the unload guard is conditional and never blocks Gmail's own
+  sync window, so marking a message read is not reverted on close.
+- **Allow once / Always allow:** the link-warning dialog offers a session-only "Allow once"
+  and a permanent "Always allow this domain" for trusted senders. A block is still the
+  default action for anything dangerous.
+- **Offline phone vetting (Pro):** a phone number in an email, signature, or embedded image
+  is checked on-device against known scam-call patterns and the public FTC Do-Not-Call list.
+  A number on a list is only ever a soft, corroborating signal — never a verdict by itself.
+- **Embedded-image scan:** the banner shows how many inline body images were checked, with a
+  Details section for URL checks and QR decode (free) and OCR text reads (Pro). Purely
   informational — it never affects the verdict.
-- **Fewer false positives on institutional senders:** known trusted roots (e.g. `blackboard.com`)
-  are rescued from a false high-confidence "phishing" AI read, so legitimate mail from e.g. your
-  university LMS no longer trips the banner, while forged lookalikes from the same brand stay caught.
-- **AI reliability:** a watchdog + late-bind keeps the on-device engine available through browser
-  blank periods, so the AI read is rarely skipped.
-- **Own-reply sender attribution:** replies inside a thread are attributed to the real external
-  counterparty and vetted normally, so a hijacker in your own reply chain is still caught.
-- **Reduced false positives on legit mail:** a single shared legitimate-root set keeps normal
-  transactional mail from known banks/carriers un-flagged while still detecting forged look-alikes.
-- **7th scam family (historical, 2026-08-30):** added "Sextortion / Extortion" detection; at the time the
-  site named the seven families in the engines section, features, guide, and FAQ.
-- **6th scam family (historical, 2026-08-24):** added a "Prize & Giveaway" icon card to the scam library and
-  named the six families in the engines section, features, and FAQ.
-- **Gemini plain-language pass:** rewrote every Gemini Nano mention in everyday terms —
-  free AI built into Chrome, runs on-device, never sends email to Google's servers,
-  optional and off-able with no loss of protection.

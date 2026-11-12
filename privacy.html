@@ -37,7 +37,7 @@
 <main class="legal-page">
   <a class="back" href="index.html">← Back to home</a>
   <h1>Privacy Policy</h1>
-  <div class="meta">Effective date: August 14, 2026 · Last updated: August 22, 2026 · Applies to the PhishDiver browser extension and this website</div>
+  <div class="meta">Effective date: August 14, 2026 · Last updated: November 12, 2026 · Applies to the PhishDiver browser extension and this website</div>
 
   <div class="callout">
     <strong>The short version:</strong> PhishDiver is built around a privacy promise. Your email content and the
@@ -106,7 +106,8 @@
     <li><strong>Settings and preferences</strong> — e.g., which checks are enabled, allow/block lists you create.</li>
     <li><strong>Threat history</strong> — a local log of non-safe verdicts, filterable and clearable by you at any time.</li>
     <li><strong>Payment-detail fingerprints</strong> — bank, routing, IBAN, and crypto-wallet details observed in emails are stored as <strong>hashes only</strong>, never as raw text, so the original values cannot be recovered from the stored data.</li>
-    <li><strong>AI analysis</strong> — the built-in AI classifier runs entirely on your device; no email content is sent anywhere for AI analysis.</li>
+    <li><strong>AI analysis</strong> — the built-in AI models (email, URL, and sender-domain trust) run entirely on your device; no email content is sent anywhere for AI analysis.</li>
+    <li><strong>Sender-domain trust</strong> — the sender's registrable domain is scored on-device by a bundled model that uses only local popularity hashes. No domain is transmitted for this check, and the result is a soft prior, never a verdict.</li>
   </ul>
 
   <h2 id="third-party">4. What leaves your browser, and why</h2>

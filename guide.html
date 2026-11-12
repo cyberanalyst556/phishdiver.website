@@ -149,7 +149,9 @@
     When the built-in ONNX classifier flags a message, it also names the scam family it found — one of 22, from
     credential theft, BEC, gift-card, advance-fee, romance, prize/giveaway, and sextortion to job, tech-support,
     government impersonation, crypto-investment, delivery/package, refund, and QR-code phishing — so a "Dangerous"
-    verdict tells you not just that something's wrong, but what the email is trying to do.
+    verdict tells you not just that something's wrong, but what the email is trying to do. A dedicated health-bait
+    detector adds a 23rd family — health-plan / Medicare card-bait scams — so those lures are named even when the
+    classifier's family scores are low.
   </p>
 
   <h2 id="dangerous-link">5. When you click a dangerous link</h2>
@@ -198,7 +200,7 @@
     <li><strong>Own Addresses &amp; Providers</strong> — email addresses PhishDiver has learned for self-spoof
       detection, grouped by provider.</li>
     <li><strong>Allowed &amp; Trusted</strong> — your allowed domains and trusted senders with one-click removal.</li>
-    <li><strong>System Health</strong> — AI engine status (ONNX, Gemini Nano) and protection module states.</li>
+    <li><strong>System Health</strong> — AI engine status (ONNX email &amp; URL models, plus Gemini Nano) and protection module states.</li>
     <li><strong>Threat Sources</strong> — live status of each threat feed, showing freshness and last-check times.</li>
     <li><strong>Quick Actions</strong> — check a URL or run a breach lookup directly from the dashboard.</li>
     <li><strong>CSV Export</strong> — download your filtered threat data with date range, type, and severity filters.</li>
@@ -271,7 +273,7 @@
   </p>
   <ul>
     <li>Email scanning on all supported providers</li>
-    <li>All three on-device AI models — ONNX email &amp; URL classifiers plus Gemini Nano</li>
+    <li>All four on-device AI models — ONNX email, URL &amp; sender-domain classifiers plus Gemini Nano</li>
     <li>Attachment, QR-code, image-OCR, and calendar-invite scanning</li>
     <li>BEC, spoofing, job-offer, reply-chain, and vishing detectors</li>
     <li>Persona Guard — contact-impersonation detection</li>
